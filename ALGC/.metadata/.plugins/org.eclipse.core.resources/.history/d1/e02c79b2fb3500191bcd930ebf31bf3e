@@ -1,0 +1,23 @@
+package aula1;
+
+import java.util.*;
+
+public class ex2 {
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) {
+		Stack<String> stack = new Stack<>();	
+		
+		System.out.println("Introduza uma expressao: ");
+		String exp = sc.nextLine();
+		
+		
+	}
+	
+	public static boolean isNumber(String s) {
+		
+	}
+	public static boolean isOperand(String s) {
+		
+	}
+
+}

@@ -1,0 +1,18 @@
+package aula1;
+
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.*;
+
+public class ex6 {
+
+	public static void main(String[] args) {
+
+	}
+	
+	public static void readTranslationFile(String filepath) {
+		List<String> lines = Files.readAllLines(Paths.get(filepath));
+		
+	}
+
+}

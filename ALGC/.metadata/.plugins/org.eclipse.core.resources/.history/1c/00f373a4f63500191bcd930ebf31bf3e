@@ -1,0 +1,27 @@
+package aula1;
+
+import java.util.*;
+
+public class ex1 {
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) {
+		System.out.println("Introduza uma expressao: ");
+		
+		String exp = sc.nextLine();
+		
+		while(!valid(exp)) {
+			System.out.println(exp);
+		}
+		
+	}
+	
+	public static boolean valid(String exp) {
+		String[] split = exp.split(" ");
+		if(split.length != 3) {
+			System.err.println("Expressao invalida!");
+			return false;
+		}
+		return true;
+	}
+
+}

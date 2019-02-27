@@ -1,0 +1,22 @@
+package aula1;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class ex3 {
+	static Map<Integer, String> mapp = new HashMap<>();
+ 	public static void main(String[] args) throws IOException {
+		readFile();
+	}
+	
+	public static void readFile() throws IOException {
+		List<String> lines = Files.readAllLines(Paths.get("bloco1/numbers.txt"));
+		lines.stream().forEach(System.out::println);
+		Arrays.stream(lines.stream().collect(Collectors.joining("\n"))
+									.split("[-| |\n|\t]"))
+									.forEach(System.out::println);
+	}
+
+}

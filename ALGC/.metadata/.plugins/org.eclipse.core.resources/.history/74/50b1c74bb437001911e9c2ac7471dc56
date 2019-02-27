@@ -1,0 +1,25 @@
+package aula1;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.*;
+
+public class ex6 {
+
+	public static void main(String[] args) {
+		readTranslationFile("bloco1/dic1.txt");
+	}
+	
+	public static void readTranslationFile(String filepath) {
+		try {
+			List<String> lines = Files.readAllLines(Paths.get(filepath));
+			lines.stream().forEach(System.out::println);
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

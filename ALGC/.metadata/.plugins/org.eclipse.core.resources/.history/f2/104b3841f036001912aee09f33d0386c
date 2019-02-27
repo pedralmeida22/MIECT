@@ -1,0 +1,38 @@
+package aula1;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class ex3 {
+	static Map<Integer, String> mapp = new HashMap<>();
+ 	public static void main(String[] args) throws IOException {
+ 		readFile();
+		//loadMap(readFile());
+		//System.out.println(mapp.toString());
+	}
+	
+	public static String[] readFile() throws IOException {
+		List<String> lines = Files.readAllLines(Paths.get("bloco1/numbers.txt"));
+		lines.stream().forEach(System.out::println);
+		return Arrays.stream(lines.stream().collect(Collectors.joining(" "))
+									.split("-| |\n"))
+									.forEach(System.out::println);
+									//.collect(Collectors.toList()).toArray(new String[0]);
+	}
+	/*
+	public static void loadMap(String[] s) {
+		for(int i = 0; i < s.length-1; i = i + 2) {
+			String key = s[i];
+			String value = s[i+1];
+			mapp.put(Integer.parseInt(key), value);
+		}
+	}
+	
+	public String toString() {
+		return mapp.keySet().stream().map(x -> x.toString().concat("=").concat(mapp.get(x)))
+							.collect(Collectors.joining("\n"));
+	}
+	*/
+}

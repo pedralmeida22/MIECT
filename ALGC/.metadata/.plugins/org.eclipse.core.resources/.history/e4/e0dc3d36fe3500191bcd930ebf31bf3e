@@ -1,0 +1,19 @@
+package aula1;
+
+import java.util.*;
+
+public class ex2 {
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) {	
+		Stack<Double> stack = new Stack<>();
+		
+		System.out.println("Introduza uma expressao: ");
+		String[] exp = sc.nextLine().split(" ");
+		
+		for(String s : exp) {
+			double num = Double.parseDouble(s);
+			stack.push(num); 
+		}
+	}
+
+}

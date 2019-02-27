@@ -1,0 +1,36 @@
+package aula1;
+
+import java.util.*;
+
+public class ex1 {
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) {
+		
+		String exp = "";
+		
+		while(!valid(exp)) {
+			System.out.println("Introduza uma expressao: ");
+			exp = sc.nextLine();
+		}
+		
+		String[] split = exp.split(" ");
+		
+		double x = Double.parseDouble(split[0]);
+		double y = Double.parseDouble(split[2]);
+		String oper = 
+		
+		switch() {
+		
+		}
+		
+	}
+	
+	public static boolean valid(String exp) {
+		String[] split = exp.split(" ");
+		if(split.length != 3) {
+			return false;
+		}
+		return true;
+	}
+
+}

@@ -1,0 +1,26 @@
+package aula1;
+
+import java.util.*;
+
+public class ex1 {
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) {
+		
+		String exp = "";
+		
+		while(!valid(exp)) {
+			System.out.println("Introduza uma expressao: ");
+			exp = sc.nextLine();
+		}
+		
+	}
+	
+	public static boolean valid(String exp) {
+		String[] split = exp.split(" ");
+		if(split.length != 3) {
+			return false;
+		}
+		return true;
+	}
+
+}

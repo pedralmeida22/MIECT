@@ -1,0 +1,16 @@
+package aula1;
+
+import java.util.*;
+
+public class ex2 {
+	static Scanner sc = new Scanner(System.in);
+	static Stack<String> stack = new Stack<>();
+	public static void main(String[] args) {	
+		
+		System.out.println("Introduza uma expressao: ");
+		String[] exp = sc.nextLine().split(" ");
+		
+		
+	}
+
+}
