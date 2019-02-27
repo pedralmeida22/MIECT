@@ -1,0 +1,45 @@
+Cidade	Voos
+Amsterdam	1
+Barcelona	1
+Basel	1
+Brussels	1
+Brussels, Charleroi	1
+Carcassonne	1
+Clermont-Ferrand	1
+Eindhoven	1
+Faro	1
+Frankfurt	1
+Frankfurt, Hahn	1
+Geneva	1
+Hamburg	1
+Istanbul, Ataturk	1
+Lille	1
+Lisboa	1
+London, Gatwick	1
+London, Luton	1
+London, Stansted	1
+Luanda	1
+Luxembourg	1
+Lyon, St. Exupery	1
+Madeira	1
+Madrid	1
+Manchester	1
+Marseille	1
+Memmingen	1
+Milan, Malpensa	1
+Milan/Bergamo	1
+Origem	1
+Palma Mallorca	1
+Paris, Beauvais	1
+Paris, Ch. de Gaulle	1
+Paris, Orly	1
+Paris, Vatry	1
+Ponta Delgada	1
+Rome, Fiumicino	1
+Saint Etienne	1
+São Paulo, Guarulhos	1
+Tenerife Sur	1
+Toronto, Pearson	1
+Toulouse, Blagnac	1
+Valencia	1
+Zurich	1

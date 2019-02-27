@@ -1,0 +1,11 @@
+Turismo 2019/Expocentro, Aveiro
+E/100/Norte Tropical/abc@uax.pt/Luis Pires
+E/101/Sul Glacial/v231@uax.com/Maria Matos
+E/102/EspiritoDoBem/j3223@uax.es/Paulo Paula
+S/200/Cafetaria/KatieDosBifes/kjd231@uax.com/Rui Matias
+S/201/Restaurante/ManuelDosOssos/liuj@uax.pt/Carla Rio
+O/001/Central/admin@uax.pt/Chico Bocas/916652367
+V/20190119:16:00
+V/20190119:16:00
+V/20190119:16:01
+V/20190119:16:01

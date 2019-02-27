@@ -1,0 +1,9 @@
+1544800055202	Copy compilation unit
+1544800071879	Copy compilation unit
+1544800078472	Copy compilation unit
+1544801389202	Extract method 'printConstructors'
+1544801424047	Extract method 'printMethods'
+1544802059861	Extract method 'printFields'
+1544899558500	Infer generic type arguments
+1544901185879	Extract method 'printModifiers'
+1544902009314	Extract method 'printClass'

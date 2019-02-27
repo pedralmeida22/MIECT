@@ -1,0 +1,17 @@
+
+Alínea 1) ----------------------------------
+
+Participante [email=bmarq87756@sapinho.pt, nome=Belinda Marques]
+Participante [email=pedro@coldmail.com, nome=Pedro Silva]
+Participante [email=bm1880@sapinho.pt, nome=Anabela Lima]
+
+Responsável: Participante [email=jmartin27@kmail.pt, nome=Joaquim Martins]
+Participante [email=jmartin27@kmail.pt, nome=Joaquim Martins]
+Participante [email=lopesmar@mymail.com, nome=Maria Lopes]
+
+Feira Indústria 5.0 - Total de Expositores: 4; Total de visitantes: 5
+Emails dos responsáveis: [jmartin27@kmail.pt, chef86@cookmail.pt, depois@uantes.pt, bmarq87756@sapinho.pt]
+StandServicos [servico=RESTAURANTE] Stand [codigo=501, nome=Paparoca, resp= Participante [email=chef86@cookmail.pt, nome=Ana Nunes]]
+
+Alínea 2) ----------------------------------
+

@@ -1,0 +1,5 @@
+package aula3;
+
+public enum COLOR {
+	VERMELHO, VERDE, BRANCO, PRETO, AZUL, CINZENTO, CASTANHO, LARANJA;
+}
