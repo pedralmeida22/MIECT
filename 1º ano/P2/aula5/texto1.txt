@@ -1,0 +1,4 @@
+Isto deve ser copiado para outro ficheiro
+isto nao vai funcionar
+...
+ultima linha

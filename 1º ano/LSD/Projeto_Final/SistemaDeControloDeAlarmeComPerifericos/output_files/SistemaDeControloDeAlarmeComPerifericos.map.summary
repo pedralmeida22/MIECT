@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Jun 05 10:11:08 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : SistemaDeControloDeAlarmeComPerifericos
+Top-level Entity Name : SistemaDeControloDeAlarmeComPerifericos
+Family : Cyclone IV E
+Total logic elements : 1,734
+    Total combinational functions : 1,658
+    Dedicated logic registers : 717
+Total registers : 717
+Total pins : 69
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

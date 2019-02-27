@@ -1,0 +1,92 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/LSD/aula7/parte2/simulation/modelsim
+Ecntupdown4
+Z1 w1523353107
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8C:/LSD/aula7/parte2/CntUpDown4.vhd
+Z6 FC:/LSD/aula7/parte2/CntUpDown4.vhd
+l0
+L5
+V2JmgR4nW8^jkWGl7haj]U3
+!s100 VBfF@D02R@:^Z0<gV3H6M3
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1523354044
+!i10b 1
+Z9 !s108 1523354044.000000
+Z10 !s90 -reportprogress|300|-work|work|C:/LSD/aula7/parte2/CntUpDown4.vhd|
+Z11 !s107 C:/LSD/aula7/parte2/CntUpDown4.vhd|
+!i113 1
+Z12 o-work work
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+Z14 DEx4 work 10 cntupdown4 0 22 2JmgR4nW8^jkWGl7haj]U3
+l18
+L14
+VUG]abVFeaDXHgR?W@WD@S1
+!s100 dCTB^i^AzZO3`Nk?PFSb<1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ecntupdown4_tb
+Z15 w1523354005
+R3
+R4
+R0
+Z16 8C:/LSD/aula7/parte2/CntUpDown4_Tb.vhd
+Z17 FC:/LSD/aula7/parte2/CntUpDown4_Tb.vhd
+l0
+L4
+VSjhk:@V3OzK`A@>68c]LS3
+!s100 ?]SMhnGVoUhUe8@C8TO@A2
+R7
+32
+R8
+!i10b 1
+R9
+Z18 !s90 -reportprogress|300|-work|work|C:/LSD/aula7/parte2/CntUpDown4_Tb.vhd|
+Z19 !s107 C:/LSD/aula7/parte2/CntUpDown4_Tb.vhd|
+!i113 1
+R12
+R13
+Astimulus
+R2
+R14
+R3
+R4
+Z20 DEx4 work 13 cntupdown4_tb 0 22 Sjhk:@V3OzK`A@>68c]LS3
+l16
+L7
+Z21 VoDfYE2h_O6G=AcX^9d5zj0
+Z22 !s100 ;_d;I:NeBTTLWDiFF;85D2
+R7
+32
+R8
+!i10b 1
+R9
+R18
+R19
+!i113 1
+R12
+R13

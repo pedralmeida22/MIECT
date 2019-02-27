@@ -1,0 +1,6 @@
+
+ Nome do Robo: VALENTE MERDA | Tempo de prova: 10 | Numero de elementos da equipa:  2 
+
+ Nome do Robo: JOAQUIM TELESCOPIO | Tempo de prova: 100 | Numero de elementos da equipa:  5 
+
+ Nome do Robo: HACKERMAN | Tempo de prova:  2 | Numero de elementos da equipa:  8 

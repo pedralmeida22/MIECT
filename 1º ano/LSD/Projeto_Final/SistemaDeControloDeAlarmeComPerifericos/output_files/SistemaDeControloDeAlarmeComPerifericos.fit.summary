@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Jun 05 10:11:46 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : SistemaDeControloDeAlarmeComPerifericos
+Top-level Entity Name : SistemaDeControloDeAlarmeComPerifericos
+Family : Cyclone IV E
+Device : EP4CE115F29C7
+Timing Models : Final
+Total logic elements : 1,695 / 114,480 ( 1 % )
+    Total combinational functions : 1,658 / 114,480 ( 1 % )
+    Dedicated logic registers : 717 / 114,480 ( < 1 % )
+Total registers : 717
+Total pins : 120 / 529 ( 23 % )
+Total virtual pins : 0
+Total memory bits : 0 / 3,981,312 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 532 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

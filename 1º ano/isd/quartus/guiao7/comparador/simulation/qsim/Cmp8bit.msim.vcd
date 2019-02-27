@@ -1,0 +1,168 @@
+$comment
+	File created using the following command:
+		vcd file Cmp8bit.msim.vcd -direction
+$end
+$date
+	Tue Nov 27 16:45:49 2018
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module cmpbit_8_vlg_vec_tst $end
+$var reg 1 ! ai0 $end
+$var reg 1 " ai1 $end
+$var reg 1 # ai2 $end
+$var reg 1 $ ai3 $end
+$var reg 1 % ai4 $end
+$var reg 1 & ai5 $end
+$var reg 1 ' ai6 $end
+$var reg 1 ( ai7 $end
+$var reg 1 ) bi0 $end
+$var reg 1 * bi1 $end
+$var reg 1 + bi2 $end
+$var reg 1 , bi3 $end
+$var reg 1 - bi4 $end
+$var reg 1 . bi5 $end
+$var reg 1 / bi6 $end
+$var reg 1 0 bi7 $end
+$var reg 1 1 xin $end
+$var reg 1 2 yin $end
+$var reg 1 3 zin $end
+$var wire 1 4 xout $end
+$var wire 1 5 yout $end
+$var wire 1 6 zout $end
+
+$scope module i1 $end
+$var wire 1 7 gnd $end
+$var wire 1 8 vcc $end
+$var wire 1 9 unknown $end
+$var tri1 1 : devclrn $end
+$var tri1 1 ; devpor $end
+$var tri1 1 < devoe $end
+$var wire 1 = yout~output_o $end
+$var wire 1 > xout~output_o $end
+$var wire 1 ? zout~output_o $end
+$var wire 1 @ yin~input_o $end
+$var wire 1 A ai7~input_o $end
+$var wire 1 B ai6~input_o $end
+$var wire 1 C bi6~input_o $end
+$var wire 1 D bi7~input_o $end
+$var wire 1 E inst5|inst~0_combout $end
+$var wire 1 F ai5~input_o $end
+$var wire 1 G ai4~input_o $end
+$var wire 1 H bi4~input_o $end
+$var wire 1 I bi5~input_o $end
+$var wire 1 J inst5|inst~1_combout $end
+$var wire 1 K ai3~input_o $end
+$var wire 1 L ai2~input_o $end
+$var wire 1 M bi2~input_o $end
+$var wire 1 N bi3~input_o $end
+$var wire 1 O inst5|inst~2_combout $end
+$var wire 1 P ai1~input_o $end
+$var wire 1 Q bi1~input_o $end
+$var wire 1 R ai0~input_o $end
+$var wire 1 S bi0~input_o $end
+$var wire 1 T inst7|pqp~combout $end
+$var wire 1 U inst5|inst~3_combout $end
+$var wire 1 V inst5|inst~combout $end
+$var wire 1 W xin~input_o $end
+$var wire 1 X inst1|inst3~0_combout $end
+$var wire 1 Y inst1|inst3~1_combout $end
+$var wire 1 Z inst1|inst3~2_combout $end
+$var wire 1 [ inst1|inst3~3_combout $end
+$var wire 1 \ inst2|inst3~0_combout $end
+$var wire 1 ] inst3|inst3~0_combout $end
+$var wire 1 ^ inst4|inst3~0_combout $end
+$var wire 1 _ inst5|inst3~0_combout $end
+$var wire 1 ` zin~input_o $end
+$var wire 1 a inst1|inst8~0_combout $end
+$var wire 1 b inst1|inst8~1_combout $end
+$var wire 1 c inst1|inst8~2_combout $end
+$var wire 1 d inst1|inst8~3_combout $end
+$var wire 1 e inst2|inst8~0_combout $end
+$var wire 1 f inst3|inst8~0_combout $end
+$var wire 1 g inst4|inst8~0_combout $end
+$var wire 1 h inst5|inst8~0_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+0%
+0&
+0'
+0(
+0)
+0*
+0+
+0,
+0-
+0.
+0/
+00
+01
+02
+13
+04
+05
+16
+07
+18
+x9
+1:
+1;
+1<
+0=
+0>
+1?
+0@
+0A
+0B
+0C
+0D
+1E
+0F
+0G
+0H
+0I
+1J
+0K
+0L
+0M
+0N
+1O
+0P
+0Q
+0R
+0S
+0T
+1U
+0V
+0W
+0X
+0Y
+0Z
+0[
+0\
+0]
+0^
+0_
+1`
+1a
+0b
+1c
+0d
+1e
+1f
+1g
+1h
+$end
+#1000000

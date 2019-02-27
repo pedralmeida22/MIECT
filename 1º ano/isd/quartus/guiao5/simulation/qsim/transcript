@@ -1,0 +1,32 @@
+# do decod4to16.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:23:23 on Oct 30,2018
+# vlog -work work decod4to16.vo 
+# -- Compiling module decod4to16
+# 
+# Top level modules:
+# 	decod4to16
+# End time: 16:23:23 on Oct 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:23:23 on Oct 30,2018
+# vlog -work work ex3.vwf.vt 
+# -- Compiling module decod4to16_vlg_vec_tst
+# 
+# Top level modules:
+# 	decod4to16_vlg_vec_tst
+# End time: 16:23:23 on Oct 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.decod4to16_vlg_vec_tst 
+# Start time: 16:23:23 on Oct 30,2018
+# Loading work.decod4to16_vlg_vec_tst
+# Loading work.decod4to16
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# after#25
+# ** Note: $finish    : ex3.vwf.vt(80)
+#    Time: 1 us  Iteration: 0  Instance: /decod4to16_vlg_vec_tst
+# End time: 16:23:23 on Oct 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

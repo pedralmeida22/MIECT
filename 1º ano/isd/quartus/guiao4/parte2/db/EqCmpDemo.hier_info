@@ -1,0 +1,84 @@
+|EqCmp16Demo
+pin_name9 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+inPort0[0] => EqCmp4buzz:inst.input0[0]
+inPort0[1] => EqCmp4buzz:inst.input0[1]
+inPort0[2] => EqCmp4buzz:inst.input0[2]
+inPort0[3] => EqCmp4buzz:inst.input0[3]
+inPort0[4] => EqCmp4buzz:inst1.input0[0]
+inPort0[5] => EqCmp4buzz:inst1.input0[1]
+inPort0[6] => EqCmp4buzz:inst1.input0[2]
+inPort0[7] => EqCmp4buzz:inst1.input0[3]
+inPort0[8] => EqCmp4buzz:inst2.input0[0]
+inPort0[9] => EqCmp4buzz:inst2.input0[1]
+inPort0[10] => EqCmp4buzz:inst2.input0[2]
+inPort0[11] => EqCmp4buzz:inst2.input0[3]
+inPort0[12] => EqCmp4buzz:inst3.input0[0]
+inPort0[13] => EqCmp4buzz:inst3.input0[1]
+inPort0[14] => EqCmp4buzz:inst3.input0[2]
+inPort0[15] => EqCmp4buzz:inst3.input0[3]
+inPort1[0] => EqCmp4buzz:inst.input1[0]
+inPort1[1] => EqCmp4buzz:inst.input1[1]
+inPort1[2] => EqCmp4buzz:inst.input1[2]
+inPort1[3] => EqCmp4buzz:inst.input1[3]
+inPort1[4] => EqCmp4buzz:inst1.input1[0]
+inPort1[5] => EqCmp4buzz:inst1.input1[1]
+inPort1[6] => EqCmp4buzz:inst1.input1[2]
+inPort1[7] => EqCmp4buzz:inst1.input1[3]
+inPort1[8] => EqCmp4buzz:inst2.input1[0]
+inPort1[9] => EqCmp4buzz:inst2.input1[1]
+inPort1[10] => EqCmp4buzz:inst2.input1[2]
+inPort1[11] => EqCmp4buzz:inst2.input1[3]
+inPort1[12] => EqCmp4buzz:inst3.input1[0]
+inPort1[13] => EqCmp4buzz:inst3.input1[1]
+inPort1[14] => EqCmp4buzz:inst3.input1[2]
+inPort1[15] => EqCmp4buzz:inst3.input1[3]
+
+
+|EqCmp16Demo|EqCmp4buzz:inst
+cmpOut <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+input1[0] => inst3.IN0
+input1[1] => inst2.IN0
+input1[2] => inst1.IN0
+input1[3] => inst.IN0
+input0[0] => inst3.IN1
+input0[1] => inst2.IN1
+input0[2] => inst1.IN1
+input0[3] => inst.IN1
+
+
+|EqCmp16Demo|EqCmp4buzz:inst1
+cmpOut <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+input1[0] => inst3.IN0
+input1[1] => inst2.IN0
+input1[2] => inst1.IN0
+input1[3] => inst.IN0
+input0[0] => inst3.IN1
+input0[1] => inst2.IN1
+input0[2] => inst1.IN1
+input0[3] => inst.IN1
+
+
+|EqCmp16Demo|EqCmp4buzz:inst2
+cmpOut <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+input1[0] => inst3.IN0
+input1[1] => inst2.IN0
+input1[2] => inst1.IN0
+input1[3] => inst.IN0
+input0[0] => inst3.IN1
+input0[1] => inst2.IN1
+input0[2] => inst1.IN1
+input0[3] => inst.IN1
+
+
+|EqCmp16Demo|EqCmp4buzz:inst3
+cmpOut <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+input1[0] => inst3.IN0
+input1[1] => inst2.IN0
+input1[2] => inst1.IN0
+input1[3] => inst.IN0
+input0[0] => inst3.IN1
+input0[1] => inst2.IN1
+input0[2] => inst1.IN1
+input0[3] => inst.IN1
+
+

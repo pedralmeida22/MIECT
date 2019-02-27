@@ -1,0 +1,240 @@
+\documentclass{report}
+\usepackage[T1]{fontenc} % Fontes T1
+\usepackage[utf8]{inputenc} % Input UTF8
+\usepackage[backend=biber, style=ieee]{biblatex} % para usar bibliografia
+\usepackage{csquotes}
+\usepackage[portuguese]{babel} %Usar língua portuguesa
+\usepackage{blindtext} % Gerar texto automaticamente
+\usepackage[printonlyused]{acronym}
+\usepackage{hyperref} % para autoref
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\graphicspath{{imagens/}}
+\bibliography{bibliografia.bib}
+
+\begin{document}
+
+%%
+% Definições
+%
+\def\titulo{Misturador de Músicas}
+\def\data{29/05/2018}
+\def\autores{André Alves, Daniel Correia, Pedro Almeida, Pedro Valente}
+\def\autorescontactos{(88811) andr.alves@ua.pt, (88753) dcorreia@ua.pt, (89205) pedro22@ua.pt, (88858)pedro.valente@ua.pt}
+\def\departamento{Departamento de Electrónica, Telecomunicações e Informática}
+\def\empresa{Universidade De Aveiro}
+\def\logotipo{img/ua.pdf}
+%
+
+%%%%%% CAPA %%%%%%
+%
+\begin{titlepage}
+
+\begin{center}
+%
+\vspace*{50mm}
+%
+{\Huge \titulo}\\ 
+%
+\vspace{10mm}
+%
+{\Large \empresa}\\
+%
+\vspace{10mm}
+%
+{\LARGE \autores}\\ 
+%
+\vspace{30mm}
+%
+\begin{figure}[h]
+\center
+\includegraphics{\logotipo}
+\end{figure}
+%
+\vspace{30mm}
+\end{center}
+%
+
+\end{titlepage}
+
+%%  Página de Título %%
+\title{%
+{\Huge\textbf{\titulo}}\\
+{\Large \departamento\\ \empresa}
+}
+%
+\author{%
+    \autores \\
+    \autorescontactos
+}
+%
+\date{\data}
+%
+\maketitle
+
+\pagenumbering{arabic}
+
+
+\tableofcontents
+\listoffigures    % descomentar se necessário
+
+
+
+\chapter{Introdução}
+\label{chap.introducao}
+Este relatório tem como propósito explicitar como o projeto foi desenvolvido, passando desde as especificações do alarme, a sua arquitetura, manual de instruções e a divisão das tarefas pelos elementos do grupo.
+
+O projeto consistiu em implementar um módulo de controlo para um sistema de alarme doméstico. O alarme permite dois modos de disparo do alarme, modo interno e modo externo. No modo interno apenas os sensores das janelas, dois dos sensores de presença e o botão de pânico ativam o alarme. Já no modo externo, todos os sensores ativam o alarme. O alarme permite também a sua ativação rápida recorrendo a um botão de pânico. Para desativar o alarme é necessário introduzir um código secreto sendo que, ao fim de três tentativas falhadas, o alarme disparará. É também possível ver as últimas ocorrências que fizeram com que o alarme fosse disparado.
+
+No \autoref{chap.especificações} serão apresentadas as características mais especificas do alarme. No \autoref{chap.arquitetura} será apresentada a arquitetura detalhada do alarme assim como o esquema da máquina de estados. O \autoref{chap.M_Instr} diz respeito ao Manual de Instruções do alarme, primeiramente de uma fase inicial e seguidamente de uma fase mais avançada do alarme. Posteriormente, no \autoref{chap.conclusao} serão apresentadas as conclusões finais do projeto. Finalmente, no \autoref{contribuições} será explicitado as contribuições de cada autor.
+	
+
+
+
+\chapter{Especificações}
+\label{chap.especificações}
+	
+As especificações do alarme são:
+	\begin{itemize}
+		\item Depois do alarme ser ativado, o utilizador tem 20 segundos para sair de casa;
+		
+		\item O alarme ligado é sinalizado pelo piscar do LEDG(0) à frequência de 1Hz;
+		
+		\item Após a ativação de um dos sensores de presença, o utilizador possui dez segundos para desligar o alarme, caso contrário o alarme dispara. Se um dos sensores das janelas for ativado, o alarme dispara imediatamente;
+		
+		\item Os interruptores SW(3..0) representam os sensores das janelas;
+		
+		\item Os interruptores SW(7..4) representam os sensores de presença no interior da habitação; 
+		
+		\item As temporizações são todas indicadas nos displays de 7 segmentos;
+		
+		\item O modo do alarme é controlado pelo SW(10) e é indicado no LCD;
+		
+		\item O botão de pânico é o SW(8);
+		
+		\item A sirene do alarme corresponde ao piscar intermitente  de vários LEDR;
+		
+		\item  O alarme é desativado por dois códigos secretos distintos, sendo um fixo (sequência "1,2,3,4" na fase básica e "lsdfixe" na fase mais avançada) e um outro programável;
+		
+		\item Ao inserir o código secreto vai aparecendo um "*" no LCD por cada carácter inserido;
+		
+		\item O código secreto pode ser introduzido através de um teclado ps2;
+		 
+	\end{itemize}
+
+	
+
+\chapter{Arquitetura}
+\label{chap.arquitetura}
+
+Na figura 3.1 é apresentada a arquitetura geral do sistema de alarme doméstico. Assim como na figura 3.2, está representada a máquina de estados do sistema.
+
+	\begin{figure} [t]
+		\centering
+		\includegraphics[scale=0.6, angle = 90]{img/arq_final.PNG}
+		\caption{Arquitetura geral}
+	\end{figure}
+
+	\begin{figure} [h]
+		\centering
+		\includegraphics[scale=0.7]{img/m_estados.PNG}
+		\caption{Máquina de Estados}
+	\end{figure}
+
+	
+	
+\chapter{Manual de instruções}
+\label{chap.M_Instr}
+	
+	Na figura 4.1 apresenta-se o manual de instruções, seguido de os passos de modo a utilizar o alarme numa fase básica do projeto.  
+	
+	\begin{figure} [h]
+		\centering
+		\includegraphics[scale=0.65]{img/m_instruc_ini.PNG}
+		\caption{Manual de instruções - modelo básico}
+	\end{figure}
+
+\newpage
+	
+	\textbf{Como funciona:}
+	\begin{enumerate}
+ 		\item Ligar o alarme:\\
+ 		Premir botão ligar (Tecla4).
+ 		
+ 		\item Botão de pânico:\\
+ 		Ligar interruptor botão de pânico. 
+ 		
+ 		\item Registo das últimas ocorrências:\\
+ 		Premir botão memória. A informação aparece no display de registo. 
+ 		A informação é transmitida da seguinte forma:
+ 		1..7 - Sensor que fez disparar alarme;
+ 		8 - botão de pânico;
+ 		9 - inseriu código secreto errado três vezes. 	
+ 		Premir botão voltar para sair do registo.
+ 		
+ 		\item Alterar código secreto:\\
+ 		Premir Tecla 3 seguido de Tecla 4 e depois o novo código secreto.
+ 		
+ 		\item Desligar alarme:\\
+ 		Introduzir código secreto. 		
+	\end{enumerate}	
+	
+	
+	
+	 Na figura 4.2 apresenta-se o manual de instruções, seguido de os passos de modo a utilizar o alarme na fase mais avançada do projeto.
+	
+	\begin{figure} [h]
+		\centering
+		\includegraphics[scale=0.65]{img/m_instruc_avan.PNG}
+		\caption{Manual de instruções - modelo avançado}
+	\end{figure}
+	
+\newpage
+
+	\textbf{Como funciona:}
+	\begin{enumerate}
+ 		\item Ligar o alarme:\\
+ 		Premir botão ligar (Tecla4).
+ 		
+ 		\item Definir modo interno/externo:\\
+ 		Alternar interruptor modo interno/externo. O modo em que o alarme                    	    se encontra é apresentado no LCD de informações diversas.
+ 		
+ 		\item Botão de pânico:\\
+ 		Ligar interruptor botão de pânico. 
+ 		
+ 		\item Registo das últimas ocorrências:\\
+ 		Premir botão memória. A informação aparece no LCD de informações 			diversas. 
+ 		A informação é transmitida da seguinte forma:
+ 		1..7 - Sensor que fez disparar alarme;
+ 		8 - botão de pânico;
+ 		9 - inseriu código secreto errado três vezes.
+ 		Premir botão voltar para sair do registo.
+ 		
+ 		\item Alterar código secreto:\\
+ 		Premir Tecla 3 seguido de Enter e depois o novo código secreto.
+ 		
+ 		\item Desligar alarme:\\
+ 		Introduzir código secreto. 		
+	\end{enumerate}
+	
+	
+	Nesta versão do alarme, durante a sua utilização, serão também apresentadas no LCD de informações diversas alguns dos passos explicitados anteriormente, de forma a ser mais intuitivo.
+	
+	 
+
+	
+\chapter{Conclusões Finais}
+\label{chap.conclusao}
+	Com este projeto de sistema de alarme doméstico foi possível consolidar os conhecimentos adquiridos em aulas pois foi necessário tudo o que foi aprendido durante o semestre. 
+	Foi também possível, não só implementar e por a funcionar cada módulo singularmente, mas ver todos a funcionar em conjunto para um propósito. 
+
+ 
+\chapter{Contribuições dos autores}
+\label{contribuições}
+
+\noindent
+Daniel Correia - 60\% \\
+Pedro Almeida - 40\%
+
+
+\end{document}

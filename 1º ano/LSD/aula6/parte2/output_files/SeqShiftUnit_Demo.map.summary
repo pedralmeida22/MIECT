@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Apr 03 21:54:55 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : SeqShiftUnit_Demo
+Top-level Entity Name : SeqShiftUnit_Demo
+Family : Cyclone IV E
+Total logic elements : 74
+    Total combinational functions : 74
+    Dedicated logic registers : 40
+Total registers : 40
+Total pins : 24
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

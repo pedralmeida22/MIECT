@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Apr 10 19:38:06 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : Mini_projecto_fase3
+Top-level Entity Name : Mini_projecto_fase3_v2
+Family : Cyclone IV E
+Total logic elements : 596
+    Total combinational functions : 596
+    Dedicated logic registers : 68
+Total registers : 68
+Total pins : 56
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,41 @@
+|CombShiftUnit
+dataIn[0] => ShiftLeft0.IN36
+dataIn[0] => ShiftRight0.IN36
+dataIn[1] => ShiftLeft0.IN35
+dataIn[1] => ShiftRight0.IN35
+dataIn[2] => ShiftLeft0.IN34
+dataIn[2] => ShiftRight0.IN34
+dataIn[3] => ShiftLeft0.IN33
+dataIn[3] => ShiftRight0.IN33
+dataIn[4] => ShiftLeft0.IN32
+dataIn[4] => ShiftRight0.IN32
+dataIn[5] => ShiftLeft0.IN31
+dataIn[5] => ShiftRight0.IN31
+dataIn[6] => ShiftLeft0.IN30
+dataIn[6] => ShiftRight0.IN30
+dataIn[7] => ShiftLeft0.IN29
+dataIn[7] => ShiftRight0.IN29
+dirLeft => dataOut.OUTPUTSELECT
+dirLeft => dataOut.OUTPUTSELECT
+dirLeft => dataOut.OUTPUTSELECT
+dirLeft => dataOut.OUTPUTSELECT
+dirLeft => dataOut.OUTPUTSELECT
+dirLeft => dataOut.OUTPUTSELECT
+dirLeft => dataOut.OUTPUTSELECT
+dirLeft => dataOut.OUTPUTSELECT
+shAmount[0] => ShiftLeft0.IN39
+shAmount[0] => ShiftRight0.IN39
+shAmount[1] => ShiftLeft0.IN38
+shAmount[1] => ShiftRight0.IN38
+shAmount[2] => ShiftLeft0.IN37
+shAmount[2] => ShiftRight0.IN37
+dataOut[0] <= dataOut.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= dataOut.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= dataOut.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= dataOut.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= dataOut.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= dataOut.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= dataOut.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[7] <= dataOut.DB_MAX_OUTPUT_PORT_TYPE
+
+

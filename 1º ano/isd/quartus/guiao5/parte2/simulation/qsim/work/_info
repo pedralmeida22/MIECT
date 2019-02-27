@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/isd/guiao5/parte2/simulation/qsim
+vPENCOD8to3
+Z1 !s110 1541515390
+!i10b 1
+!s100 06nM5g76Db@:kUR8@mNgn2
+I;4QOoO2H]78J9Vd_>`:`c3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1541515389
+8PENCOD8to3.vo
+FPENCOD8to3.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1541515390.000000
+!s107 PENCOD8to3.vo|
+!s90 -work|work|PENCOD8to3.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@p@e@n@c@o@d8to3
+vPENCOD8to3_vlg_vec_tst
+R1
+!i10b 1
+!s100 fK_]NA9=NRRfTQgWSR?C?2
+Ik@Tli:P^EO6o8oZ4g;>4d2
+R2
+R0
+w1541515387
+8PENCOD8to3.vwf.vt
+FPENCOD8to3.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 PENCOD8to3.vwf.vt|
+!s90 -work|work|PENCOD8to3.vwf.vt|
+!i113 1
+R5
+R6
+n@p@e@n@c@o@d8to3_vlg_vec_tst

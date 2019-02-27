@@ -1,0 +1,11 @@
+
+State Machine - |DrinksMachine|DrinksFSM:machine|s_currentState
+Name s_currentState.DRINK s_currentState.E80 s_currentState.E70 s_currentState.E60 s_currentState.E50 s_currentState.E40 s_currentState.E20 s_currentState.CLEARED 
+s_currentState.CLEARED 0 0 0 0 0 0 0 0 
+s_currentState.E20 0 0 0 0 0 0 1 1 
+s_currentState.E40 0 0 0 0 0 1 0 1 
+s_currentState.E50 0 0 0 0 1 0 0 1 
+s_currentState.E60 0 0 0 1 0 0 0 1 
+s_currentState.E70 0 0 1 0 0 0 0 1 
+s_currentState.E80 0 1 0 0 0 0 0 1 
+s_currentState.DRINK 1 0 0 0 0 0 0 1 

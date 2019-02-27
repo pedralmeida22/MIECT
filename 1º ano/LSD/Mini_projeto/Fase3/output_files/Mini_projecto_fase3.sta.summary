@@ -1,0 +1,113 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -3.957
+TNS   : -64.687
+
+Type  : Slow 1200mV 85C Model Setup 'ClkDividerN:clk4Hz|clkOut'
+Slack : -3.898
+TNS   : -104.800
+
+Type  : Slow 1200mV 85C Model Setup 'KEY[0]'
+Slack : 0.210
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'ClkDividerN:clk4Hz|clkOut'
+Slack : 0.250
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'KEY[0]'
+Slack : 0.445
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.655
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -44.120
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'KEY[0]'
+Slack : -3.000
+TNS   : -4.285
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'ClkDividerN:clk4Hz|clkOut'
+Slack : -1.285
+TNS   : -44.975
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -3.571
+TNS   : -54.918
+
+Type  : Slow 1200mV 0C Model Setup 'ClkDividerN:clk4Hz|clkOut'
+Slack : -3.420
+TNS   : -92.021
+
+Type  : Slow 1200mV 0C Model Setup 'KEY[0]'
+Slack : 0.297
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'ClkDividerN:clk4Hz|clkOut'
+Slack : 0.271
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'KEY[0]'
+Slack : 0.398
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.599
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -44.120
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'KEY[0]'
+Slack : -3.000
+TNS   : -4.285
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'ClkDividerN:clk4Hz|clkOut'
+Slack : -1.285
+TNS   : -44.975
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -1.474
+TNS   : -16.611
+
+Type  : Fast 1200mV 0C Model Setup 'ClkDividerN:clk4Hz|clkOut'
+Slack : -1.465
+TNS   : -36.242
+
+Type  : Fast 1200mV 0C Model Setup 'KEY[0]'
+Slack : 0.624
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'ClkDividerN:clk4Hz|clkOut'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'KEY[0]'
+Slack : 0.206
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.299
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -36.972
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'KEY[0]'
+Slack : -3.000
+TNS   : -4.181
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'ClkDividerN:clk4Hz|clkOut'
+Slack : -1.000
+TNS   : -35.000
+
+------------------------------------------------------------

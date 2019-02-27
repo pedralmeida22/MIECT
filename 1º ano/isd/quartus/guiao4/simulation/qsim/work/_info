@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/isd/guiao4/simulation/qsim
+vGateDemo
+!s110 1540301417
+!i10b 1
+!s100 aKXkY;WUI6_LhPm]C<b<N3
+I`=?kdHSGXoCg5UZ_WK5PI3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1540301416
+8GateDemo.vo
+FGateDemo.vo
+L0 31
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1540301417.000000
+!s107 GateDemo.vo|
+!s90 -work|work|GateDemo.vo|
+!i113 1
+Z3 o-work work
+Z4 tCvgOpt 0
+n@gate@demo
+vGateDemo_vlg_vec_tst
+!s110 1540301418
+!i10b 1
+!s100 _o5;B9U8AQMlhc[V0PEkZ3
+IgAk[I5fbeKiTbdeG=oCUA3
+R1
+R0
+w1540301414
+8GateDemo2.vwf.vt
+FGateDemo2.vwf.vt
+L0 29
+R2
+r1
+!s85 0
+31
+!s108 1540301418.000000
+!s107 GateDemo2.vwf.vt|
+!s90 -work|work|GateDemo2.vwf.vt|
+!i113 1
+R3
+R4
+n@gate@demo_vlg_vec_tst

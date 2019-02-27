@@ -1,0 +1,66 @@
+|ShiftRegister_Demo
+CLOCK_50 => clkdividern:clk_divider.clkIn
+SW[0] => shiftregistern:shift_divider.sin
+LEDG[0] << <GND>
+LEDG[1] << <GND>
+LEDG[2] << <GND>
+LEDG[3] << <GND>
+LEDG[4] << <GND>
+LEDG[5] << <GND>
+LEDG[6] << <GND>
+LEDG[7] << <GND>
+LEDG[8] << clkdividern:clk_divider.clkOut
+LEDR[0] << shiftregistern:shift_divider.dataOut[0]
+LEDR[1] << shiftregistern:shift_divider.dataOut[1]
+LEDR[2] << shiftregistern:shift_divider.dataOut[2]
+LEDR[3] << shiftregistern:shift_divider.dataOut[3]
+
+
+|ShiftRegister_Demo|ClkDividerN:clk_divider
+clkIn => s_divCounter[0].CLK
+clkIn => s_divCounter[1].CLK
+clkIn => s_divCounter[2].CLK
+clkIn => s_divCounter[3].CLK
+clkIn => s_divCounter[4].CLK
+clkIn => s_divCounter[5].CLK
+clkIn => s_divCounter[6].CLK
+clkIn => s_divCounter[7].CLK
+clkIn => s_divCounter[8].CLK
+clkIn => s_divCounter[9].CLK
+clkIn => s_divCounter[10].CLK
+clkIn => s_divCounter[11].CLK
+clkIn => s_divCounter[12].CLK
+clkIn => s_divCounter[13].CLK
+clkIn => s_divCounter[14].CLK
+clkIn => s_divCounter[15].CLK
+clkIn => s_divCounter[16].CLK
+clkIn => s_divCounter[17].CLK
+clkIn => s_divCounter[18].CLK
+clkIn => s_divCounter[19].CLK
+clkIn => s_divCounter[20].CLK
+clkIn => s_divCounter[21].CLK
+clkIn => s_divCounter[22].CLK
+clkIn => s_divCounter[23].CLK
+clkIn => s_divCounter[24].CLK
+clkIn => s_divCounter[25].CLK
+clkIn => s_divCounter[26].CLK
+clkIn => s_divCounter[27].CLK
+clkIn => s_divCounter[28].CLK
+clkIn => s_divCounter[29].CLK
+clkIn => s_divCounter[30].CLK
+clkIn => clkOut~reg0.CLK
+clkOut <= clkOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ShiftRegister_Demo|ShiftRegisterN:shift_divider
+clk => s_dataOut[0].CLK
+clk => s_dataOut[1].CLK
+clk => s_dataOut[2].CLK
+clk => s_dataOut[3].CLK
+sin => s_dataOut[0].DATAIN
+dataOut[0] <= s_dataOut[0].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= s_dataOut[1].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= s_dataOut[2].DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= s_dataOut[3].DB_MAX_OUTPUT_PORT_TYPE
+
+

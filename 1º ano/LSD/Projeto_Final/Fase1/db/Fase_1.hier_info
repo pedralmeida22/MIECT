@@ -1,0 +1,94 @@
+|Register_Pin
+clk => reg8:reg8.clk
+clk => seqdetector:seq_detec.clk
+enable_rec => s_start.OUTPUTSELECT
+btn[0] => s_start.DATAB
+btn[0] => seqdetector:seq_detec.btn[0]
+btn[1] => seqdetector:seq_detec.btn[1]
+btn[2] => seqdetector:seq_detec.btn[2]
+btn[3] => seqdetector:seq_detec.btn[3]
+done <= comb.DB_MAX_OUTPUT_PORT_TYPE
+entering <= seqdetector:seq_detec.entering
+pin[0] <= reg8:reg8.dataOut[0]
+pin[1] <= reg8:reg8.dataOut[1]
+pin[2] <= reg8:reg8.dataOut[2]
+pin[3] <= reg8:reg8.dataOut[3]
+pin[4] <= reg8:reg8.dataOut[4]
+pin[5] <= reg8:reg8.dataOut[5]
+pin[6] <= reg8:reg8.dataOut[6]
+pin[7] <= reg8:reg8.dataOut[7]
+
+
+|Register_Pin|Reg8:reg8
+clk => dataOut[0]~reg0.CLK
+clk => dataOut[1]~reg0.CLK
+clk => dataOut[2]~reg0.CLK
+clk => dataOut[3]~reg0.CLK
+clk => dataOut[4]~reg0.CLK
+clk => dataOut[5]~reg0.CLK
+clk => dataOut[6]~reg0.CLK
+clk => dataOut[7]~reg0.CLK
+enable => dataOut[0]~reg0.ENA
+enable => dataOut[1]~reg0.ENA
+enable => dataOut[2]~reg0.ENA
+enable => dataOut[3]~reg0.ENA
+enable => dataOut[4]~reg0.ENA
+enable => dataOut[5]~reg0.ENA
+enable => dataOut[6]~reg0.ENA
+enable => dataOut[7]~reg0.ENA
+dataIn[0] => dataOut[0]~reg0.DATAIN
+dataIn[1] => dataOut[1]~reg0.DATAIN
+dataIn[2] => dataOut[2]~reg0.DATAIN
+dataIn[3] => dataOut[3]~reg0.DATAIN
+dataIn[4] => dataOut[4]~reg0.DATAIN
+dataIn[5] => dataOut[5]~reg0.DATAIN
+dataIn[6] => dataOut[6]~reg0.DATAIN
+dataIn[7] => dataOut[7]~reg0.DATAIN
+dataOut[0] <= dataOut[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= dataOut[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= dataOut[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= dataOut[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[4] <= dataOut[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[5] <= dataOut[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[6] <= dataOut[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[7] <= dataOut[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Register_Pin|SeqDetector:seq_detec
+reset => s_cs.OUTPUTSELECT
+reset => s_cs.OUTPUTSELECT
+reset => s_cs.OUTPUTSELECT
+reset => s_cs.OUTPUTSELECT
+reset => s_cs.OUTPUTSELECT
+clk => s_pressed.LATCH_ENABLE
+clk => s_cs~1.DATAIN
+start => s_ns.OUTPUTSELECT
+start => s_ns.OUTPUTSELECT
+start => s_ns.OUTPUTSELECT
+start => s_ns.OUTPUTSELECT
+start => s_ns.OUTPUTSELECT
+btn[0] => s_pressed.IN0
+btn[0] => s_btn_pressed[0].OUTPUTSELECT
+btn[0] => s_btn_pressed[1].IN1
+btn[0] => s_btn_pressed[1].OUTPUTSELECT
+btn[1] => s_pressed.IN1
+btn[1] => s_btn_pressed[0].OUTPUTSELECT
+btn[1] => s_btn_pressed[1].IN1
+btn[1] => s_btn_pressed[1].DATAA
+btn[2] => s_pressed.IN1
+btn[2] => s_btn_pressed[1].IN0
+btn[2] => s_btn_pressed[0].DATAA
+btn[3] => s_pressed.IN1
+btn[3] => s_btn_pressed[1].IN1
+valid <= valid.DB_MAX_OUTPUT_PORT_TYPE
+entering <= entering.DB_MAX_OUTPUT_PORT_TYPE
+pin[0] <= s_pin[0].DB_MAX_OUTPUT_PORT_TYPE
+pin[1] <= s_pin[1].DB_MAX_OUTPUT_PORT_TYPE
+pin[2] <= s_pin[2].DB_MAX_OUTPUT_PORT_TYPE
+pin[3] <= s_pin[3].DB_MAX_OUTPUT_PORT_TYPE
+pin[4] <= s_pin[4].DB_MAX_OUTPUT_PORT_TYPE
+pin[5] <= s_pin[5].DB_MAX_OUTPUT_PORT_TYPE
+pin[6] <= s_pin[6].DB_MAX_OUTPUT_PORT_TYPE
+pin[7] <= s_pin[7].DB_MAX_OUTPUT_PORT_TYPE
+
+

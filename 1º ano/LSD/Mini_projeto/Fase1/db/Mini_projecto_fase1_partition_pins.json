@@ -1,0 +1,157 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "countOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "countOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "countOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "countOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "countOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "countOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "countOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "countOut[7]",
+					"strict" : false
+				},
+				{
+					"name" : "countOut[8]",
+					"strict" : false
+				},
+				{
+					"name" : "countOut[9]",
+					"strict" : false
+				},
+				{
+					"name" : "countOut[10]",
+					"strict" : false
+				},
+				{
+					"name" : "countOut[11]",
+					"strict" : false
+				},
+				{
+					"name" : "countOut[12]",
+					"strict" : false
+				},
+				{
+					"name" : "countOut[13]",
+					"strict" : false
+				},
+				{
+					"name" : "countOut[14]",
+					"strict" : false
+				},
+				{
+					"name" : "countOut[15]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disp1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disp2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "disp2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disp2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disp2[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disp3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "disp3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disp3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disp3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "disp4[0]",
+					"strict" : false
+				},
+				{
+					"name" : "disp4[1]",
+					"strict" : false
+				},
+				{
+					"name" : "disp4[2]",
+					"strict" : false
+				},
+				{
+					"name" : "disp4[3]",
+					"strict" : false
+				},
+				{
+					"name" : "termCount",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "enable",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "start",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

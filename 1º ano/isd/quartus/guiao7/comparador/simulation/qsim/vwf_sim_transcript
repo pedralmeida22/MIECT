@@ -1,0 +1,141 @@
+Determining the location of the ModelSim executable...
+
+Using: C:\intelFPGA_lite\17.1\modelsim_ase\win32aloem
+
+To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
+Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-Altera will be used.
+
+**** Generating the ModelSim Testbench ****
+
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Cmp8bit -c Cmp8bit --vector_source="C:/isd/guiao7/comparador/cmpbit_8.vwf" --testbench_file="C:/isd/guiao7/comparador/simulation/qsim/cmpbit_8.vwf.vt"
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details.
+    Info: Processing started: Tue Nov 27 16:45:45 2018
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off Cmp8bit -c Cmp8bit --vector_source=C:/isd/guiao7/comparador/cmpbit_8.vwf --testbench_file=C:/isd/guiao7/comparador/simulation/qsim/cmpbit_8.vwf.vt
+Info (119004): Automatically selected device EP4CE6E22C6 for design Cmp8bit
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+
+Completed successfully. 
+
+Completed successfully. 
+
+**** Generating the functional simulation netlist ****
+
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/isd/guiao7/comparador/simulation/qsim/" Cmp8bit -c Cmp8bit
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Copyright (C) 2017  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and its AMPP partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details.
+    Info: Processing started: Tue Nov 27 16:45:46 2018
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/isd/guiao7/comparador/simulation/qsim/ Cmp8bit -c Cmp8bit
+Info (119004): Automatically selected device EP4CE6E22C6 for design Cmp8bit
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file Cmp8bit.vo in folder "C:/isd/guiao7/comparador/simulation/qsim//" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4656 megabytes
+    Info: Processing ended: Tue Nov 27 16:45:47 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+Completed successfully. 
+
+**** Generating the ModelSim .do script ****
+
+C:/isd/guiao7/comparador/simulation/qsim/Cmp8bit.do generated.
+
+Completed successfully. 
+
+**** Running the ModelSim simulation ****
+
+C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/vsim -c -do Cmp8bit.do
+
+Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
+
+# 10.5b
+
+
+# do Cmp8bit.do
+
+# ** Warning: (vlib-34) Library already exists at "work".
+
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:45:49 on Nov 27,2018
+# vlog -work work Cmp8bit.vo 
+# -- Compiling module cmpbit_8
+# 
+# Top level modules:
+# 	cmpbit_8
+
+# End time: 16:45:49 on Nov 27,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:45:49 on Nov 27,2018
+# vlog -work work cmpbit_8.vwf.vt 
+
+# -- Compiling module cmpbit_8_vlg_vec_tst
+# 
+# Top level modules:
+# 	cmpbit_8_vlg_vec_tst
+
+# End time: 16:45:49 on Nov 27,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+# vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.cmpbit_8_vlg_vec_tst 
+# Start time: 16:45:49 on Nov 27,2018
+# Loading work.cmpbit_8_vlg_vec_tst
+# Loading work.cmpbit_8
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# after#25
+# ** Note: $finish    : cmpbit_8.vwf.vt(84)
+#    Time: 1 us  Iteration: 0  Instance: /cmpbit_8_vlg_vec_tst
+
+# End time: 16:45:49 on Nov 27,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+Completed successfully. 
+
+**** Converting ModelSim VCD to vector waveform ****
+
+Reading C:/isd/guiao7/comparador/cmpbit_8.vwf...
+
+Reading C:/isd/guiao7/comparador/simulation/qsim/Cmp8bit.msim.vcd...
+
+Processing channel transitions... 
+
+Writing the resulting VWF to C:/isd/guiao7/comparador/simulation/qsim/Cmp8bit_20181127164549.sim.vwf
+
+Finished VCD to VWF conversion.
+
+Completed successfully. 
+
+All completed.

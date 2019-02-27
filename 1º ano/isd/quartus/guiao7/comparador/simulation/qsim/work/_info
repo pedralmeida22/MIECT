@@ -1,0 +1,96 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/isd/guiao7/comparador/simulation/qsim
+vCmp8bit
+Z1 !s110 1543333442
+!i10b 1
+!s100 7D<5KG>XC;<Ed=`_V<hhL0
+Ii94AB@g8d_17O]kcjJ0b>1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1543333440
+Z3 8Cmp8bit.vo
+Z4 FCmp8bit.vo
+Z5 L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1543333442.000000
+Z8 !s107 Cmp8bit.vo|
+Z9 !s90 -work|work|Cmp8bit.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+n@cmp8bit
+vCmp8bit_vlg_vec_tst
+R1
+!i10b 1
+!s100 L5c>gZ4eEBn>]Gg;`M>J<2
+I]UNOPo48ez_gWCL]A1X=]2
+R2
+R0
+w1543333439
+Z12 8cmpbit_8.vwf.vt
+Z13 Fcmpbit_8.vwf.vt
+Z14 L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 cmpbit_8.vwf.vt|
+Z15 !s90 -work|work|cmpbit_8.vwf.vt|
+!i113 1
+R10
+R11
+n@cmp8bit_vlg_vec_tst
+vcmpbit_8
+Z16 !s110 1543333549
+!i10b 1
+!s100 _>KTME9FLem2H=icC@Q1<2
+IDL9=]AHQjcb]0a7L3YL<M3
+R2
+R0
+w1543333547
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z17 !s108 1543333549.000000
+R8
+R9
+!i113 1
+R10
+R11
+vcmpbit_8_vlg_vec_tst
+R16
+!i10b 1
+!s100 KC3W2mkiK5jk4z]S0_e]h1
+IoU1Q0R?^=j<YY=dd?HWZE0
+R2
+R0
+w1543333546
+R12
+R13
+R14
+R6
+r1
+!s85 0
+31
+R17
+!s107 cmpbit_8.vwf.vt|
+R15
+!i113 1
+R10
+R11

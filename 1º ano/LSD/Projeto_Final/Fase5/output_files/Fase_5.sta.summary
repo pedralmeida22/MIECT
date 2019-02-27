@@ -1,0 +1,641 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -7.506
+TNS   : -1720.776
+
+Type  : Slow 1200mV 85C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM8'
+Slack : -1.494
+TNS   : -11.054
+
+Type  : Slow 1200mV 85C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM3'
+Slack : -1.284
+TNS   : -7.790
+
+Type  : Slow 1200mV 85C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM2'
+Slack : -1.194
+TNS   : -6.669
+
+Type  : Slow 1200mV 85C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM1'
+Slack : -1.179
+TNS   : -2.986
+
+Type  : Slow 1200mV 85C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM7'
+Slack : -1.000
+TNS   : -7.262
+
+Type  : Slow 1200mV 85C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM5'
+Slack : -0.998
+TNS   : -5.565
+
+Type  : Slow 1200mV 85C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM7'
+Slack : -0.937
+TNS   : -5.492
+
+Type  : Slow 1200mV 85C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM5'
+Slack : -0.926
+TNS   : -5.903
+
+Type  : Slow 1200mV 85C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM8'
+Slack : -0.915
+TNS   : -6.397
+
+Type  : Slow 1200mV 85C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM3'
+Slack : -0.910
+TNS   : -6.646
+
+Type  : Slow 1200mV 85C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM2'
+Slack : -0.878
+TNS   : -5.911
+
+Type  : Slow 1200mV 85C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM4'
+Slack : -0.764
+TNS   : -5.424
+
+Type  : Slow 1200mV 85C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM6'
+Slack : -0.747
+TNS   : -4.901
+
+Type  : Slow 1200mV 85C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM6'
+Slack : -0.730
+TNS   : -4.930
+
+Type  : Slow 1200mV 85C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM1'
+Slack : -0.628
+TNS   : -4.139
+
+Type  : Slow 1200mV 85C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM4'
+Slack : -0.501
+TNS   : -3.141
+
+Type  : Slow 1200mV 85C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM1'
+Slack : -0.647
+TNS   : -3.227
+
+Type  : Slow 1200mV 85C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM4'
+Slack : -0.168
+TNS   : -0.859
+
+Type  : Slow 1200mV 85C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM1'
+Slack : -0.096
+TNS   : -0.096
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.082
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM4'
+Slack : 0.096
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM6'
+Slack : 0.106
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM6'
+Slack : 0.138
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM2'
+Slack : 0.148
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM7'
+Slack : 0.252
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM5'
+Slack : 0.272
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM2'
+Slack : 0.334
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM3'
+Slack : 0.347
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM5'
+Slack : 0.349
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM8'
+Slack : 0.361
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM7'
+Slack : 0.412
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM3'
+Slack : 0.446
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM8'
+Slack : 0.915
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'CLOCK_50'
+Slack : -1.691
+TNS   : -3.382
+
+Type  : Slow 1200mV 85C Model Removal 'CLOCK_50'
+Slack : 1.896
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -675.055
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM1'
+Slack : 0.349
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM2'
+Slack : 0.360
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM5'
+Slack : 0.360
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM8'
+Slack : 0.364
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM6'
+Slack : 0.370
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM1'
+Slack : 0.393
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM4'
+Slack : 0.395
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM2'
+Slack : 0.408
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM6'
+Slack : 0.411
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM3'
+Slack : 0.414
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM7'
+Slack : 0.420
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM3'
+Slack : 0.425
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM7'
+Slack : 0.428
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM8'
+Slack : 0.433
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM4'
+Slack : 0.441
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM5'
+Slack : 0.446
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -6.673
+TNS   : -1524.511
+
+Type  : Slow 1200mV 0C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM8'
+Slack : -1.488
+TNS   : -11.197
+
+Type  : Slow 1200mV 0C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM3'
+Slack : -1.290
+TNS   : -7.919
+
+Type  : Slow 1200mV 0C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM2'
+Slack : -1.114
+TNS   : -6.573
+
+Type  : Slow 1200mV 0C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM1'
+Slack : -1.111
+TNS   : -2.826
+
+Type  : Slow 1200mV 0C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM7'
+Slack : -1.001
+TNS   : -7.286
+
+Type  : Slow 1200mV 0C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM5'
+Slack : -0.948
+TNS   : -5.653
+
+Type  : Slow 1200mV 0C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM3'
+Slack : -0.940
+TNS   : -6.696
+
+Type  : Slow 1200mV 0C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM8'
+Slack : -0.921
+TNS   : -6.464
+
+Type  : Slow 1200mV 0C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM5'
+Slack : -0.916
+TNS   : -5.880
+
+Type  : Slow 1200mV 0C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM7'
+Slack : -0.912
+TNS   : -5.419
+
+Type  : Slow 1200mV 0C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM2'
+Slack : -0.844
+TNS   : -5.893
+
+Type  : Slow 1200mV 0C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM4'
+Slack : -0.810
+TNS   : -5.554
+
+Type  : Slow 1200mV 0C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM6'
+Slack : -0.757
+TNS   : -5.062
+
+Type  : Slow 1200mV 0C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM6'
+Slack : -0.704
+TNS   : -4.887
+
+Type  : Slow 1200mV 0C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM1'
+Slack : -0.638
+TNS   : -4.235
+
+Type  : Slow 1200mV 0C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM4'
+Slack : -0.490
+TNS   : -3.326
+
+Type  : Slow 1200mV 0C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM1'
+Slack : -0.466
+TNS   : -2.321
+
+Type  : Slow 1200mV 0C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM4'
+Slack : -0.031
+TNS   : -0.031
+
+Type  : Slow 1200mV 0C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM1'
+Slack : 0.042
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.050
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM6'
+Slack : 0.211
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM2'
+Slack : 0.233
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM6'
+Slack : 0.270
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM4'
+Slack : 0.271
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM7'
+Slack : 0.347
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM5'
+Slack : 0.371
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM5'
+Slack : 0.411
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM8'
+Slack : 0.434
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM2'
+Slack : 0.467
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM7'
+Slack : 0.482
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM3'
+Slack : 0.497
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM3'
+Slack : 0.529
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM8'
+Slack : 0.951
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'CLOCK_50'
+Slack : -1.450
+TNS   : -2.900
+
+Type  : Slow 1200mV 0C Model Removal 'CLOCK_50'
+Slack : 1.702
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -675.055
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM4'
+Slack : 0.344
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM8'
+Slack : 0.346
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM7'
+Slack : 0.380
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM3'
+Slack : 0.382
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM5'
+Slack : 0.385
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM3'
+Slack : 0.407
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM2'
+Slack : 0.428
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM1'
+Slack : 0.429
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM2'
+Slack : 0.429
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM5'
+Slack : 0.429
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM6'
+Slack : 0.429
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM4'
+Slack : 0.430
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM8'
+Slack : 0.430
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM7'
+Slack : 0.437
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM1'
+Slack : 0.438
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM6'
+Slack : 0.438
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -3.601
+TNS   : -615.025
+
+Type  : Fast 1200mV 0C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM8'
+Slack : -0.535
+TNS   : -3.305
+
+Type  : Fast 1200mV 0C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM1'
+Slack : -0.398
+TNS   : -0.691
+
+Type  : Fast 1200mV 0C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM3'
+Slack : -0.351
+TNS   : -1.740
+
+Type  : Fast 1200mV 0C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM2'
+Slack : -0.306
+TNS   : -0.738
+
+Type  : Fast 1200mV 0C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM5'
+Slack : -0.282
+TNS   : -0.408
+
+Type  : Fast 1200mV 0C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM3'
+Slack : -0.231
+TNS   : -1.212
+
+Type  : Fast 1200mV 0C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM7'
+Slack : -0.198
+TNS   : -1.323
+
+Type  : Fast 1200mV 0C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM5'
+Slack : -0.198
+TNS   : -0.585
+
+Type  : Fast 1200mV 0C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM2'
+Slack : -0.176
+TNS   : -0.619
+
+Type  : Fast 1200mV 0C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM8'
+Slack : -0.174
+TNS   : -0.925
+
+Type  : Fast 1200mV 0C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM7'
+Slack : -0.149
+TNS   : -0.412
+
+Type  : Fast 1200mV 0C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM4'
+Slack : -0.081
+TNS   : -0.425
+
+Type  : Fast 1200mV 0C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM6'
+Slack : -0.071
+TNS   : -0.177
+
+Type  : Fast 1200mV 0C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM6'
+Slack : -0.066
+TNS   : -0.185
+
+Type  : Fast 1200mV 0C Model Setup 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM4'
+Slack : 0.004
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM1'
+Slack : 0.011
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM1'
+Slack : -0.214
+TNS   : -1.064
+
+Type  : Fast 1200mV 0C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM4'
+Slack : 0.000
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM1'
+Slack : 0.006
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.007
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM6'
+Slack : 0.118
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM2'
+Slack : 0.132
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM6'
+Slack : 0.137
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM4'
+Slack : 0.166
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM5'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM5'
+Slack : 0.191
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM7'
+Slack : 0.210
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM8'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM2'
+Slack : 0.236
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM3'
+Slack : 0.248
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM7'
+Slack : 0.268
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM3'
+Slack : 0.275
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM8'
+Slack : 0.429
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'CLOCK_50'
+Slack : -0.325
+TNS   : -0.650
+
+Type  : Fast 1200mV 0C Model Removal 'CLOCK_50'
+Slack : 0.937
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -559.033
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM8'
+Slack : 0.221
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM3'
+Slack : 0.246
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM2'
+Slack : 0.256
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM5'
+Slack : 0.259
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM8'
+Slack : 0.266
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM1'
+Slack : 0.269
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM4'
+Slack : 0.270
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM4'
+Slack : 0.278
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM6'
+Slack : 0.280
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM6'
+Slack : 0.281
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM3'
+Slack : 0.281
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM2'
+Slack : 0.291
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM1'
+Slack : 0.292
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM5'
+Slack : 0.300
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'RegisterPin:regPin|SeqDetector:seq_detec|s_cs.NUM7'
+Slack : 0.300
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CheckPin:checkPin|SeqDetector:seqdetector|s_cs.NUM7'
+Slack : 0.317
+TNS   : 0.000
+
+------------------------------------------------------------

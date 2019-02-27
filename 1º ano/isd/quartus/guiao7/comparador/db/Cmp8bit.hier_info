@@ -1,0 +1,177 @@
+|cmpbit_8
+yout <= Cmp8bit:inst5.yout
+ai7 => Cmp8bit:inst5.ai
+bi7 => Cmp8bit:inst5.bi
+ai6 => Cmp8bit:inst4.ai
+bi6 => Cmp8bit:inst4.bi
+ai5 => Cmp8bit:inst3.ai
+bi5 => Cmp8bit:inst3.bi
+ai4 => Cmp8bit:inst2.ai
+bi4 => Cmp8bit:inst2.bi
+ai3 => Cmp8bit:inst1.ai
+bi3 => Cmp8bit:inst1.bi
+ai2 => Cmp8bit:inst.ai
+bi2 => Cmp8bit:inst.bi
+ai1 => Cmp8bit:inst6.ai
+bi1 => Cmp8bit:inst6.bi
+ai0 => Cmp8bit:inst7.ai
+bi0 => Cmp8bit:inst7.bi
+yin => Cmp8bit:inst7.yin
+xin => Cmp8bit:inst7.xin
+zin => Cmp8bit:inst7.zin
+xout <= Cmp8bit:inst5.xout
+zout <= Cmp8bit:inst5.zout
+
+
+|cmpbit_8|Cmp8bit:inst5
+xout <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+ai => inst5.IN0
+ai => inst4.IN0
+ai => pqp.IN0
+ai => inst12.IN0
+xin => inst5.IN1
+xin => inst6.IN1
+bi => inst7.IN0
+bi => pqp.IN1
+bi => inst10.IN1
+bi => inst11.IN0
+yout <= inst.DB_MAX_OUTPUT_PORT_TYPE
+yin => inst.IN1
+zout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+zin => inst11.IN1
+zin => inst9.IN1
+
+
+|cmpbit_8|Cmp8bit:inst4
+xout <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+ai => inst5.IN0
+ai => inst4.IN0
+ai => pqp.IN0
+ai => inst12.IN0
+xin => inst5.IN1
+xin => inst6.IN1
+bi => inst7.IN0
+bi => pqp.IN1
+bi => inst10.IN1
+bi => inst11.IN0
+yout <= inst.DB_MAX_OUTPUT_PORT_TYPE
+yin => inst.IN1
+zout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+zin => inst11.IN1
+zin => inst9.IN1
+
+
+|cmpbit_8|Cmp8bit:inst3
+xout <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+ai => inst5.IN0
+ai => inst4.IN0
+ai => pqp.IN0
+ai => inst12.IN0
+xin => inst5.IN1
+xin => inst6.IN1
+bi => inst7.IN0
+bi => pqp.IN1
+bi => inst10.IN1
+bi => inst11.IN0
+yout <= inst.DB_MAX_OUTPUT_PORT_TYPE
+yin => inst.IN1
+zout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+zin => inst11.IN1
+zin => inst9.IN1
+
+
+|cmpbit_8|Cmp8bit:inst2
+xout <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+ai => inst5.IN0
+ai => inst4.IN0
+ai => pqp.IN0
+ai => inst12.IN0
+xin => inst5.IN1
+xin => inst6.IN1
+bi => inst7.IN0
+bi => pqp.IN1
+bi => inst10.IN1
+bi => inst11.IN0
+yout <= inst.DB_MAX_OUTPUT_PORT_TYPE
+yin => inst.IN1
+zout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+zin => inst11.IN1
+zin => inst9.IN1
+
+
+|cmpbit_8|Cmp8bit:inst1
+xout <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+ai => inst5.IN0
+ai => inst4.IN0
+ai => pqp.IN0
+ai => inst12.IN0
+xin => inst5.IN1
+xin => inst6.IN1
+bi => inst7.IN0
+bi => pqp.IN1
+bi => inst10.IN1
+bi => inst11.IN0
+yout <= inst.DB_MAX_OUTPUT_PORT_TYPE
+yin => inst.IN1
+zout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+zin => inst11.IN1
+zin => inst9.IN1
+
+
+|cmpbit_8|Cmp8bit:inst
+xout <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+ai => inst5.IN0
+ai => inst4.IN0
+ai => pqp.IN0
+ai => inst12.IN0
+xin => inst5.IN1
+xin => inst6.IN1
+bi => inst7.IN0
+bi => pqp.IN1
+bi => inst10.IN1
+bi => inst11.IN0
+yout <= inst.DB_MAX_OUTPUT_PORT_TYPE
+yin => inst.IN1
+zout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+zin => inst11.IN1
+zin => inst9.IN1
+
+
+|cmpbit_8|Cmp8bit:inst6
+xout <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+ai => inst5.IN0
+ai => inst4.IN0
+ai => pqp.IN0
+ai => inst12.IN0
+xin => inst5.IN1
+xin => inst6.IN1
+bi => inst7.IN0
+bi => pqp.IN1
+bi => inst10.IN1
+bi => inst11.IN0
+yout <= inst.DB_MAX_OUTPUT_PORT_TYPE
+yin => inst.IN1
+zout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+zin => inst11.IN1
+zin => inst9.IN1
+
+
+|cmpbit_8|Cmp8bit:inst7
+xout <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+ai => inst5.IN0
+ai => inst4.IN0
+ai => pqp.IN0
+ai => inst12.IN0
+xin => inst5.IN1
+xin => inst6.IN1
+bi => inst7.IN0
+bi => pqp.IN1
+bi => inst10.IN1
+bi => inst11.IN0
+yout <= inst.DB_MAX_OUTPUT_PORT_TYPE
+yin => inst.IN1
+zout <= inst8.DB_MAX_OUTPUT_PORT_TYPE
+zin => inst11.IN1
+zin => inst9.IN1
+
+

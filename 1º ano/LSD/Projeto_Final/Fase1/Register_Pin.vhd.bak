@@ -1,0 +1,20 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity Register_Pin is
+	port(clk, enable: in std_logic;
+		  btn
+		  done);
+	
+end Register_Pin;
+
+architecture Shell of Register_Pin is
+
+	signal s_entering, s_btn, s_valid, s_pin, s_reset, s_enable, s_start : std_logic;
+
+begin
+	
+	reg8 : entity work.Reg8(Behavioral)
+			 port map();
+
+end Shell;

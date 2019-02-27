@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Oct 30 16:22:06 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : decod4to16
+Top-level Entity Name : decod4to16
+Family : Cyclone IV E
+Total logic elements : 16
+    Total combinational functions : 16
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 20
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

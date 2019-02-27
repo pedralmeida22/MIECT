@@ -1,0 +1,449 @@
+$comment
+	File created using the following command:
+		vcd file ALUDemo.msim.vcd -direction
+$end
+$date
+	Wed Mar 07 14:30:44 2018
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module bin2bcd_vhd_vec_tst $end
+$var wire 1 ! bcd0 [3] $end
+$var wire 1 " bcd0 [2] $end
+$var wire 1 # bcd0 [1] $end
+$var wire 1 $ bcd0 [0] $end
+$var wire 1 % bcd1 [3] $end
+$var wire 1 & bcd1 [2] $end
+$var wire 1 ' bcd1 [1] $end
+$var wire 1 ( bcd1 [0] $end
+$var wire 1 ) bcd2 [3] $end
+$var wire 1 * bcd2 [2] $end
+$var wire 1 + bcd2 [1] $end
+$var wire 1 , bcd2 [0] $end
+$var wire 1 - bin [7] $end
+$var wire 1 . bin [6] $end
+$var wire 1 / bin [5] $end
+$var wire 1 0 bin [4] $end
+$var wire 1 1 bin [3] $end
+$var wire 1 2 bin [2] $end
+$var wire 1 3 bin [1] $end
+$var wire 1 4 bin [0] $end
+
+$scope module i1 $end
+$var wire 1 5 gnd $end
+$var wire 1 6 vcc $end
+$var wire 1 7 unknown $end
+$var wire 1 8 devoe $end
+$var wire 1 9 devclrn $end
+$var wire 1 : devpor $end
+$var wire 1 ; ww_devoe $end
+$var wire 1 < ww_devclrn $end
+$var wire 1 = ww_devpor $end
+$var wire 1 > ww_bin [7] $end
+$var wire 1 ? ww_bin [6] $end
+$var wire 1 @ ww_bin [5] $end
+$var wire 1 A ww_bin [4] $end
+$var wire 1 B ww_bin [3] $end
+$var wire 1 C ww_bin [2] $end
+$var wire 1 D ww_bin [1] $end
+$var wire 1 E ww_bin [0] $end
+$var wire 1 F ww_bcd0 [3] $end
+$var wire 1 G ww_bcd0 [2] $end
+$var wire 1 H ww_bcd0 [1] $end
+$var wire 1 I ww_bcd0 [0] $end
+$var wire 1 J ww_bcd1 [3] $end
+$var wire 1 K ww_bcd1 [2] $end
+$var wire 1 L ww_bcd1 [1] $end
+$var wire 1 M ww_bcd1 [0] $end
+$var wire 1 N ww_bcd2 [3] $end
+$var wire 1 O ww_bcd2 [2] $end
+$var wire 1 P ww_bcd2 [1] $end
+$var wire 1 Q ww_bcd2 [0] $end
+$var wire 1 R \bin[0]~input_o\ $end
+$var wire 1 S \bin[1]~input_o\ $end
+$var wire 1 T \bin[2]~input_o\ $end
+$var wire 1 U \bin[3]~input_o\ $end
+$var wire 1 V \bin[4]~input_o\ $end
+$var wire 1 W \bin[5]~input_o\ $end
+$var wire 1 X \bin[6]~input_o\ $end
+$var wire 1 Y \bin[7]~input_o\ $end
+$var wire 1 Z \bcd0[0]~output_o\ $end
+$var wire 1 [ \bcd0[1]~output_o\ $end
+$var wire 1 \ \bcd0[2]~output_o\ $end
+$var wire 1 ] \bcd0[3]~output_o\ $end
+$var wire 1 ^ \bcd1[0]~output_o\ $end
+$var wire 1 _ \bcd1[1]~output_o\ $end
+$var wire 1 ` \bcd1[2]~output_o\ $end
+$var wire 1 a \bcd1[3]~output_o\ $end
+$var wire 1 b \bcd2[0]~output_o\ $end
+$var wire 1 c \bcd2[1]~output_o\ $end
+$var wire 1 d \bcd2[2]~output_o\ $end
+$var wire 1 e \bcd2[3]~output_o\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+05
+16
+x7
+18
+19
+1:
+1;
+1<
+1=
+0R
+0S
+0T
+0U
+0V
+0W
+0X
+0Y
+0Z
+1[
+0\
+0]
+1^
+0_
+0`
+0a
+0b
+0c
+1d
+0e
+0-
+0.
+0/
+00
+01
+02
+03
+04
+0>
+0?
+0@
+0A
+0B
+0C
+0D
+0E
+0F
+0G
+1H
+0I
+0J
+0K
+0L
+1M
+0N
+1O
+0P
+0Q
+0!
+0"
+1#
+0$
+0%
+0&
+0'
+1(
+0)
+1*
+0+
+0,
+$end
+#20000
+1-
+10
+11
+12
+13
+1D
+1C
+1B
+1A
+1>
+1Y
+1V
+1U
+1T
+1S
+#70000
+0-
+01
+1/
+14
+1E
+0B
+1@
+0>
+0Y
+1W
+0U
+1R
+#120000
+1-
+04
+00
+03
+0E
+0D
+0A
+1>
+1Y
+0V
+0S
+0R
+#170000
+0-
+14
+10
+11
+02
+1.
+1E
+0C
+1B
+1A
+1?
+0>
+0Y
+1X
+1V
+1U
+0T
+1R
+#220000
+1-
+04
+00
+01
+0/
+0E
+0B
+0A
+0@
+1>
+1Y
+0W
+0V
+0U
+0R
+#270000
+10
+11
+1/
+12
+0.
+13
+1D
+1C
+1B
+1A
+1@
+0?
+0X
+1W
+1V
+1U
+1T
+1S
+#320000
+1.
+14
+1E
+1?
+1X
+1R
+#370000
+04
+0/
+02
+0E
+0C
+0@
+0W
+0T
+0R
+#420000
+1/
+12
+0.
+01
+03
+0D
+1C
+0B
+1@
+0?
+0X
+1W
+0U
+1T
+0S
+#470000
+02
+1.
+11
+00
+0C
+1B
+0A
+1?
+1X
+0V
+1U
+0T
+#520000
+01
+0/
+14
+0-
+1E
+0B
+0@
+0>
+0Y
+0W
+0U
+1R
+#570000
+11
+1-
+12
+0.
+13
+1D
+1C
+1B
+0?
+1>
+1Y
+0X
+1U
+1T
+1S
+#620000
+02
+04
+10
+0E
+0C
+1A
+1V
+0T
+0R
+#670000
+14
+0-
+1.
+03
+1E
+0D
+1?
+0>
+0Y
+1X
+0S
+1R
+#720000
+1-
+0.
+13
+00
+1/
+1D
+0A
+1@
+0?
+1>
+1Y
+0X
+1W
+0V
+1S
+#770000
+0-
+1.
+03
+0/
+0D
+0@
+1?
+0>
+0Y
+1X
+0W
+0S
+#820000
+1-
+1/
+04
+0E
+1@
+1>
+1Y
+1W
+0R
+#870000
+0/
+14
+13
+10
+12
+01
+1E
+1D
+1C
+0B
+1A
+0@
+0W
+1V
+0U
+1T
+1S
+1R
+#920000
+04
+03
+00
+02
+0-
+0E
+0D
+0C
+0A
+0>
+0Y
+0V
+0T
+0S
+0R
+#970000
+14
+10
+12
+1-
+1/
+11
+1E
+1C
+1B
+1A
+1@
+1>
+1Y
+1W
+1V
+1U
+1T
+1R
+#1000000

@@ -1,0 +1,99 @@
+
+State Machine - |Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|state
+Name state.WAIT_FOR_THIRD_MOUSE_BYTE state.WAIT_FOR_SECOND_MOUSE_BYTE state.WAIT_FOR_FIRST_MOUSE_BYTE state.WAIT_FOR_ENABLE_MOUSE_ACKNOWLEDGE state.ENABLE_MOUSE state.WAIT_FOR_KEYBOARD_SET_LED_DATA_ACKNOWLEDGE state.SEND_KEYBOARD_SET_LED_DATA state.WAIT_FOR_KEYBOARD_SET_LED_ACKNOWLEDGE state.KEYBOARD_WAIT_FOR_CHANGE state.WAIT_FOR_ENABLE_KEYBOARD_ACKNOWLEDGE state.ENABLE_KEYBOARD state.WAIT_FOR_MOUSE_BAT state.WAIT_FOR_BAT state.WAIT_FOR_RESET_ACKNOWLEDGE state.PERIODIC_RESET state.RESTART 
+state.RESTART 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.PERIODIC_RESET 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.WAIT_FOR_RESET_ACKNOWLEDGE 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.WAIT_FOR_BAT 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.WAIT_FOR_MOUSE_BAT 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.ENABLE_KEYBOARD 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.WAIT_FOR_ENABLE_KEYBOARD_ACKNOWLEDGE 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.KEYBOARD_WAIT_FOR_CHANGE 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.WAIT_FOR_KEYBOARD_SET_LED_ACKNOWLEDGE 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.SEND_KEYBOARD_SET_LED_DATA 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.WAIT_FOR_KEYBOARD_SET_LED_DATA_ACKNOWLEDGE 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.ENABLE_MOUSE 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.WAIT_FOR_ENABLE_MOUSE_ACKNOWLEDGE 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.WAIT_FOR_FIRST_MOUSE_BYTE 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.WAIT_FOR_SECOND_MOUSE_BYTE 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.WAIT_FOR_THIRD_MOUSE_BYTE 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|state
+Name state.FINISHING state.WAITING_FOR_ACKNOWLEDGE state.SENDING state.INTERRUPTING state.RECEIVING state.IDLE 
+state.IDLE 0 0 0 0 0 0 
+state.RECEIVING 0 0 0 0 1 1 
+state.INTERRUPTING 0 0 0 1 0 1 
+state.SENDING 0 0 1 0 0 1 
+state.WAITING_FOR_ACKNOWLEDGE 0 1 0 0 0 1 
+state.FINISHING 1 0 0 0 0 1 
+
+State Machine - |Fase_5|LCDModule:LCDMod|lcd_controller:DISPLAY|state
+Name state.PROCESS_TXD_REQUESTS state.POWER_ON_PHASE_8 state.POWER_ON_PHASE_7 state.POWER_ON_PHASE_6 state.POWER_ON_PHASE_5 state.POWER_ON_PHASE_4 state.POWER_ON_PHASE_3 state.POWER_ON_PHASE_2 state.POWER_ON_PHASE_1 
+state.POWER_ON_PHASE_1 0 0 0 0 0 0 0 0 0 
+state.POWER_ON_PHASE_2 0 0 0 0 0 0 0 1 1 
+state.POWER_ON_PHASE_3 0 0 0 0 0 0 1 0 1 
+state.POWER_ON_PHASE_4 0 0 0 0 0 1 0 0 1 
+state.POWER_ON_PHASE_5 0 0 0 0 1 0 0 0 1 
+state.POWER_ON_PHASE_6 0 0 0 1 0 0 0 0 1 
+state.POWER_ON_PHASE_7 0 0 1 0 0 0 0 0 1 
+state.POWER_ON_PHASE_8 0 1 0 0 0 0 0 0 1 
+state.PROCESS_TXD_REQUESTS 1 0 0 0 0 0 0 0 1 
+
+State Machine - |Fase_5|RegisterPin:regPin|SeqDetector:seq_detec|s_cs
+Name s_cs.NUM8 s_cs.NUM7 s_cs.NUM6 s_cs.NUM5 s_cs.NUM4 s_cs.NUM3 s_cs.NUM2 s_cs.NUM1 s_cs.IDLE 
+s_cs.IDLE 0 0 0 0 0 0 0 0 0 
+s_cs.NUM1 0 0 0 0 0 0 0 1 1 
+s_cs.NUM2 0 0 0 0 0 0 1 0 1 
+s_cs.NUM3 0 0 0 0 0 1 0 0 1 
+s_cs.NUM4 0 0 0 0 1 0 0 0 1 
+s_cs.NUM5 0 0 0 1 0 0 0 0 1 
+s_cs.NUM6 0 0 1 0 0 0 0 0 1 
+s_cs.NUM7 0 1 0 0 0 0 0 0 1 
+s_cs.NUM8 1 0 0 0 0 0 0 0 1 
+
+State Machine - |Fase_5|CheckPin:checkPin|SeqDetector:seqdetector|s_cs
+Name s_cs.NUM8 s_cs.NUM7 s_cs.NUM6 s_cs.NUM5 s_cs.NUM4 s_cs.NUM3 s_cs.NUM2 s_cs.NUM1 s_cs.IDLE 
+s_cs.IDLE 0 0 0 0 0 0 0 0 0 
+s_cs.NUM1 0 0 0 0 0 0 0 1 1 
+s_cs.NUM2 0 0 0 0 0 0 1 0 1 
+s_cs.NUM3 0 0 0 0 0 1 0 0 1 
+s_cs.NUM4 0 0 0 0 1 0 0 0 1 
+s_cs.NUM5 0 0 0 1 0 0 0 0 1 
+s_cs.NUM6 0 0 1 0 0 0 0 0 1 
+s_cs.NUM7 0 1 0 0 0 0 0 0 1 
+s_cs.NUM8 1 0 0 0 0 0 0 0 1 
+
+State Machine - |Fase_5|AlarmControlUnit:alarmControl|s_cs
+Name s_cs.SET_PIN s_cs.TRIGGERD_TIMER s_cs.TRIGGERD s_cs.DESARM_TIMER s_cs.ARMED_INT s_cs.ARMED_EXT s_cs.ARM_TIMER s_cs.IDLE 
+s_cs.IDLE 0 0 0 0 0 0 0 0 
+s_cs.ARM_TIMER 0 0 0 0 0 0 1 1 
+s_cs.ARMED_EXT 0 0 0 0 0 1 0 1 
+s_cs.ARMED_INT 0 0 0 0 1 0 0 1 
+s_cs.DESARM_TIMER 0 0 0 1 0 0 0 1 
+s_cs.TRIGGERD 0 0 1 0 0 0 0 1 
+s_cs.TRIGGERD_TIMER 0 1 0 0 0 0 0 1 
+s_cs.SET_PIN 1 0 0 0 0 0 0 1 
+
+State Machine - |Fase_5|debouncer:debouncer3|state
+Name state.INSIDE_DELAY state.INSIDE_WINDOW state.IDLE 
+state.IDLE 0 0 0 
+state.INSIDE_WINDOW 0 1 1 
+state.INSIDE_DELAY 1 0 1 
+
+State Machine - |Fase_5|debouncer:debouncer2|state
+Name state.INSIDE_DELAY state.INSIDE_WINDOW state.IDLE 
+state.IDLE 0 0 0 
+state.INSIDE_WINDOW 0 1 1 
+state.INSIDE_DELAY 1 0 1 
+
+State Machine - |Fase_5|debouncer:debouncer1|state
+Name state.INSIDE_DELAY state.INSIDE_WINDOW state.IDLE 
+state.IDLE 0 0 0 
+state.INSIDE_WINDOW 0 1 1 
+state.INSIDE_DELAY 1 0 1 
+
+State Machine - |Fase_5|debouncer:debouncer0|state
+Name state.INSIDE_DELAY state.INSIDE_WINDOW state.IDLE 
+state.IDLE 0 0 0 
+state.INSIDE_WINDOW 0 1 1 
+state.INSIDE_DELAY 1 0 1 

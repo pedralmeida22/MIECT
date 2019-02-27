@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Apr 14 17:15:17 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : DebugDemo
+Top-level Entity Name : DebugDemo
+Family : Cyclone IV E
+Total logic elements : 1,103
+    Total combinational functions : 622
+    Dedicated logic registers : 873
+Total registers : 873
+Total pins : 21
+Total virtual pins : 0
+Total memory bits : 131,072
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

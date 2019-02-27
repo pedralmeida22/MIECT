@@ -1,0 +1,141 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "pin_name9",
+					"strict" : false
+				},
+				{
+					"name" : "inPort0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort0[7]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort0[8]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort0[9]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort1[9]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort1[8]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort0[11]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort1[11]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort0[10]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort1[10]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort0[12]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort0[13]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort1[13]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort1[12]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort0[14]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort0[15]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort1[15]",
+					"strict" : false
+				},
+				{
+					"name" : "inPort1[14]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

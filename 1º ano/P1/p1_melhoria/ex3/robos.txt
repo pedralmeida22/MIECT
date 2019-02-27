@@ -1,0 +1,2 @@
+Robo 0 | Nome: pedro; Tempo: 0:1:9; Elementos: 2
+Robo 1 | Nome: marta; Tempo: 0:1:2; Elementos: 3

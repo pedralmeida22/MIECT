@@ -1,0 +1,273 @@
+$comment
+	File created using the following command:
+		vcd file Counter_Demo.msim.vcd -direction
+$end
+$date
+	Mon Mar 12 18:56:31 2018
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module counterloadupdown4_vhd_vec_tst $end
+$var wire 1 ! clk $end
+$var wire 1 " cntOut [3] $end
+$var wire 1 # cntOut [2] $end
+$var wire 1 $ cntOut [1] $end
+$var wire 1 % cntOut [0] $end
+$var wire 1 & dataIn [3] $end
+$var wire 1 ' dataIn [2] $end
+$var wire 1 ( dataIn [1] $end
+$var wire 1 ) dataIn [0] $end
+$var wire 1 * enable $end
+$var wire 1 + load $end
+$var wire 1 , reset $end
+$var wire 1 - upDown_n $end
+
+$scope module i1 $end
+$var wire 1 . gnd $end
+$var wire 1 / vcc $end
+$var wire 1 0 unknown $end
+$var wire 1 1 devoe $end
+$var wire 1 2 devclrn $end
+$var wire 1 3 devpor $end
+$var wire 1 4 ww_devoe $end
+$var wire 1 5 ww_devclrn $end
+$var wire 1 6 ww_devpor $end
+$var wire 1 7 ww_clk $end
+$var wire 1 8 ww_enable $end
+$var wire 1 9 ww_reset $end
+$var wire 1 : ww_upDown_n $end
+$var wire 1 ; ww_load $end
+$var wire 1 < ww_dataIn [3] $end
+$var wire 1 = ww_dataIn [2] $end
+$var wire 1 > ww_dataIn [1] $end
+$var wire 1 ? ww_dataIn [0] $end
+$var wire 1 @ ww_cntOut [3] $end
+$var wire 1 A ww_cntOut [2] $end
+$var wire 1 B ww_cntOut [1] $end
+$var wire 1 C ww_cntOut [0] $end
+$var wire 1 D \cntOut[0]~output_o\ $end
+$var wire 1 E \cntOut[1]~output_o\ $end
+$var wire 1 F \cntOut[2]~output_o\ $end
+$var wire 1 G \cntOut[3]~output_o\ $end
+$var wire 1 H \clk~input_o\ $end
+$var wire 1 I \enable~input_o\ $end
+$var wire 1 J \dataIn[0]~input_o\ $end
+$var wire 1 K \load~input_o\ $end
+$var wire 1 L \s_cntValue~3_combout\ $end
+$var wire 1 M \reset~input_o\ $end
+$var wire 1 N \s_cntValue~4_combout\ $end
+$var wire 1 O \upDown_n~input_o\ $end
+$var wire 1 P \Add0~0_combout\ $end
+$var wire 1 Q \Add0~1_combout\ $end
+$var wire 1 R \s_cntValue[1]~6_cout\ $end
+$var wire 1 S \s_cntValue[1]~7_combout\ $end
+$var wire 1 T \dataIn[1]~input_o\ $end
+$var wire 1 U \s_cntValue~9_combout\ $end
+$var wire 1 V \s_cntValue[1]~8\ $end
+$var wire 1 W \s_cntValue[2]~10_combout\ $end
+$var wire 1 X \dataIn[2]~input_o\ $end
+$var wire 1 Y \s_cntValue[2]~11\ $end
+$var wire 1 Z \s_cntValue[3]~12_combout\ $end
+$var wire 1 [ \dataIn[3]~input_o\ $end
+$var wire 1 \ s_cntValue [3] $end
+$var wire 1 ] s_cntValue [2] $end
+$var wire 1 ^ s_cntValue [1] $end
+$var wire 1 _ s_cntValue [0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1*
+0+
+0,
+1-
+0.
+1/
+x0
+11
+12
+13
+14
+15
+16
+07
+18
+09
+1:
+0;
+0D
+0E
+0F
+0G
+0H
+1I
+0J
+0K
+1L
+0M
+1N
+1O
+0P
+0Q
+0R
+0S
+0T
+1U
+1V
+0W
+1X
+0Y
+0Z
+1[
+1&
+1'
+0(
+0)
+1<
+1=
+0>
+0?
+0@
+0A
+0B
+0C
+0\
+0]
+0^
+0_
+0"
+0#
+0$
+0%
+$end
+#20000
+1!
+17
+1H
+1_
+0L
+1P
+1S
+0N
+1D
+1C
+1%
+#160000
+0-
+0:
+0O
+1Q
+1W
+1Z
+1R
+0S
+0V
+0W
+1Y
+0Z
+#240000
+0!
+07
+0H
+#320000
+1,
+19
+1M
+#360000
+1!
+17
+1H
+0_
+1L
+0Q
+0R
+0D
+1S
+1V
+0C
+0%
+1W
+0Y
+1Z
+#420000
+0,
+09
+0M
+1N
+#580000
+0!
+07
+0H
+#660000
+1+
+1;
+1K
+0L
+0N
+#700000
+1!
+17
+1H
+1]
+1\
+0Z
+0W
+1Y
+1Z
+1G
+1F
+1@
+1A
+1#
+1"
+#760000
+0+
+0;
+0K
+1L
+1N
+#780000
+0!
+07
+0H
+#860000
+1!
+17
+1H
+1_
+1^
+0]
+1W
+0Y
+0S
+0V
+0L
+1Q
+1R
+0N
+0W
+1Y
+0Z
+0F
+1E
+1D
+1Z
+1S
+0A
+1B
+1C
+1%
+1$
+0#
+#940000
+0!
+07
+0H
+#1000000

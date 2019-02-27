@@ -1,0 +1,51 @@
+
+State Machine - |Fase_4|RegisterPin:regPin|SeqDetector:seq_detec|s_cs
+Name s_cs.NUM4 s_cs.NUM3 s_cs.NUM2 s_cs.NUM1 s_cs.IDLE 
+s_cs.IDLE 0 0 0 0 0 
+s_cs.NUM1 0 0 0 1 1 
+s_cs.NUM2 0 0 1 0 1 
+s_cs.NUM3 0 1 0 0 1 
+s_cs.NUM4 1 0 0 0 1 
+
+State Machine - |Fase_4|CheckPin:checkPin|SeqDetector:seqdetector|s_cs
+Name s_cs.NUM4 s_cs.NUM3 s_cs.NUM2 s_cs.NUM1 s_cs.IDLE 
+s_cs.IDLE 0 0 0 0 0 
+s_cs.NUM1 0 0 0 1 1 
+s_cs.NUM2 0 0 1 0 1 
+s_cs.NUM3 0 1 0 0 1 
+s_cs.NUM4 1 0 0 0 1 
+
+State Machine - |Fase_4|AlarmControlUnit:alarmControl|s_cs
+Name s_cs.SET_PIN s_cs.TRIGGERD_TIMER s_cs.TRIGGERD s_cs.DESARM_TIMER s_cs.ARMED_INT s_cs.ARMED_EXT s_cs.ARM_TIMER s_cs.IDLE 
+s_cs.IDLE 0 0 0 0 0 0 0 0 
+s_cs.ARM_TIMER 0 0 0 0 0 0 1 1 
+s_cs.ARMED_EXT 0 0 0 0 0 1 0 1 
+s_cs.ARMED_INT 0 0 0 0 1 0 0 1 
+s_cs.DESARM_TIMER 0 0 0 1 0 0 0 1 
+s_cs.TRIGGERD 0 0 1 0 0 0 0 1 
+s_cs.TRIGGERD_TIMER 0 1 0 0 0 0 0 1 
+s_cs.SET_PIN 1 0 0 0 0 0 0 1 
+
+State Machine - |Fase_4|debouncer:debouncer3|state
+Name state.INSIDE_DELAY state.INSIDE_WINDOW state.IDLE 
+state.IDLE 0 0 0 
+state.INSIDE_WINDOW 0 1 1 
+state.INSIDE_DELAY 1 0 1 
+
+State Machine - |Fase_4|debouncer:debouncer2|state
+Name state.INSIDE_DELAY state.INSIDE_WINDOW state.IDLE 
+state.IDLE 0 0 0 
+state.INSIDE_WINDOW 0 1 1 
+state.INSIDE_DELAY 1 0 1 
+
+State Machine - |Fase_4|debouncer:debouncer1|state
+Name state.INSIDE_DELAY state.INSIDE_WINDOW state.IDLE 
+state.IDLE 0 0 0 
+state.INSIDE_WINDOW 0 1 1 
+state.INSIDE_DELAY 1 0 1 
+
+State Machine - |Fase_4|debouncer:debouncer0|state
+Name state.INSIDE_DELAY state.INSIDE_WINDOW state.IDLE 
+state.IDLE 0 0 0 
+state.INSIDE_WINDOW 0 1 1 
+state.INSIDE_DELAY 1 0 1 

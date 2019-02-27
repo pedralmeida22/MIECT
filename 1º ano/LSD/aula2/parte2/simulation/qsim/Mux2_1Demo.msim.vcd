@@ -1,0 +1,238 @@
+$comment
+	File created using the following command:
+		vcd file Mux2_1Demo.msim.vcd -direction
+$end
+$date
+	Tue Feb 27 11:19:48 2018
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module mux2_1_vhd_vec_tst $end
+$var wire 1 ! input0 $end
+$var wire 1 " input1 $end
+$var wire 1 # muxOut $end
+$var wire 1 $ sel $end
+
+$scope module i1 $end
+$var wire 1 % gnd $end
+$var wire 1 & vcc $end
+$var wire 1 ' unknown $end
+$var wire 1 ( devoe $end
+$var wire 1 ) devclrn $end
+$var wire 1 * devpor $end
+$var wire 1 + ww_devoe $end
+$var wire 1 , ww_devclrn $end
+$var wire 1 - ww_devpor $end
+$var wire 1 . ww_sel $end
+$var wire 1 / ww_input0 $end
+$var wire 1 0 ww_input1 $end
+$var wire 1 1 ww_muxOut $end
+$var wire 1 2 \muxOut~output_o\ $end
+$var wire 1 3 \input1~input_o\ $end
+$var wire 1 4 \input0~input_o\ $end
+$var wire 1 5 \sel~input_o\ $end
+$var wire 1 6 \muxOut~0_combout\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1!
+0"
+1#
+0$
+0%
+1&
+x'
+1(
+1)
+1*
+1+
+1,
+1-
+0.
+1/
+00
+11
+12
+03
+14
+05
+16
+$end
+#60000
+1$
+1.
+15
+06
+02
+01
+0#
+#100000
+0!
+0/
+04
+#120000
+0$
+0.
+05
+#160000
+1"
+10
+13
+#250000
+1!
+1/
+14
+16
+12
+11
+1#
+#280000
+0"
+00
+03
+#300000
+0!
+1$
+0/
+1.
+15
+04
+06
+02
+01
+0#
+#320000
+1"
+10
+13
+16
+12
+11
+1#
+#360000
+0$
+0.
+05
+06
+02
+01
+0#
+#400000
+0"
+00
+03
+#450000
+1!
+1/
+14
+16
+12
+11
+1#
+#480000
+1"
+10
+13
+#500000
+0!
+0/
+04
+06
+02
+01
+0#
+#520000
+0"
+00
+03
+#560000
+1"
+10
+13
+#600000
+0"
+1$
+00
+1.
+15
+03
+#640000
+1"
+10
+13
+16
+12
+11
+1#
+#660000
+0$
+0.
+05
+06
+02
+01
+0#
+#700000
+1!
+1/
+14
+16
+12
+11
+1#
+#720000
+1$
+1.
+15
+#750000
+0!
+0/
+04
+#760000
+0"
+00
+03
+06
+02
+01
+0#
+#780000
+0$
+0.
+05
+#840000
+1"
+10
+13
+#850000
+1!
+1/
+14
+16
+12
+11
+1#
+#900000
+0!
+0/
+04
+06
+02
+01
+0#
+#920000
+0"
+00
+03
+#960000
+1$
+1.
+15
+#1000000

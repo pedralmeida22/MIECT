@@ -1,0 +1,158 @@
+$comment
+	File created using the following command:
+		vcd file PEnc2_4Demo.msim.vcd -direction
+$end
+$date
+	Tue Feb 27 19:46:42 2018
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module penc2_4_vhd_vec_tst $end
+$var wire 1 ! decodedIn [3] $end
+$var wire 1 " decodedIn [2] $end
+$var wire 1 # decodedIn [1] $end
+$var wire 1 $ decodedIn [0] $end
+$var wire 1 % encodedOut [1] $end
+$var wire 1 & encodedOut [0] $end
+$var wire 1 ' validOut $end
+
+$scope module i1 $end
+$var wire 1 ( gnd $end
+$var wire 1 ) vcc $end
+$var wire 1 * unknown $end
+$var wire 1 + devoe $end
+$var wire 1 , devclrn $end
+$var wire 1 - devpor $end
+$var wire 1 . ww_devoe $end
+$var wire 1 / ww_devclrn $end
+$var wire 1 0 ww_devpor $end
+$var wire 1 1 ww_decodedIn [3] $end
+$var wire 1 2 ww_decodedIn [2] $end
+$var wire 1 3 ww_decodedIn [1] $end
+$var wire 1 4 ww_decodedIn [0] $end
+$var wire 1 5 ww_encodedOut [1] $end
+$var wire 1 6 ww_encodedOut [0] $end
+$var wire 1 7 ww_validOut $end
+$var wire 1 8 \encodedOut[0]~output_o\ $end
+$var wire 1 9 \encodedOut[1]~output_o\ $end
+$var wire 1 : \validOut~output_o\ $end
+$var wire 1 ; \decodedIn[3]~input_o\ $end
+$var wire 1 < \decodedIn[1]~input_o\ $end
+$var wire 1 = \decodedIn[2]~input_o\ $end
+$var wire 1 > \encodedOut~0_combout\ $end
+$var wire 1 ? \encodedOut~1_combout\ $end
+$var wire 1 @ \decodedIn[0]~input_o\ $end
+$var wire 1 A \validOut~0_combout\ $end
+$var wire 1 B \ALT_INV_encodedOut~1_combout\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0'
+0(
+1)
+x*
+1+
+1,
+1-
+1.
+1/
+10
+07
+08
+09
+0:
+0;
+0<
+0=
+0>
+1?
+0@
+0A
+0B
+0!
+0"
+0#
+0$
+01
+02
+03
+04
+05
+06
+0%
+0&
+$end
+#20000
+1!
+11
+1;
+1>
+0?
+1A
+1B
+1:
+18
+19
+17
+16
+15
+1'
+1&
+1%
+#40000
+1"
+12
+1=
+#60000
+1#
+13
+1<
+#80000
+1$
+14
+1@
+#230000
+0!
+01
+0;
+0>
+08
+06
+0&
+#250000
+0"
+02
+0=
+1>
+1?
+0B
+18
+09
+16
+05
+1&
+0%
+#280000
+0#
+03
+0<
+0>
+08
+06
+0&
+#300000
+0$
+04
+0@
+0A
+0:
+07
+0'
+#1000000

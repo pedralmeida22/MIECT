@@ -1,0 +1,903 @@
+Analysis & Synthesis report for Fase_3_1
+Wed May 30 14:00:53 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Fase_3_1|RegisterPin:regPin|SeqDetector:seq_detec|s_cs
+  9. State Machine - |Fase_3_1|CheckPin:checkPin|SeqDetector:seqdetector|s_cs
+ 10. State Machine - |Fase_3_1|AlarmControlUnit:alarmControl|s_cs
+ 11. State Machine - |Fase_3_1|debouncer:debouncer3|state
+ 12. State Machine - |Fase_3_1|debouncer:debouncer2|state
+ 13. State Machine - |Fase_3_1|debouncer:debouncer1|state
+ 14. State Machine - |Fase_3_1|debouncer:debouncer0|state
+ 15. Registers Protected by Synthesis
+ 16. User-Specified and Inferred Latches
+ 17. Registers Removed During Synthesis
+ 18. General Register Statistics
+ 19. Inverted Register Statistics
+ 20. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 21. Source assignments for debouncer:debouncer0
+ 22. Source assignments for debouncer:debouncer1
+ 23. Source assignments for debouncer:debouncer2
+ 24. Source assignments for debouncer:debouncer3
+ 25. Parameter Settings for User Entity Instance: ClkDividerN:clock1Hz
+ 26. Parameter Settings for User Entity Instance: debouncer:debouncer0
+ 27. Parameter Settings for User Entity Instance: debouncer:debouncer1
+ 28. Parameter Settings for User Entity Instance: debouncer:debouncer2
+ 29. Parameter Settings for User Entity Instance: debouncer:debouncer3
+ 30. Port Connectivity Checks: "RamControler:ram|ram_8x8:ram"
+ 31. Port Connectivity Checks: "Bin7SegDecoder:decHex4"
+ 32. Port Connectivity Checks: "Bin7SegDecoder:decHex6"
+ 33. Port Connectivity Checks: "Bin7SegDecoder:decHex7"
+ 34. Port Connectivity Checks: "Bin2BCDCase:bin2bcd"
+ 35. Port Connectivity Checks: "Timer:timer"
+ 36. Port Connectivity Checks: "RegisterPin:regPin"
+ 37. Port Connectivity Checks: "CheckPin:checkPin"
+ 38. Port Connectivity Checks: "debouncer:debouncer3"
+ 39. Port Connectivity Checks: "debouncer:debouncer2"
+ 40. Port Connectivity Checks: "debouncer:debouncer1"
+ 41. Port Connectivity Checks: "debouncer:debouncer0"
+ 42. Post-Synthesis Netlist Statistics for Top Partition
+ 43. Elapsed Time Per Partition
+ 44. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed May 30 14:00:53 2018       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; Fase_3_1                                    ;
+; Top-level Entity Name              ; Fase_3_1                                    ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 686                                         ;
+;     Total combinational functions  ; 641                                         ;
+;     Dedicated logic registers      ; 271                                         ;
+; Total registers                    ; 271                                         ;
+; Total pins                         ; 61                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; Fase_3_1           ; Fase_3_1           ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                              ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                       ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------+---------+
+; ClkDividerN.vhd                  ; yes             ; User VHDL File  ; C:/LSD/Projeto_Final/Fase_3_1/ClkDividerN.vhd      ;         ;
+; Timer.vhd                        ; yes             ; User VHDL File  ; C:/LSD/Projeto_Final/Fase_3_1/Timer.vhd            ;         ;
+; Bin7SegDecoder.vhd               ; yes             ; User VHDL File  ; C:/LSD/Projeto_Final/Fase_3_1/Bin7SegDecoder.vhd   ;         ;
+; Bin2BCDCase.vhd                  ; yes             ; User VHDL File  ; C:/LSD/Projeto_Final/Fase_3_1/Bin2BCDCase.vhd      ;         ;
+; ram_8x8.vhd                      ; yes             ; User VHDL File  ; C:/LSD/Projeto_Final/Fase_3_1/ram_8x8.vhd          ;         ;
+; Fase_3_1.vhd                     ; yes             ; User VHDL File  ; C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd         ;         ;
+; SeqDetector.vhd                  ; yes             ; User VHDL File  ; C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd      ;         ;
+; RegisterPin.vhd                  ; yes             ; User VHDL File  ; C:/LSD/Projeto_Final/Fase_3_1/RegisterPin.vhd      ;         ;
+; Reg8.vhd                         ; yes             ; User VHDL File  ; C:/LSD/Projeto_Final/Fase_3_1/Reg8.vhd             ;         ;
+; debouncer.vhd                    ; yes             ; User VHDL File  ; C:/LSD/Projeto_Final/Fase_3_1/debouncer.vhd        ;         ;
+; CheckPin.vhd                     ; yes             ; User VHDL File  ; C:/LSD/Projeto_Final/Fase_3_1/CheckPin.vhd         ;         ;
+; AlarmControlUnit.vhd             ; yes             ; User VHDL File  ; C:/LSD/Projeto_Final/Fase_3_1/AlarmControlUnit.vhd ;         ;
+; RamControler.vhd                 ; yes             ; User VHDL File  ; C:/LSD/Projeto_Final/Fase_3_1/RamControler.vhd     ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 686            ;
+;                                             ;                ;
+; Total combinational functions               ; 641            ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 303            ;
+;     -- 3 input functions                    ; 126            ;
+;     -- <=2 input functions                  ; 212            ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 500            ;
+;     -- arithmetic mode                      ; 141            ;
+;                                             ;                ;
+; Total registers                             ; 271            ;
+;     -- Dedicated logic registers            ; 271            ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 61             ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 272            ;
+; Total fan-out                               ; 2793           ;
+; Average fan-out                             ; 2.70           ;
++---------------------------------------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                   ;
++------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                 ; Entity Name      ; Library Name ;
++------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+------------------+--------------+
+; |Fase_3_1                          ; 641 (10)            ; 271 (0)                   ; 0           ; 0            ; 0       ; 0         ; 61   ; 0            ; |Fase_3_1                                           ; Fase_3_1         ; work         ;
+;    |AlarmControlUnit:alarmControl| ; 49 (49)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_3_1|AlarmControlUnit:alarmControl             ; AlarmControlUnit ; work         ;
+;    |Bin2BCDCase:bin2bcd|           ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_3_1|Bin2BCDCase:bin2bcd                       ; Bin2BCDCase      ; work         ;
+;    |Bin7SegDecoder:decHex4|        ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_3_1|Bin7SegDecoder:decHex4                    ; Bin7SegDecoder   ; work         ;
+;    |Bin7SegDecoder:decHex6|        ; 15 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_3_1|Bin7SegDecoder:decHex6                    ; Bin7SegDecoder   ; work         ;
+;    |Bin7SegDecoder:decHex7|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_3_1|Bin7SegDecoder:decHex7                    ; Bin7SegDecoder   ; work         ;
+;    |CheckPin:checkPin|             ; 36 (13)             ; 9 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_3_1|CheckPin:checkPin                         ; CheckPin         ; work         ;
+;       |SeqDetector:seqdetector|    ; 23 (23)             ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_3_1|CheckPin:checkPin|SeqDetector:seqdetector ; SeqDetector      ; work         ;
+;    |ClkDividerN:clock1Hz|          ; 57 (57)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_3_1|ClkDividerN:clock1Hz                      ; ClkDividerN      ; work         ;
+;    |RamControler:ram|              ; 75 (42)             ; 63 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_3_1|RamControler:ram                          ; RamControler     ; work         ;
+;       |ram_8x8:ram|                ; 33 (33)             ; 45 (45)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_3_1|RamControler:ram|ram_8x8:ram              ; ram_8x8          ; work         ;
+;    |RegisterPin:regPin|            ; 24 (0)              ; 13 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_3_1|RegisterPin:regPin                        ; RegisterPin      ; work         ;
+;       |Reg8:reg8|                  ; 0 (0)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_3_1|RegisterPin:regPin|Reg8:reg8              ; Reg8             ; work         ;
+;       |SeqDetector:seq_detec|      ; 24 (24)             ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_3_1|RegisterPin:regPin|SeqDetector:seq_detec  ; SeqDetector      ; work         ;
+;    |Timer:timer|                   ; 66 (66)             ; 41 (41)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_3_1|Timer:timer                               ; Timer            ; work         ;
+;    |debouncer:debouncer0|          ; 68 (68)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_3_1|debouncer:debouncer0                      ; debouncer        ; work         ;
+;    |debouncer:debouncer1|          ; 68 (68)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_3_1|debouncer:debouncer1                      ; debouncer        ; work         ;
+;    |debouncer:debouncer2|          ; 68 (68)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_3_1|debouncer:debouncer2                      ; debouncer        ; work         ;
+;    |debouncer:debouncer3|          ; 68 (68)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_3_1|debouncer:debouncer3                      ; debouncer        ; work         ;
++------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------+------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------+
+; State Machine - |Fase_3_1|RegisterPin:regPin|SeqDetector:seq_detec|s_cs ;
++-----------+-----------+-----------+-----------+-----------+-------------+
+; Name      ; s_cs.NUM4 ; s_cs.NUM3 ; s_cs.NUM2 ; s_cs.NUM1 ; s_cs.IDLE   ;
++-----------+-----------+-----------+-----------+-----------+-------------+
+; s_cs.IDLE ; 0         ; 0         ; 0         ; 0         ; 0           ;
+; s_cs.NUM1 ; 0         ; 0         ; 0         ; 1         ; 1           ;
+; s_cs.NUM2 ; 0         ; 0         ; 1         ; 0         ; 1           ;
+; s_cs.NUM3 ; 0         ; 1         ; 0         ; 0         ; 1           ;
+; s_cs.NUM4 ; 1         ; 0         ; 0         ; 0         ; 1           ;
++-----------+-----------+-----------+-----------+-----------+-------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------+
+; State Machine - |Fase_3_1|CheckPin:checkPin|SeqDetector:seqdetector|s_cs ;
++-----------+-----------+-----------+-----------+-----------+--------------+
+; Name      ; s_cs.NUM4 ; s_cs.NUM3 ; s_cs.NUM2 ; s_cs.NUM1 ; s_cs.IDLE    ;
++-----------+-----------+-----------+-----------+-----------+--------------+
+; s_cs.IDLE ; 0         ; 0         ; 0         ; 0         ; 0            ;
+; s_cs.NUM1 ; 0         ; 0         ; 0         ; 1         ; 1            ;
+; s_cs.NUM2 ; 0         ; 0         ; 1         ; 0         ; 1            ;
+; s_cs.NUM3 ; 0         ; 1         ; 0         ; 0         ; 1            ;
+; s_cs.NUM4 ; 1         ; 0         ; 0         ; 0         ; 1            ;
++-----------+-----------+-----------+-----------+-----------+--------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Fase_3_1|AlarmControlUnit:alarmControl|s_cs                                                                                                                ;
++---------------------+---------------+--------------+---------------------+---------------+-------------------+----------------+----------------+----------------+-----------+
+; Name                ; s_cs.RAM_READ ; s_cs.SET_PIN ; s_cs.TRIGGERD_TIMER ; s_cs.TRIGGERD ; s_cs.DESARM_TIMER ; s_cs.ARMED_INT ; s_cs.ARMED_EXT ; s_cs.ARM_TIMER ; s_cs.IDLE ;
++---------------------+---------------+--------------+---------------------+---------------+-------------------+----------------+----------------+----------------+-----------+
+; s_cs.IDLE           ; 0             ; 0            ; 0                   ; 0             ; 0                 ; 0              ; 0              ; 0              ; 0         ;
+; s_cs.ARM_TIMER      ; 0             ; 0            ; 0                   ; 0             ; 0                 ; 0              ; 0              ; 1              ; 1         ;
+; s_cs.ARMED_EXT      ; 0             ; 0            ; 0                   ; 0             ; 0                 ; 0              ; 1              ; 0              ; 1         ;
+; s_cs.ARMED_INT      ; 0             ; 0            ; 0                   ; 0             ; 0                 ; 1              ; 0              ; 0              ; 1         ;
+; s_cs.DESARM_TIMER   ; 0             ; 0            ; 0                   ; 0             ; 1                 ; 0              ; 0              ; 0              ; 1         ;
+; s_cs.TRIGGERD       ; 0             ; 0            ; 0                   ; 1             ; 0                 ; 0              ; 0              ; 0              ; 1         ;
+; s_cs.TRIGGERD_TIMER ; 0             ; 0            ; 1                   ; 0             ; 0                 ; 0              ; 0              ; 0              ; 1         ;
+; s_cs.SET_PIN        ; 0             ; 1            ; 0                   ; 0             ; 0                 ; 0              ; 0              ; 0              ; 1         ;
+; s_cs.RAM_READ       ; 1             ; 0            ; 0                   ; 0             ; 0                 ; 0              ; 0              ; 0              ; 1         ;
++---------------------+---------------+--------------+---------------------+---------------+-------------------+----------------+----------------+----------------+-----------+
+
+
+Encoding Type: Safe One-Hot
++-----------------------------------------------------------------------------+
+; State Machine - |Fase_3_1|debouncer:debouncer3|state                        ;
++---------------------+--------------------+---------------------+------------+
+; Name                ; state.INSIDE_DELAY ; state.INSIDE_WINDOW ; state.IDLE ;
++---------------------+--------------------+---------------------+------------+
+; state.IDLE          ; 0                  ; 0                   ; 0          ;
+; state.INSIDE_WINDOW ; 0                  ; 1                   ; 1          ;
+; state.INSIDE_DELAY  ; 1                  ; 0                   ; 1          ;
++---------------------+--------------------+---------------------+------------+
+
+
+Encoding Type: Safe One-Hot
++-----------------------------------------------------------------------------+
+; State Machine - |Fase_3_1|debouncer:debouncer2|state                        ;
++---------------------+--------------------+---------------------+------------+
+; Name                ; state.INSIDE_DELAY ; state.INSIDE_WINDOW ; state.IDLE ;
++---------------------+--------------------+---------------------+------------+
+; state.IDLE          ; 0                  ; 0                   ; 0          ;
+; state.INSIDE_WINDOW ; 0                  ; 1                   ; 1          ;
+; state.INSIDE_DELAY  ; 1                  ; 0                   ; 1          ;
++---------------------+--------------------+---------------------+------------+
+
+
+Encoding Type: Safe One-Hot
++-----------------------------------------------------------------------------+
+; State Machine - |Fase_3_1|debouncer:debouncer1|state                        ;
++---------------------+--------------------+---------------------+------------+
+; Name                ; state.INSIDE_DELAY ; state.INSIDE_WINDOW ; state.IDLE ;
++---------------------+--------------------+---------------------+------------+
+; state.IDLE          ; 0                  ; 0                   ; 0          ;
+; state.INSIDE_WINDOW ; 0                  ; 1                   ; 1          ;
+; state.INSIDE_DELAY  ; 1                  ; 0                   ; 1          ;
++---------------------+--------------------+---------------------+------------+
+
+
+Encoding Type: Safe One-Hot
++-----------------------------------------------------------------------------+
+; State Machine - |Fase_3_1|debouncer:debouncer0|state                        ;
++---------------------+--------------------+---------------------+------------+
+; Name                ; state.INSIDE_DELAY ; state.INSIDE_WINDOW ; state.IDLE ;
++---------------------+--------------------+---------------------+------------+
+; state.IDLE          ; 0                  ; 0                   ; 0          ;
+; state.INSIDE_WINDOW ; 0                  ; 1                   ; 1          ;
+; state.INSIDE_DELAY  ; 1                  ; 0                   ; 1          ;
++---------------------+--------------------+---------------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Protected by Synthesis                                                                                                                          ;
++-------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; Register Name                             ; Protected by Synthesis Attribute or Preserve Register Assignment ; Not to be Touched by Netlist Optimizations ;
++-------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; debouncer:debouncer0|state.INSIDE_WINDOW  ; no                                                               ; yes                                        ;
+; debouncer:debouncer2|state.INSIDE_WINDOW  ; no                                                               ; yes                                        ;
+; debouncer:debouncer3|state.INSIDE_WINDOW  ; no                                                               ; yes                                        ;
+; debouncer:debouncer1|state.INSIDE_WINDOW  ; no                                                               ; yes                                        ;
+; debouncer:debouncer0|state.IDLE           ; no                                                               ; yes                                        ;
+; debouncer:debouncer0|state.INSIDE_DELAY   ; no                                                               ; yes                                        ;
+; debouncer:debouncer2|state.IDLE           ; no                                                               ; yes                                        ;
+; debouncer:debouncer2|state.INSIDE_DELAY   ; no                                                               ; yes                                        ;
+; debouncer:debouncer3|state.IDLE           ; no                                                               ; yes                                        ;
+; debouncer:debouncer3|state.INSIDE_DELAY   ; no                                                               ; yes                                        ;
+; debouncer:debouncer1|state.IDLE           ; no                                                               ; yes                                        ;
+; debouncer:debouncer1|state.INSIDE_DELAY   ; no                                                               ; yes                                        ;
+; Total number of protected registers is 12 ;                                                                  ;                                            ;
++-------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                      ;
++------------------------------------------------------------+----------------------------------------------------+------------------------+
+; Latch Name                                                 ; Latch Enable Signal                                ; Free of Timing Hazards ;
++------------------------------------------------------------+----------------------------------------------------+------------------------+
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pressed         ; CLOCK_50                                           ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[0]         ; CheckPin:checkPin|SeqDetector:seqdetector|valid    ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[2]         ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[3] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[3]         ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[3] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[4]         ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[5] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[5]         ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[5] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[6]         ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[7] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[7]         ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[7] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[1]         ; CheckPin:checkPin|SeqDetector:seqdetector|valid    ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pressed        ; CLOCK_50                                           ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_btn_pressed[0] ; GND                                                ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_btn_pressed[1] ; GND                                                ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[0]          ; RegisterPin:regPin|SeqDetector:seq_detec|valid     ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[1]          ; RegisterPin:regPin|SeqDetector:seq_detec|valid     ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[2]          ; RegisterPin:regPin|SeqDetector:seq_detec|Selector4 ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[3]          ; RegisterPin:regPin|SeqDetector:seq_detec|Selector4 ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[4]          ; RegisterPin:regPin|SeqDetector:seq_detec|Selector3 ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[5]          ; RegisterPin:regPin|SeqDetector:seq_detec|Selector3 ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[6]          ; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[7]  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[7]          ; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[7]  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_btn_pressed[0]  ; GND                                                ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_btn_pressed[1]  ; GND                                                ; yes                    ;
+; Number of user-specified and inferred latches = 22         ;                                                    ;                        ;
++------------------------------------------------------------+----------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; Timer:timer|s_max[5]                  ; Stuck at GND due to stuck port data_in ;
+; RamControler:ram|s_ram_data_in[4..6]  ; Lost fanout                            ;
+; Timer:timer|s_max[4]                  ; Merged with Timer:timer|s_max[2]       ;
+; Timer:timer|s_max[3]                  ; Merged with Timer:timer|s_max[1]       ;
+; Total Number of Removed Registers = 6 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 271   ;
+; Number of registers using Synchronous Clear  ; 35    ;
+; Number of registers using Synchronous Load   ; 21    ;
+; Number of registers using Asynchronous Clear ; 2     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 80    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; RamControler:ram|s_address_read[0]     ; 5       ;
+; RamControler:ram|s_address_write[0]    ; 13      ;
+; RamControler:ram|s_address_read[1]     ; 4       ;
+; RamControler:ram|s_address_write[1]    ; 12      ;
+; RamControler:ram|s_address_write[2]    ; 11      ;
+; RamControler:ram|s_address_write[3]    ; 2       ;
+; Total number of inverted registers = 6 ;         ;
++----------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Fase_3_1|RamControler:ram|s_ram_data_in[3]      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Fase_3_1|RamControler:ram|s_address_read[2]     ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |Fase_3_1|Timer:timer|s_count[1]                 ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |Fase_3_1|Timer:timer|s_count_freq[27]           ;
+; 7:1                ; 20 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |Fase_3_1|debouncer:debouncer3|timer_counter[17] ;
+; 7:1                ; 20 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |Fase_3_1|debouncer:debouncer2|timer_counter[10] ;
+; 7:1                ; 20 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |Fase_3_1|debouncer:debouncer1|timer_counter[6]  ;
+; 7:1                ; 20 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |Fase_3_1|debouncer:debouncer0|timer_counter[4]  ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Fase_3_1|RamControler:ram|s_sensor[1]           ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Fase_3_1|RamControler:ram|s_address_read[1]     ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Fase_3_1|Bin7SegDecoder:decHex7|decOut_n[2]     ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Fase_3_1|Bin7SegDecoder:decHex7|decOut_n[0]     ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |Fase_3_1|debouncer:debouncer3|state             ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |Fase_3_1|debouncer:debouncer2|state             ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |Fase_3_1|debouncer:debouncer1|state             ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |Fase_3_1|debouncer:debouncer0|state             ;
+; 23:1               ; 7 bits    ; 105 LEs       ; 56 LEs               ; 49 LEs                 ; No         ; |Fase_3_1|AlarmControlUnit:alarmControl|s_cs     ;
+; 23:1               ; 2 bits    ; 30 LEs        ; 4 LEs                ; 26 LEs                 ; No         ; |Fase_3_1|AlarmControlUnit:alarmControl|s_cs     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
+
+
++---------------------------------------------+
+; Source assignments for debouncer:debouncer0 ;
++--------------------+-------+------+---------+
+; Assignment         ; Value ; From ; To      ;
++--------------------+-------+------+---------+
+; SAFE_STATE_MACHINE ; on    ; -    ; state   ;
++--------------------+-------+------+---------+
+
+
++---------------------------------------------+
+; Source assignments for debouncer:debouncer1 ;
++--------------------+-------+------+---------+
+; Assignment         ; Value ; From ; To      ;
++--------------------+-------+------+---------+
+; SAFE_STATE_MACHINE ; on    ; -    ; state   ;
++--------------------+-------+------+---------+
+
+
++---------------------------------------------+
+; Source assignments for debouncer:debouncer2 ;
++--------------------+-------+------+---------+
+; Assignment         ; Value ; From ; To      ;
++--------------------+-------+------+---------+
+; SAFE_STATE_MACHINE ; on    ; -    ; state   ;
++--------------------+-------+------+---------+
+
+
++---------------------------------------------+
+; Source assignments for debouncer:debouncer3 ;
++--------------------+-------+------+---------+
+; Assignment         ; Value ; From ; To      ;
++--------------------+-------+------+---------+
+; SAFE_STATE_MACHINE ; on    ; -    ; state   ;
++--------------------+-------+------+---------+
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ClkDividerN:clock1Hz ;
++----------------+----------+---------------------------------------+
+; Parameter Name ; Value    ; Type                                  ;
++----------------+----------+---------------------------------------+
+; k              ; 50000000 ; Signed Integer                        ;
++----------------+----------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: debouncer:debouncer0 ;
++-----------------+------------+------------------------------------+
+; Parameter Name  ; Value      ; Type                               ;
++-----------------+------------+------------------------------------+
+; clock_frequency ; 50000000.0 ; Signed Float                       ;
+; window_duration ; 2.0E-05    ; Signed Float                       ;
+; delay_duration  ; 0.02       ; Signed Float                       ;
+; initial_level   ; '0'        ; Enumerated                         ;
++-----------------+------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: debouncer:debouncer1 ;
++-----------------+------------+------------------------------------+
+; Parameter Name  ; Value      ; Type                               ;
++-----------------+------------+------------------------------------+
+; clock_frequency ; 50000000.0 ; Signed Float                       ;
+; window_duration ; 2.0E-05    ; Signed Float                       ;
+; delay_duration  ; 0.02       ; Signed Float                       ;
+; initial_level   ; '0'        ; Enumerated                         ;
++-----------------+------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: debouncer:debouncer2 ;
++-----------------+------------+------------------------------------+
+; Parameter Name  ; Value      ; Type                               ;
++-----------------+------------+------------------------------------+
+; clock_frequency ; 50000000.0 ; Signed Float                       ;
+; window_duration ; 2.0E-05    ; Signed Float                       ;
+; delay_duration  ; 0.02       ; Signed Float                       ;
+; initial_level   ; '0'        ; Enumerated                         ;
++-----------------+------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: debouncer:debouncer3 ;
++-----------------+------------+------------------------------------+
+; Parameter Name  ; Value      ; Type                               ;
++-----------------+------------+------------------------------------+
+; clock_frequency ; 50000000.0 ; Signed Float                       ;
+; window_duration ; 2.0E-05    ; Signed Float                       ;
+; delay_duration  ; 0.02       ; Signed Float                       ;
+; initial_level   ; '0'        ; Enumerated                         ;
++-----------------+------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RamControler:ram|ram_8x8:ram"                                                                 ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; readdata[6..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "Bin7SegDecoder:decHex4" ;
++-------------+-------+----------+-------------------+
+; Port        ; Type  ; Severity ; Details           ;
++-------------+-------+----------+-------------------+
+; bininput[4] ; Input ; Info     ; Stuck at GND      ;
++-------------+-------+----------+-------------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "Bin7SegDecoder:decHex6" ;
++-------------+-------+----------+-------------------+
+; Port        ; Type  ; Severity ; Details           ;
++-------------+-------+----------+-------------------+
+; bininput[4] ; Input ; Info     ; Stuck at GND      ;
++-------------+-------+----------+-------------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "Bin7SegDecoder:decHex7" ;
++-------------+-------+----------+-------------------+
+; Port        ; Type  ; Severity ; Details           ;
++-------------+-------+----------+-------------------+
+; bininput[4] ; Input ; Info     ; Stuck at GND      ;
++-------------+-------+----------+-------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Bin2BCDCase:bin2bcd"                                                                          ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; bininput[7..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; bcd2           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "Timer:timer"  ;
++--------+-------+----------+--------------+
+; Port   ; Type  ; Severity ; Details      ;
++--------+-------+----------+--------------+
+; enable ; Input ; Info     ; Stuck at VCC ;
++--------+-------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "RegisterPin:regPin"                                                                     ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; entering ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CheckPin:checkPin"                                                                                ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                             ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+; correct_pin1[7..5] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; correct_pin1[4..3] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; correct_pin1[1..0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; correct_pin1[2]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; entering           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "debouncer:debouncer3"                                                                            ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; clean             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero_to_one_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "debouncer:debouncer2"                                                                            ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; clean             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero_to_one_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "debouncer:debouncer1"                                                                            ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; clean             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero_to_one_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "debouncer:debouncer0"                                                                            ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; clean             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero_to_one_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 61                          ;
+; cycloneiii_ff         ; 271                         ;
+;     ENA               ; 78                          ;
+;     ENA CLR           ; 2                           ;
+;     SCLR              ; 35                          ;
+;     SLD               ; 21                          ;
+;     plain             ; 135                         ;
+; cycloneiii_lcell_comb ; 643                         ;
+;     arith             ; 141                         ;
+;         2 data inputs ; 141                         ;
+;     normal            ; 502                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 62                          ;
+;         3 data inputs ; 126                         ;
+;         4 data inputs ; 303                         ;
+;                       ;                             ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 3.94                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Wed May 30 14:00:34 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Fase_3_1 -c Fase_3_1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file clkdividern.vhd
+    Info (12022): Found design unit 1: ClkDividerN-RTL File: C:/LSD/Projeto_Final/Fase_3_1/ClkDividerN.vhd Line: 11
+    Info (12023): Found entity 1: ClkDividerN File: C:/LSD/Projeto_Final/Fase_3_1/ClkDividerN.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file timer.vhd
+    Info (12022): Found design unit 1: Timer-Behavioral File: C:/LSD/Projeto_Final/Fase_3_1/Timer.vhd Line: 13
+    Info (12023): Found entity 1: Timer File: C:/LSD/Projeto_Final/Fase_3_1/Timer.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bin7segdecoder.vhd
+    Info (12022): Found design unit 1: Bin7SegDecoder-Behavioral File: C:/LSD/Projeto_Final/Fase_3_1/Bin7SegDecoder.vhd Line: 12
+    Info (12023): Found entity 1: Bin7SegDecoder File: C:/LSD/Projeto_Final/Fase_3_1/Bin7SegDecoder.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file bin2bcdcase.vhd
+    Info (12022): Found design unit 1: Bin2BCDCase-Behavioral File: C:/LSD/Projeto_Final/Fase_3_1/Bin2BCDCase.vhd Line: 13
+    Info (12023): Found entity 1: Bin2BCDCase File: C:/LSD/Projeto_Final/Fase_3_1/Bin2BCDCase.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ram_8x8.vhd
+    Info (12022): Found design unit 1: ram_8x8-Behavioral File: C:/LSD/Projeto_Final/Fase_3_1/ram_8x8.vhd Line: 13
+    Info (12023): Found entity 1: ram_8x8 File: C:/LSD/Projeto_Final/Fase_3_1/ram_8x8.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file fase_3_1.vhd
+    Info (12022): Found design unit 1: Fase_3_1-Behavioral File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 14
+    Info (12023): Found entity 1: Fase_3_1 File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file testregister_pin.vhd
+    Info (12022): Found design unit 1: TestRegister_Pin-Shell File: C:/LSD/Projeto_Final/Fase_3_1/TestRegister_Pin.vhd Line: 12
+    Info (12023): Found entity 1: TestRegister_Pin File: C:/LSD/Projeto_Final/Fase_3_1/TestRegister_Pin.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file seqdetector.vhd
+    Info (12022): Found design unit 1: SeqDetector-Behavioral File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 11
+    Info (12023): Found entity 1: SeqDetector File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file registerpin.vhd
+    Info (12022): Found design unit 1: RegisterPin-Behavioral File: C:/LSD/Projeto_Final/Fase_3_1/RegisterPin.vhd Line: 12
+    Info (12023): Found entity 1: RegisterPin File: C:/LSD/Projeto_Final/Fase_3_1/RegisterPin.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file reg8.vhd
+    Info (12022): Found design unit 1: Reg8-Behavioral File: C:/LSD/Projeto_Final/Fase_3_1/Reg8.vhd Line: 12
+    Info (12023): Found entity 1: Reg8 File: C:/LSD/Projeto_Final/Fase_3_1/Reg8.vhd Line: 5
+Info (12021): Found 3 design units, including 1 entities, in source file debouncer.vhd
+    Info (12022): Found design unit 1: debouncer-fancy File: C:/LSD/Projeto_Final/Fase_3_1/debouncer.vhd Line: 44
+    Info (12022): Found design unit 2: debouncer-basic File: C:/LSD/Projeto_Final/Fase_3_1/debouncer.vhd Line: 140
+    Info (12023): Found entity 1: debouncer File: C:/LSD/Projeto_Final/Fase_3_1/debouncer.vhd Line: 24
+Info (12021): Found 2 design units, including 1 entities, in source file checkpin.vhd
+    Info (12022): Found design unit 1: CheckPin-Behavioral File: C:/LSD/Projeto_Final/Fase_3_1/CheckPin.vhd Line: 12
+    Info (12023): Found entity 1: CheckPin File: C:/LSD/Projeto_Final/Fase_3_1/CheckPin.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file alarmcontrolunit.vhd
+    Info (12022): Found design unit 1: AlarmControlUnit-Behavioral File: C:/LSD/Projeto_Final/Fase_3_1/AlarmControlUnit.vhd Line: 11
+    Info (12023): Found entity 1: AlarmControlUnit File: C:/LSD/Projeto_Final/Fase_3_1/AlarmControlUnit.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ramcontroler.vhd
+    Info (12022): Found design unit 1: RamControler-Behavioral File: C:/LSD/Projeto_Final/Fase_3_1/RamControler.vhd Line: 12
+    Info (12023): Found entity 1: RamControler File: C:/LSD/Projeto_Final/Fase_3_1/RamControler.vhd Line: 5
+Info (12127): Elaborating entity "Fase_3_1" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Fase_3_1.vhd(16): object "s_entering_pin" assigned a value but never read File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 16
+Warning (10873): Using initial value X (don't care) for net "LEDR[13..0]" at Fase_3_1.vhd(9) File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 9
+Info (12129): Elaborating entity "ClkDividerN" using architecture "A:rtl" for hierarchy "ClkDividerN:clock1Hz" File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 32
+Info (12129): Elaborating entity "debouncer" using architecture "A:fancy" for hierarchy "debouncer:debouncer0" File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 38
+Info (12129): Elaborating entity "AlarmControlUnit" using architecture "A:behavioral" for hierarchy "AlarmControlUnit:alarmControl" File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 86
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(45): signal "arm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/AlarmControlUnit.vhd Line: 45
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(47): signal "pin_set" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/AlarmControlUnit.vhd Line: 47
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(49): signal "ram_enter" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/AlarmControlUnit.vhd Line: 49
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(61): signal "timer_finish" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/AlarmControlUnit.vhd Line: 61
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(62): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/AlarmControlUnit.vhd Line: 62
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(67): signal "right_pin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/AlarmControlUnit.vhd Line: 67
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(79): signal "window_trigger" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/AlarmControlUnit.vhd Line: 79
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(81): signal "trigger" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/AlarmControlUnit.vhd Line: 81
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(94): signal "window_trigger" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/AlarmControlUnit.vhd Line: 94
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(96): signal "int_trigger" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/AlarmControlUnit.vhd Line: 96
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(108): signal "window_trigger" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/AlarmControlUnit.vhd Line: 108
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(108): signal "wrong_pin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/AlarmControlUnit.vhd Line: 108
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(108): signal "timer_finish" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/AlarmControlUnit.vhd Line: 108
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(110): signal "right_pin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/AlarmControlUnit.vhd Line: 110
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(134): signal "right_pin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/AlarmControlUnit.vhd Line: 134
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(134): signal "timer_finish" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/AlarmControlUnit.vhd Line: 134
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(147): signal "done_set" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/AlarmControlUnit.vhd Line: 147
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(150): signal "back" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/AlarmControlUnit.vhd Line: 150
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(164): signal "back" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/AlarmControlUnit.vhd Line: 164
+Info (12129): Elaborating entity "CheckPin" using architecture "A:behavioral" for hierarchy "CheckPin:checkPin" File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 110
+Warning (10492): VHDL Process Statement warning at CheckPin.vhd(39): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/CheckPin.vhd Line: 39
+Info (12129): Elaborating entity "SeqDetector" using architecture "A:behavioral" for hierarchy "CheckPin:checkPin|SeqDetector:seqdetector" File: C:/LSD/Projeto_Final/Fase_3_1/CheckPin.vhd Line: 24
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(36): signal "s_btn_pressed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 36
+Warning (10631): VHDL Process Statement warning at SeqDetector.vhd(23): inferring latch(es) for signal or variable "s_pressed", which holds its previous value in one or more paths through the process File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 23
+Warning (10631): VHDL Process Statement warning at SeqDetector.vhd(23): inferring latch(es) for signal or variable "s_btn_pressed", which holds its previous value in one or more paths through the process File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 23
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(55): signal "start" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 55
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(62): signal "s_btn_pressed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 62
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(66): signal "s_pin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 66
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(73): signal "s_btn_pressed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 73
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(77): signal "s_pin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 77
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(84): signal "s_btn_pressed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 84
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(89): signal "s_pin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 89
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(95): signal "s_btn_pressed" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 95
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(100): signal "s_pin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 100
+Warning (10631): VHDL Process Statement warning at SeqDetector.vhd(47): inferring latch(es) for signal or variable "s_pin", which holds its previous value in one or more paths through the process File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 47
+Info (10041): Inferred latch for "s_pin[0]" at SeqDetector.vhd(47) File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 47
+Info (10041): Inferred latch for "s_pin[1]" at SeqDetector.vhd(47) File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 47
+Info (10041): Inferred latch for "s_pin[2]" at SeqDetector.vhd(47) File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 47
+Info (10041): Inferred latch for "s_pin[3]" at SeqDetector.vhd(47) File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 47
+Info (10041): Inferred latch for "s_pin[4]" at SeqDetector.vhd(47) File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 47
+Info (10041): Inferred latch for "s_pin[5]" at SeqDetector.vhd(47) File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 47
+Info (10041): Inferred latch for "s_pin[6]" at SeqDetector.vhd(47) File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 47
+Info (10041): Inferred latch for "s_pin[7]" at SeqDetector.vhd(47) File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 47
+Info (10041): Inferred latch for "s_btn_pressed[0]" at SeqDetector.vhd(23) File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 23
+Info (10041): Inferred latch for "s_btn_pressed[1]" at SeqDetector.vhd(23) File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 23
+Info (10041): Inferred latch for "s_pressed" at SeqDetector.vhd(23) File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 23
+Info (12129): Elaborating entity "RegisterPin" using architecture "A:behavioral" for hierarchy "RegisterPin:regPin" File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 121
+Info (12129): Elaborating entity "Reg8" using architecture "A:behavioral" for hierarchy "RegisterPin:regPin|Reg8:reg8" File: C:/LSD/Projeto_Final/Fase_3_1/RegisterPin.vhd Line: 25
+Info (12129): Elaborating entity "Timer" using architecture "A:behavioral" for hierarchy "Timer:timer" File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 131
+Info (12129): Elaborating entity "Bin2BCDCase" using architecture "A:behavioral" for hierarchy "Bin2BCDCase:bin2bcd" File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 141
+Info (12129): Elaborating entity "Bin7SegDecoder" using architecture "A:behavioral" for hierarchy "Bin7SegDecoder:decHex7" File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 149
+Info (12129): Elaborating entity "RamControler" using architecture "A:behavioral" for hierarchy "RamControler:ram" File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 167
+Info (12129): Elaborating entity "ram_8x8" using architecture "A:behavioral" for hierarchy "RamControler:ram|ram_8x8:ram" File: C:/LSD/Projeto_Final/Fase_3_1/RamControler.vhd Line: 89
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "RamControler:ram|ram_8x8:ram|s_memory" is uninferred due to inappropriate RAM size File: C:/LSD/Projeto_Final/Fase_3_1/ram_8x8.vhd Line: 17
+Info (284007): State machine "|Fase_3_1|debouncer:debouncer3|state" will be implemented as a safe state machine. File: C:/LSD/Projeto_Final/Fase_3_1/debouncer.vhd Line: 71
+Info (284007): State machine "|Fase_3_1|debouncer:debouncer2|state" will be implemented as a safe state machine. File: C:/LSD/Projeto_Final/Fase_3_1/debouncer.vhd Line: 71
+Info (284007): State machine "|Fase_3_1|debouncer:debouncer1|state" will be implemented as a safe state machine. File: C:/LSD/Projeto_Final/Fase_3_1/debouncer.vhd Line: 71
+Info (284007): State machine "|Fase_3_1|debouncer:debouncer0|state" will be implemented as a safe state machine. File: C:/LSD/Projeto_Final/Fase_3_1/debouncer.vhd Line: 71
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "CheckPin:checkPin|SeqDetector:seqdetector|s_pressed" merged with LATCH primitive "RegisterPin:regPin|SeqDetector:seq_detec|s_pressed" File: C:/LSD/Projeto_Final/Fase_3_1/SeqDetector.vhd Line: 15
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 9
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 9
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 9
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 9
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 9
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 9
+    Warning (13410): Pin "LEDR[6]" is stuck at GND File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 9
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 9
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 9
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 9
+    Warning (13410): Pin "LEDR[10]" is stuck at GND File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 9
+    Warning (13410): Pin "LEDR[11]" is stuck at GND File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 9
+    Warning (13410): Pin "LEDR[12]" is stuck at GND File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 9
+    Warning (13410): Pin "LEDR[13]" is stuck at GND File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 9
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 7
+    Warning (15610): No output dependent on input pin "SW[11]" File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 7
+    Warning (15610): No output dependent on input pin "SW[12]" File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 7
+    Warning (15610): No output dependent on input pin "SW[13]" File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 7
+    Warning (15610): No output dependent on input pin "SW[14]" File: C:/LSD/Projeto_Final/Fase_3_1/Fase_3_1.vhd Line: 7
+Info (21057): Implemented 758 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 21 input pins
+    Info (21059): Implemented 40 output pins
+    Info (21061): Implemented 697 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 57 warnings
+    Info: Peak virtual memory: 4805 megabytes
+    Info: Processing ended: Wed May 30 14:00:53 2018
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:38
+
+

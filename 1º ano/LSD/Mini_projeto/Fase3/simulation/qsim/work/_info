@@ -1,0 +1,190 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Data/Universidade/LSD/Mini_projecto/Fase3/simulation/qsim
+Emini_projecto_fase3_v2
+Z1 w1523376737
+Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 N5CzKW88F^ShIK@<7Vek12
+Z3 DPx10 cycloneive 21 cycloneive_components 0 22 K8IbX`K5[Y1gJUKg2X_071
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 ?bDUB9Db2N8iCCALNL;CT3
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z9 DPx6 altera 28 altera_primitives_components 0 22 c]VUMXSEi8Z`KM1bem<:B3
+R0
+Z10 8Mini_projecto_fase3.vho
+Z11 FMini_projecto_fase3.vho
+l0
+L36
+VCiN?km7WgNSMJYciY2WDf1
+!s100 zCKK3<P3a^o<b?=V_T7UT2
+Z12 OV;C;10.5b;63
+32
+Z13 !s110 1523376738
+!i10b 1
+Z14 !s108 1523376737.000000
+Z15 !s90 -work|work|Mini_projecto_fase3.vho|
+Z16 !s107 Mini_projecto_fase3.vho|
+!i113 1
+Z17 o-work work
+Z18 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 22 mini_projecto_fase3_v2 0 22 CiN?km7WgNSMJYciY2WDf1
+l711
+L51
+VKcfmP7FXzRQa>gPCed]h?3
+!s100 ocghJ]>VL1m@m`_K;Oa=e0
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Emini_projecto_fase3_v2_vhd_vec_tst
+Z19 w1523376735
+R7
+R8
+R0
+Z20 8V2_test.vwf.vht
+Z21 FV2_test.vwf.vht
+l0
+L31
+V9?ShTGa6Mac>GmzDXnI6[0
+!s100 6DiY1jXmGSV^L0STS6lUh1
+R12
+32
+R13
+!i10b 1
+Z22 !s108 1523376738.000000
+Z23 !s90 -work|work|V2_test.vwf.vht|
+Z24 !s107 V2_test.vwf.vht|
+!i113 1
+R17
+R18
+Amini_projecto_fase3_v2_arch
+R7
+R8
+DEx4 work 34 mini_projecto_fase3_v2_vhd_vec_tst 0 22 9?ShTGa6Mac>GmzDXnI6[0
+l60
+L33
+VRf6djNmfW7RlaY>9F1B_R3
+!s100 2En4I@cfz5:zYYje1NFdh3
+R12
+32
+R13
+!i10b 1
+R22
+R23
+R24
+!i113 1
+R17
+R18
+Etimercounter_v2
+Z25 w1523380512
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R0
+R10
+R11
+l0
+L36
+V3V>O_5]7_?HHRB;o@[hiO3
+!s100 X;fhAWo1CAg5ZmQROL<C61
+R12
+32
+Z26 !s110 1523380513
+!i10b 1
+Z27 !s108 1523380513.000000
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 15 timercounter_v2 0 22 3V>O_5]7_?HHRB;o@[hiO3
+l384
+L49
+VIGePhN]XK]7[YHWh:QK7:2
+!s100 DRkVe[lb<CU1cLDzfSV313
+R12
+32
+R26
+!i10b 1
+R27
+R15
+R16
+!i113 1
+R17
+R18
+Etimercounter_v2_vhd_vec_tst
+Z28 w1523380511
+R7
+R8
+R0
+R20
+R21
+l0
+L31
+VN6<4d]JLhcV_bj<=Ibn:01
+!s100 _[=g7Khn8<7VGEPSRjIUV3
+R12
+32
+R26
+!i10b 1
+R27
+R23
+R24
+!i113 1
+R17
+R18
+Atimercounter_v2_arch
+R7
+R8
+Z29 DEx4 work 27 timercounter_v2_vhd_vec_tst 0 22 N6<4d]JLhcV_bj<=Ibn:01
+l56
+L33
+VIPXUfMQMVaBXFz3V^b1KA0
+!s100 >1Z@CLSh<a8K7lFXa0]dN3
+R12
+32
+R26
+!i10b 1
+R27
+R23
+R24
+!i113 1
+R17
+R18

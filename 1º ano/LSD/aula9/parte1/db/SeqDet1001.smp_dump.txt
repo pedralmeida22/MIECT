@@ -1,0 +1,7 @@
+
+State Machine - |SeqDet1001|SeqDetFSM:SeqDet|s_presentState
+Name s_presentState.ST_100 s_presentState.ST_10 s_presentState.ST_1 s_presentState.ST_INI 
+s_presentState.ST_INI 0 0 0 0 
+s_presentState.ST_1 0 0 1 1 
+s_presentState.ST_10 0 1 0 1 
+s_presentState.ST_100 1 0 0 1 

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Nov 27 16:44:43 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : Cmp8bit
+Top-level Entity Name : cmpbit_8
+Family : Cyclone IV E
+Total logic elements : 22
+    Total combinational functions : 22
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 22
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

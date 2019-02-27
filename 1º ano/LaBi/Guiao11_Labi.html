@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt" lang="pt">
+
+<head>
+	<title>Guiao11_Labi</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" 
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+	<link rel="stylesheet" 
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"> 
+	<script 
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+	<script 
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+	<script type="text/javascript" 
+	src="http://code.highcharts.com/highcharts.js"></script>
+	<script type="text/javascript" 
+	src="grafico-linhas.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css"> 
+	<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+	<script type="text/javascript" src="map.js"></script>
+
+	
+</head>
+
+<body onload="mostrarMapa(); mostrarMapaAlcobaçaCity()">
+	<div class="container"> 
+		<nav class="navbar navbar-default"> 
+			<div class="navbar-header"> 
+				<a class="navbar-brand" href="#">LABI</a> 
+			</div>
+			
+			<div class="navbar-collapse collapse"> 
+				<ul class="nav navbar-nav"> 
+					<li class="active"><a href="#topicoA">TópicoA</a></li>
+					 
+					<li><a href="#topicoB">TópicoB</a></li> 
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"> 
+							Mais Topicos<b class="caret"></b></a> 
+						<ul class="dropdown-menu"> 
+							<li><a href="#topicoC">Tópico C</a></li> 
+							<li class="divider"></li> 
+							<li><a href="#">Opção2</a></li> 
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right"> 
+					<li class="active"><a href="#">Default</a></li> 
+				</ul> 
+			</div>
+		</nav>
+		
+		(Conteúdo da página)
+		<h2 id="topicoA"> Este é o Tópico A </h2>
+		
+		<h2 id="topicoB"> Este é o Tópico B </h2>
+		
+		<h2 id="topicoC"> Este é o Tópico C </h2>
+		
+		<div id="oMeuPopup" class="modal fade"> 
+		<div class="modal-dialog"> 
+			<div class="modal-content"> 
+				<div class="modal-header"> 
+					<button type="button" class="close" 
+						data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Foste avisado!</h4> 
+				</div>
+				<div class="modal-body"> 
+					<p>Vais chumbar a ISD!</p> 
+				</div>
+				<div class="modal-footer"> 
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button> 
+				</div> 
+			</div> 
+		</div> 
+		</div>
+		
+		<button class="btn btn-primary" data-toggle="modal" data-target="#oMeuPopup">
+			Não carregar! 
+		</button>
+		
+		<!-- Gráficos --> 
+		<div id="grafico-linhas" style="width: 400px; height: 300px;"></div>
+		
+		<button class="btn btn-primary" onclick="desenhaGrafico()"> 
+			Grafico de Linhas 
+		</button>
+		
+		<button class="btn btn-primary" onclick="desenhaGrafico2()"> 
+			Grafico de Colunas
+		</button>
+		
+		<button class="btn btn-primary" onclick="desenhaGrafico3()"> 
+			Grafico de Pie
+		</button>
+		
+		<button class="btn btn-primary" onclick="desenhaGrafico4()"> 
+			Grafico de Scatter
+		</button>
+		
+		</br> </br> </br>
+		
+		<!-- Mapa --> 
+		<div id="oMeuMapa" style="width: 500px; height: 400px; float:left"></div>
+		<div id="oMeuMapa2" style="width: 500px; height: 400px; float:left"></div>
+		</br> </br> </br>
+		<span id="coordenadas"></span>
+
+
+	</div>
+	
+</body>
+
+</html>

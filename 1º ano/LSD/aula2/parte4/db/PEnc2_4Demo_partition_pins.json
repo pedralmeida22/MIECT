@@ -1,0 +1,37 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "encodedOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "encodedOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "validOut",
+					"strict" : false
+				},
+				{
+					"name" : "decodedIn[3]",
+					"strict" : false
+				},
+				{
+					"name" : "decodedIn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "decodedIn[2]",
+					"strict" : false
+				},
+				{
+					"name" : "decodedIn[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

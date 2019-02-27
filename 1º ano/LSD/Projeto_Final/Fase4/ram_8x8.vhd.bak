@@ -1,0 +1,13 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity ram_8x8 is
+	port(clk : in std_logic;
+	     adrress : in std_logic_vector(7 downto 0);
+		  dataOut : out std_logic_vector(7 downto 0));
+end ram_8x8;
+
+architecture Behavioral of ram_8x8 is
+
+end Behavioral;

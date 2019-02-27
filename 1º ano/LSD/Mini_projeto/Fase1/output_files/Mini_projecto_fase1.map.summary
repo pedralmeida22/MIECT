@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Apr 09 14:32:23 2018
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+Revision Name : Mini_projecto_fase1
+Top-level Entity Name : TimerCounter
+Family : Cyclone IV E
+Total logic elements : 29
+    Total combinational functions : 28
+    Dedicated logic registers : 18
+Total registers : 18
+Total pins : 37
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

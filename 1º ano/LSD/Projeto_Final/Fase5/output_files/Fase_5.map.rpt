@@ -1,0 +1,1442 @@
+Analysis & Synthesis report for Fase_5
+Tue May 29 11:40:51 2018
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|state
+  9. State Machine - |Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|state
+ 10. State Machine - |Fase_5|LCDModule:LCDMod|lcd_controller:DISPLAY|state
+ 11. State Machine - |Fase_5|RegisterPin:regPin|SeqDetector:seq_detec|s_cs
+ 12. State Machine - |Fase_5|CheckPin:checkPin|SeqDetector:seqdetector|s_cs
+ 13. State Machine - |Fase_5|AlarmControlUnit:alarmControl|s_cs
+ 14. State Machine - |Fase_5|debouncer:debouncer3|state
+ 15. State Machine - |Fase_5|debouncer:debouncer2|state
+ 16. State Machine - |Fase_5|debouncer:debouncer1|state
+ 17. State Machine - |Fase_5|debouncer:debouncer0|state
+ 18. Registers Protected by Synthesis
+ 19. User-Specified and Inferred Latches
+ 20. Registers Removed During Synthesis
+ 21. Removed Registers Triggering Further Register Optimizations
+ 22. General Register Statistics
+ 23. Inverted Register Statistics
+ 24. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 25. Source assignments for debouncer:debouncer0
+ 26. Source assignments for debouncer:debouncer1
+ 27. Source assignments for debouncer:debouncer2
+ 28. Source assignments for debouncer:debouncer3
+ 29. Source assignments for LCDModule:LCDMod|lcd_controller:DISPLAY
+ 30. Source assignments for ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER
+ 31. Source assignments for ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL
+ 32. Parameter Settings for User Entity Instance: debouncer:debouncer0
+ 33. Parameter Settings for User Entity Instance: debouncer:debouncer1
+ 34. Parameter Settings for User Entity Instance: debouncer:debouncer2
+ 35. Parameter Settings for User Entity Instance: debouncer:debouncer3
+ 36. Parameter Settings for User Entity Instance: ClkDividerN:pulse
+ 37. Parameter Settings for User Entity Instance: LCDModule:LCDMod
+ 38. Parameter Settings for User Entity Instance: LCDModule:LCDMod|lcd_controller:DISPLAY
+ 39. Parameter Settings for User Entity Instance: ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER
+ 40. Parameter Settings for User Entity Instance: ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL
+ 41. Port Connectivity Checks: "ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER"
+ 42. Port Connectivity Checks: "Bin7SegDecoder:decHex6"
+ 43. Port Connectivity Checks: "Bin7SegDecoder:decHex7"
+ 44. Port Connectivity Checks: "Bin2BCDCase:bin2bcd"
+ 45. Port Connectivity Checks: "LCDModule:LCDMod|lcd_controller:DISPLAY"
+ 46. Port Connectivity Checks: "Timer:timer"
+ 47. Port Connectivity Checks: "CheckPin:checkPin"
+ 48. Port Connectivity Checks: "debouncer:debouncer3"
+ 49. Port Connectivity Checks: "debouncer:debouncer2"
+ 50. Port Connectivity Checks: "debouncer:debouncer1"
+ 51. Port Connectivity Checks: "debouncer:debouncer0"
+ 52. Post-Synthesis Netlist Statistics for Top Partition
+ 53. Elapsed Time Per Partition
+ 54. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue May 29 11:40:51 2018       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; Fase_5                                      ;
+; Top-level Entity Name              ; Fase_5                                      ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 1,328                                       ;
+;     Total combinational functions  ; 1,289                                       ;
+;     Dedicated logic registers      ; 523                                         ;
+; Total registers                    ; 523                                         ;
+; Total pins                         ; 74                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                                      ; Fase_5             ; Fase_5             ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.1%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                        ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                 ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------+---------+
+; Reg64.vhd                        ; yes             ; User VHDL File  ; C:/Data/Universidade/LSD/Projeto/Fase_5/Reg64.vhd            ;         ;
+; ps2Keyboard.vhd                  ; yes             ; User VHDL File  ; C:/Data/Universidade/LSD/Projeto/Fase_5/ps2Keyboard.vhd      ;         ;
+; Fase_5.vhd                       ; yes             ; User VHDL File  ; C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd           ;         ;
+; Timer.vhd                        ; yes             ; User VHDL File  ; C:/Data/Universidade/LSD/Projeto/Fase_5/Timer.vhd            ;         ;
+; SeqDetector.vhd                  ; yes             ; User VHDL File  ; C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd      ;         ;
+; RegisterPin.vhd                  ; yes             ; User VHDL File  ; C:/Data/Universidade/LSD/Projeto/Fase_5/RegisterPin.vhd      ;         ;
+; ps2_controller.vhd               ; yes             ; User VHDL File  ; C:/Data/Universidade/LSD/Projeto/Fase_5/ps2_controller.vhd   ;         ;
+; LCDSelector.vhd                  ; yes             ; User VHDL File  ; C:/Data/Universidade/LSD/Projeto/Fase_5/LCDSelector.vhd      ;         ;
+; LCDModule.vhd                    ; yes             ; User VHDL File  ; C:/Data/Universidade/LSD/Projeto/Fase_5/LCDModule.vhd        ;         ;
+; lcd_controller.vhd               ; yes             ; User VHDL File  ; C:/Data/Universidade/LSD/Projeto/Fase_5/lcd_controller.vhd   ;         ;
+; debouncer.vhd                    ; yes             ; User VHDL File  ; C:/Data/Universidade/LSD/Projeto/Fase_5/debouncer.vhd        ;         ;
+; ClkDividerN.vhd                  ; yes             ; User VHDL File  ; C:/Data/Universidade/LSD/Projeto/Fase_5/ClkDividerN.vhd      ;         ;
+; CheckPin.vhd                     ; yes             ; User VHDL File  ; C:/Data/Universidade/LSD/Projeto/Fase_5/CheckPin.vhd         ;         ;
+; Bin7SegDecoder.vhd               ; yes             ; User VHDL File  ; C:/Data/Universidade/LSD/Projeto/Fase_5/Bin7SegDecoder.vhd   ;         ;
+; Bin2BCDCase.vhd                  ; yes             ; User VHDL File  ; C:/Data/Universidade/LSD/Projeto/Fase_5/Bin2BCDCase.vhd      ;         ;
+; AlarmControlUnit.vhd             ; yes             ; User VHDL File  ; C:/Data/Universidade/LSD/Projeto/Fase_5/AlarmControlUnit.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimated Total logic elements              ; 1,328          ;
+;                                             ;                ;
+; Total combinational functions               ; 1289           ;
+; Logic element usage by number of LUT inputs ;                ;
+;     -- 4 input functions                    ; 663            ;
+;     -- 3 input functions                    ; 285            ;
+;     -- <=2 input functions                  ; 341            ;
+;                                             ;                ;
+; Logic elements by mode                      ;                ;
+;     -- normal mode                          ; 1092           ;
+;     -- arithmetic mode                      ; 197            ;
+;                                             ;                ;
+; Total registers                             ; 523            ;
+;     -- Dedicated logic registers            ; 523            ;
+;     -- I/O registers                        ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 74             ;
+;                                             ;                ;
+; Embedded Multiplier 9-bit elements          ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; CLOCK_50~input ;
+; Maximum fan-out                             ; 523            ;
+; Total fan-out                               ; 5639           ;
+; Average fan-out                             ; 2.86           ;
++---------------------------------------------+----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                          ;
++------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+--------------------------+--------------+
+; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                    ; Entity Name              ; Library Name ;
++------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+--------------------------+--------------+
+; |Fase_5                                        ; 1289 (15)           ; 523 (0)                   ; 0           ; 0            ; 0       ; 0         ; 74   ; 0            ; |Fase_5                                                                                                ; Fase_5                   ; work         ;
+;    |AlarmControlUnit:alarmControl|             ; 43 (43)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_5|AlarmControlUnit:alarmControl                                                                  ; AlarmControlUnit         ; work         ;
+;    |Bin2BCDCase:bin2bcd|                       ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_5|Bin2BCDCase:bin2bcd                                                                            ; Bin2BCDCase              ; work         ;
+;    |Bin7SegDecoder:decHex6|                    ; 15 (15)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_5|Bin7SegDecoder:decHex6                                                                         ; Bin7SegDecoder           ; work         ;
+;    |Bin7SegDecoder:decHex7|                    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_5|Bin7SegDecoder:decHex7                                                                         ; Bin7SegDecoder           ; work         ;
+;    |CheckPin:checkPin|                         ; 150 (68)            ; 13 (4)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_5|CheckPin:checkPin                                                                              ; CheckPin                 ; work         ;
+;       |SeqDetector:seqdetector|                ; 82 (82)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_5|CheckPin:checkPin|SeqDetector:seqdetector                                                      ; SeqDetector              ; work         ;
+;    |ClkDividerN:pulse|                         ; 57 (57)             ; 32 (32)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_5|ClkDividerN:pulse                                                                              ; ClkDividerN              ; work         ;
+;    |LCDModule:LCDMod|                          ; 352 (215)           ; 159 (85)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_5|LCDModule:LCDMod                                                                               ; LCDModule                ; work         ;
+;       |lcd_controller:DISPLAY|                 ; 137 (137)           ; 74 (74)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_5|LCDModule:LCDMod|lcd_controller:DISPLAY                                                        ; lcd_controller           ; work         ;
+;    |LCDSelector:LCDSel|                        ; 8 (8)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_5|LCDSelector:LCDSel                                                                             ; LCDSelector              ; work         ;
+;    |RegisterPin:regPin|                        ; 79 (3)              ; 73 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_5|RegisterPin:regPin                                                                             ; RegisterPin              ; work         ;
+;       |Reg64:reg8|                             ; 0 (0)               ; 64 (64)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_5|RegisterPin:regPin|Reg64:reg8                                                                  ; Reg64                    ; work         ;
+;       |SeqDetector:seq_detec|                  ; 76 (76)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_5|RegisterPin:regPin|SeqDetector:seq_detec                                                       ; SeqDetector              ; work         ;
+;    |Timer:timer|                               ; 67 (67)             ; 41 (41)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_5|Timer:timer                                                                                    ; Timer                    ; work         ;
+;    |debouncer:debouncer0|                      ; 68 (68)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_5|debouncer:debouncer0                                                                           ; debouncer                ; work         ;
+;    |debouncer:debouncer1|                      ; 68 (68)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_5|debouncer:debouncer1                                                                           ; debouncer                ; work         ;
+;    |ps2Keyboard:keyboard|                      ; 346 (5)             ; 138 (10)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_5|ps2Keyboard:keyboard                                                                           ; ps2Keyboard              ; work         ;
+;       |ps2_controller:PS2_KEYBOARD_CONTROLLER| ; 341 (195)           ; 128 (62)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER                                    ; ps2_controller           ; work         ;
+;          |low_level_ps2_controller:LOW_LEVEL|  ; 146 (146)           ; 66 (66)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL ; low_level_ps2_controller ; work         ;
++------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------+--------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type: Safe One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|state                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ;
++--------------------------------------------------+---------------------------------+----------------------------------+---------------------------------+-----------------------------------------+--------------------+--------------------------------------------------+----------------------------------+---------------------------------------------+--------------------------------+--------------------------------------------+-----------------------+--------------------------+--------------------+----------------------------------+----------------------+---------------+
+; Name                                             ; state.WAIT_FOR_THIRD_MOUSE_BYTE ; state.WAIT_FOR_SECOND_MOUSE_BYTE ; state.WAIT_FOR_FIRST_MOUSE_BYTE ; state.WAIT_FOR_ENABLE_MOUSE_ACKNOWLEDGE ; state.ENABLE_MOUSE ; state.WAIT_FOR_KEYBOARD_SET_LED_DATA_ACKNOWLEDGE ; state.SEND_KEYBOARD_SET_LED_DATA ; state.WAIT_FOR_KEYBOARD_SET_LED_ACKNOWLEDGE ; state.KEYBOARD_WAIT_FOR_CHANGE ; state.WAIT_FOR_ENABLE_KEYBOARD_ACKNOWLEDGE ; state.ENABLE_KEYBOARD ; state.WAIT_FOR_MOUSE_BAT ; state.WAIT_FOR_BAT ; state.WAIT_FOR_RESET_ACKNOWLEDGE ; state.PERIODIC_RESET ; state.RESTART ;
++--------------------------------------------------+---------------------------------+----------------------------------+---------------------------------+-----------------------------------------+--------------------+--------------------------------------------------+----------------------------------+---------------------------------------------+--------------------------------+--------------------------------------------+-----------------------+--------------------------+--------------------+----------------------------------+----------------------+---------------+
+; state.RESTART                                    ; 0                               ; 0                                ; 0                               ; 0                                       ; 0                  ; 0                                                ; 0                                ; 0                                           ; 0                              ; 0                                          ; 0                     ; 0                        ; 0                  ; 0                                ; 0                    ; 0             ;
+; state.PERIODIC_RESET                             ; 0                               ; 0                                ; 0                               ; 0                                       ; 0                  ; 0                                                ; 0                                ; 0                                           ; 0                              ; 0                                          ; 0                     ; 0                        ; 0                  ; 0                                ; 1                    ; 1             ;
+; state.WAIT_FOR_RESET_ACKNOWLEDGE                 ; 0                               ; 0                                ; 0                               ; 0                                       ; 0                  ; 0                                                ; 0                                ; 0                                           ; 0                              ; 0                                          ; 0                     ; 0                        ; 0                  ; 1                                ; 0                    ; 1             ;
+; state.WAIT_FOR_BAT                               ; 0                               ; 0                                ; 0                               ; 0                                       ; 0                  ; 0                                                ; 0                                ; 0                                           ; 0                              ; 0                                          ; 0                     ; 0                        ; 1                  ; 0                                ; 0                    ; 1             ;
+; state.WAIT_FOR_MOUSE_BAT                         ; 0                               ; 0                                ; 0                               ; 0                                       ; 0                  ; 0                                                ; 0                                ; 0                                           ; 0                              ; 0                                          ; 0                     ; 1                        ; 0                  ; 0                                ; 0                    ; 1             ;
+; state.ENABLE_KEYBOARD                            ; 0                               ; 0                                ; 0                               ; 0                                       ; 0                  ; 0                                                ; 0                                ; 0                                           ; 0                              ; 0                                          ; 1                     ; 0                        ; 0                  ; 0                                ; 0                    ; 1             ;
+; state.WAIT_FOR_ENABLE_KEYBOARD_ACKNOWLEDGE       ; 0                               ; 0                                ; 0                               ; 0                                       ; 0                  ; 0                                                ; 0                                ; 0                                           ; 0                              ; 1                                          ; 0                     ; 0                        ; 0                  ; 0                                ; 0                    ; 1             ;
+; state.KEYBOARD_WAIT_FOR_CHANGE                   ; 0                               ; 0                                ; 0                               ; 0                                       ; 0                  ; 0                                                ; 0                                ; 0                                           ; 1                              ; 0                                          ; 0                     ; 0                        ; 0                  ; 0                                ; 0                    ; 1             ;
+; state.WAIT_FOR_KEYBOARD_SET_LED_ACKNOWLEDGE      ; 0                               ; 0                                ; 0                               ; 0                                       ; 0                  ; 0                                                ; 0                                ; 1                                           ; 0                              ; 0                                          ; 0                     ; 0                        ; 0                  ; 0                                ; 0                    ; 1             ;
+; state.SEND_KEYBOARD_SET_LED_DATA                 ; 0                               ; 0                                ; 0                               ; 0                                       ; 0                  ; 0                                                ; 1                                ; 0                                           ; 0                              ; 0                                          ; 0                     ; 0                        ; 0                  ; 0                                ; 0                    ; 1             ;
+; state.WAIT_FOR_KEYBOARD_SET_LED_DATA_ACKNOWLEDGE ; 0                               ; 0                                ; 0                               ; 0                                       ; 0                  ; 1                                                ; 0                                ; 0                                           ; 0                              ; 0                                          ; 0                     ; 0                        ; 0                  ; 0                                ; 0                    ; 1             ;
+; state.ENABLE_MOUSE                               ; 0                               ; 0                                ; 0                               ; 0                                       ; 1                  ; 0                                                ; 0                                ; 0                                           ; 0                              ; 0                                          ; 0                     ; 0                        ; 0                  ; 0                                ; 0                    ; 1             ;
+; state.WAIT_FOR_ENABLE_MOUSE_ACKNOWLEDGE          ; 0                               ; 0                                ; 0                               ; 1                                       ; 0                  ; 0                                                ; 0                                ; 0                                           ; 0                              ; 0                                          ; 0                     ; 0                        ; 0                  ; 0                                ; 0                    ; 1             ;
+; state.WAIT_FOR_FIRST_MOUSE_BYTE                  ; 0                               ; 0                                ; 1                               ; 0                                       ; 0                  ; 0                                                ; 0                                ; 0                                           ; 0                              ; 0                                          ; 0                     ; 0                        ; 0                  ; 0                                ; 0                    ; 1             ;
+; state.WAIT_FOR_SECOND_MOUSE_BYTE                 ; 0                               ; 1                                ; 0                               ; 0                                       ; 0                  ; 0                                                ; 0                                ; 0                                           ; 0                              ; 0                                          ; 0                     ; 0                        ; 0                  ; 0                                ; 0                    ; 1             ;
+; state.WAIT_FOR_THIRD_MOUSE_BYTE                  ; 1                               ; 0                                ; 0                               ; 0                                       ; 0                  ; 0                                                ; 0                                ; 0                                           ; 0                              ; 0                                          ; 0                     ; 0                        ; 0                  ; 0                                ; 0                    ; 1             ;
++--------------------------------------------------+---------------------------------+----------------------------------+---------------------------------+-----------------------------------------+--------------------+--------------------------------------------------+----------------------------------+---------------------------------------------+--------------------------------+--------------------------------------------+-----------------------+--------------------------+--------------------+----------------------------------+----------------------+---------------+
+
+
+Encoding Type: Safe One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|state                        ;
++-------------------------------+-----------------+-------------------------------+---------------+--------------------+-----------------+------------+
+; Name                          ; state.FINISHING ; state.WAITING_FOR_ACKNOWLEDGE ; state.SENDING ; state.INTERRUPTING ; state.RECEIVING ; state.IDLE ;
++-------------------------------+-----------------+-------------------------------+---------------+--------------------+-----------------+------------+
+; state.IDLE                    ; 0               ; 0                             ; 0             ; 0                  ; 0               ; 0          ;
+; state.RECEIVING               ; 0               ; 0                             ; 0             ; 0                  ; 1               ; 1          ;
+; state.INTERRUPTING            ; 0               ; 0                             ; 0             ; 1                  ; 0               ; 1          ;
+; state.SENDING                 ; 0               ; 0                             ; 1             ; 0                  ; 0               ; 1          ;
+; state.WAITING_FOR_ACKNOWLEDGE ; 0               ; 1                             ; 0             ; 0                  ; 0               ; 1          ;
+; state.FINISHING               ; 1               ; 0                             ; 0             ; 0                  ; 0               ; 1          ;
++-------------------------------+-----------------+-------------------------------+---------------+--------------------+-----------------+------------+
+
+
+Encoding Type: Safe One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Fase_5|LCDModule:LCDMod|lcd_controller:DISPLAY|state                                                                                                                                                                                           ;
++----------------------------+----------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+
+; Name                       ; state.PROCESS_TXD_REQUESTS ; state.POWER_ON_PHASE_8 ; state.POWER_ON_PHASE_7 ; state.POWER_ON_PHASE_6 ; state.POWER_ON_PHASE_5 ; state.POWER_ON_PHASE_4 ; state.POWER_ON_PHASE_3 ; state.POWER_ON_PHASE_2 ; state.POWER_ON_PHASE_1 ;
++----------------------------+----------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+
+; state.POWER_ON_PHASE_1     ; 0                          ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ;
+; state.POWER_ON_PHASE_2     ; 0                          ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 1                      ; 1                      ;
+; state.POWER_ON_PHASE_3     ; 0                          ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 1                      ; 0                      ; 1                      ;
+; state.POWER_ON_PHASE_4     ; 0                          ; 0                      ; 0                      ; 0                      ; 0                      ; 1                      ; 0                      ; 0                      ; 1                      ;
+; state.POWER_ON_PHASE_5     ; 0                          ; 0                      ; 0                      ; 0                      ; 1                      ; 0                      ; 0                      ; 0                      ; 1                      ;
+; state.POWER_ON_PHASE_6     ; 0                          ; 0                      ; 0                      ; 1                      ; 0                      ; 0                      ; 0                      ; 0                      ; 1                      ;
+; state.POWER_ON_PHASE_7     ; 0                          ; 0                      ; 1                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 1                      ;
+; state.POWER_ON_PHASE_8     ; 0                          ; 1                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 1                      ;
+; state.PROCESS_TXD_REQUESTS ; 1                          ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 0                      ; 1                      ;
++----------------------------+----------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+------------------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Fase_5|RegisterPin:regPin|SeqDetector:seq_detec|s_cs                                                 ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+; Name      ; s_cs.NUM8 ; s_cs.NUM7 ; s_cs.NUM6 ; s_cs.NUM5 ; s_cs.NUM4 ; s_cs.NUM3 ; s_cs.NUM2 ; s_cs.NUM1 ; s_cs.IDLE ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+; s_cs.IDLE ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ;
+; s_cs.NUM1 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 1         ;
+; s_cs.NUM2 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 1         ;
+; s_cs.NUM3 ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 1         ;
+; s_cs.NUM4 ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 1         ;
+; s_cs.NUM5 ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; s_cs.NUM6 ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; s_cs.NUM7 ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; s_cs.NUM8 ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Fase_5|CheckPin:checkPin|SeqDetector:seqdetector|s_cs                                                ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+; Name      ; s_cs.NUM8 ; s_cs.NUM7 ; s_cs.NUM6 ; s_cs.NUM5 ; s_cs.NUM4 ; s_cs.NUM3 ; s_cs.NUM2 ; s_cs.NUM1 ; s_cs.IDLE ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+; s_cs.IDLE ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ;
+; s_cs.NUM1 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 1         ;
+; s_cs.NUM2 ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 1         ;
+; s_cs.NUM3 ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 1         ;
+; s_cs.NUM4 ; 0         ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 1         ;
+; s_cs.NUM5 ; 0         ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; s_cs.NUM6 ; 0         ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; s_cs.NUM7 ; 0         ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
+; s_cs.NUM8 ; 1         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 0         ; 1         ;
++-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+-----------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |Fase_5|AlarmControlUnit:alarmControl|s_cs                                                                                                  ;
++---------------------+--------------+---------------------+---------------+-------------------+----------------+----------------+----------------+-----------+
+; Name                ; s_cs.SET_PIN ; s_cs.TRIGGERD_TIMER ; s_cs.TRIGGERD ; s_cs.DESARM_TIMER ; s_cs.ARMED_INT ; s_cs.ARMED_EXT ; s_cs.ARM_TIMER ; s_cs.IDLE ;
++---------------------+--------------+---------------------+---------------+-------------------+----------------+----------------+----------------+-----------+
+; s_cs.IDLE           ; 0            ; 0                   ; 0             ; 0                 ; 0              ; 0              ; 0              ; 0         ;
+; s_cs.ARM_TIMER      ; 0            ; 0                   ; 0             ; 0                 ; 0              ; 0              ; 1              ; 1         ;
+; s_cs.ARMED_EXT      ; 0            ; 0                   ; 0             ; 0                 ; 0              ; 1              ; 0              ; 1         ;
+; s_cs.ARMED_INT      ; 0            ; 0                   ; 0             ; 0                 ; 1              ; 0              ; 0              ; 1         ;
+; s_cs.DESARM_TIMER   ; 0            ; 0                   ; 0             ; 1                 ; 0              ; 0              ; 0              ; 1         ;
+; s_cs.TRIGGERD       ; 0            ; 0                   ; 1             ; 0                 ; 0              ; 0              ; 0              ; 1         ;
+; s_cs.TRIGGERD_TIMER ; 0            ; 1                   ; 0             ; 0                 ; 0              ; 0              ; 0              ; 1         ;
+; s_cs.SET_PIN        ; 1            ; 0                   ; 0             ; 0                 ; 0              ; 0              ; 0              ; 1         ;
++---------------------+--------------+---------------------+---------------+-------------------+----------------+----------------+----------------+-----------+
+
+
+Encoding Type: Safe One-Hot
++-----------------------------------------------------------------------------+
+; State Machine - |Fase_5|debouncer:debouncer3|state                          ;
++---------------------+--------------------+---------------------+------------+
+; Name                ; state.INSIDE_DELAY ; state.INSIDE_WINDOW ; state.IDLE ;
++---------------------+--------------------+---------------------+------------+
+; state.IDLE          ; 0                  ; 0                   ; 0          ;
+; state.INSIDE_WINDOW ; 0                  ; 1                   ; 1          ;
+; state.INSIDE_DELAY  ; 1                  ; 0                   ; 1          ;
++---------------------+--------------------+---------------------+------------+
+
+
+Encoding Type: Safe One-Hot
++-----------------------------------------------------------------------------+
+; State Machine - |Fase_5|debouncer:debouncer2|state                          ;
++---------------------+--------------------+---------------------+------------+
+; Name                ; state.INSIDE_DELAY ; state.INSIDE_WINDOW ; state.IDLE ;
++---------------------+--------------------+---------------------+------------+
+; state.IDLE          ; 0                  ; 0                   ; 0          ;
+; state.INSIDE_WINDOW ; 0                  ; 1                   ; 1          ;
+; state.INSIDE_DELAY  ; 1                  ; 0                   ; 1          ;
++---------------------+--------------------+---------------------+------------+
+
+
+Encoding Type: Safe One-Hot
++-----------------------------------------------------------------------------+
+; State Machine - |Fase_5|debouncer:debouncer1|state                          ;
++---------------------+--------------------+---------------------+------------+
+; Name                ; state.INSIDE_DELAY ; state.INSIDE_WINDOW ; state.IDLE ;
++---------------------+--------------------+---------------------+------------+
+; state.IDLE          ; 0                  ; 0                   ; 0          ;
+; state.INSIDE_WINDOW ; 0                  ; 1                   ; 1          ;
+; state.INSIDE_DELAY  ; 1                  ; 0                   ; 1          ;
++---------------------+--------------------+---------------------+------------+
+
+
+Encoding Type: Safe One-Hot
++-----------------------------------------------------------------------------+
+; State Machine - |Fase_5|debouncer:debouncer0|state                          ;
++---------------------+--------------------+---------------------+------------+
+; Name                ; state.INSIDE_DELAY ; state.INSIDE_WINDOW ; state.IDLE ;
++---------------------+--------------------+---------------------+------------+
+; state.IDLE          ; 0                  ; 0                   ; 0          ;
+; state.INSIDE_WINDOW ; 0                  ; 1                   ; 1          ;
+; state.INSIDE_DELAY  ; 1                  ; 0                   ; 1          ;
++---------------------+--------------------+---------------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Protected by Synthesis                                                                                                                                                                                                             ;
++------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; Register Name                                                                                                                ; Protected by Synthesis Attribute or Preserve Register Assignment ; Not to be Touched by Netlist Optimizations ;
++------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; LCDModule:LCDMod|lcd_controller:DISPLAY|state.PROCESS_TXD_REQUESTS                                                           ; no                                                               ; yes                                        ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|state.WAIT_FOR_MOUSE_BAT                                         ; no                                                               ; yes                                        ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|state.RESTART                                                    ; no                                                               ; yes                                        ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|state.KEYBOARD_WAIT_FOR_CHANGE                                   ; no                                                               ; yes                                        ;
+; debouncer:debouncer1|state.INSIDE_WINDOW                                                                                     ; no                                                               ; yes                                        ;
+; debouncer:debouncer0|state.INSIDE_WINDOW                                                                                     ; no                                                               ; yes                                        ;
+; LCDModule:LCDMod|lcd_controller:DISPLAY|state.POWER_ON_PHASE_8                                                               ; no                                                               ; yes                                        ;
+; LCDModule:LCDMod|lcd_controller:DISPLAY|state.POWER_ON_PHASE_1                                                               ; no                                                               ; yes                                        ;
+; LCDModule:LCDMod|lcd_controller:DISPLAY|state.POWER_ON_PHASE_2                                                               ; no                                                               ; yes                                        ;
+; LCDModule:LCDMod|lcd_controller:DISPLAY|state.POWER_ON_PHASE_3                                                               ; no                                                               ; yes                                        ;
+; LCDModule:LCDMod|lcd_controller:DISPLAY|state.POWER_ON_PHASE_4                                                               ; no                                                               ; yes                                        ;
+; LCDModule:LCDMod|lcd_controller:DISPLAY|state.POWER_ON_PHASE_5                                                               ; no                                                               ; yes                                        ;
+; LCDModule:LCDMod|lcd_controller:DISPLAY|state.POWER_ON_PHASE_6                                                               ; no                                                               ; yes                                        ;
+; LCDModule:LCDMod|lcd_controller:DISPLAY|state.POWER_ON_PHASE_7                                                               ; no                                                               ; yes                                        ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|state.PERIODIC_RESET                                             ; no                                                               ; yes                                        ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|state.WAIT_FOR_RESET_ACKNOWLEDGE                                 ; no                                                               ; yes                                        ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|state.WAIT_FOR_BAT                                               ; no                                                               ; yes                                        ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|state.ENABLE_KEYBOARD                                            ; no                                                               ; yes                                        ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|state.WAIT_FOR_ENABLE_KEYBOARD_ACKNOWLEDGE                       ; no                                                               ; yes                                        ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|state.WAIT_FOR_KEYBOARD_SET_LED_ACKNOWLEDGE                      ; no                                                               ; yes                                        ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|state.SEND_KEYBOARD_SET_LED_DATA                                 ; no                                                               ; yes                                        ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|state.WAIT_FOR_KEYBOARD_SET_LED_DATA_ACKNOWLEDGE                 ; no                                                               ; yes                                        ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|state.ENABLE_MOUSE                                               ; no                                                               ; yes                                        ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|state.WAIT_FOR_ENABLE_MOUSE_ACKNOWLEDGE                          ; no                                                               ; yes                                        ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|state.WAIT_FOR_FIRST_MOUSE_BYTE                                  ; no                                                               ; yes                                        ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|state.WAIT_FOR_SECOND_MOUSE_BYTE                                 ; no                                                               ; yes                                        ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|state.WAIT_FOR_THIRD_MOUSE_BYTE                                  ; no                                                               ; yes                                        ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|state.RECEIVING               ; no                                                               ; yes                                        ;
+; debouncer:debouncer1|state.IDLE                                                                                              ; no                                                               ; yes                                        ;
+; debouncer:debouncer1|state.INSIDE_DELAY                                                                                      ; no                                                               ; yes                                        ;
+; debouncer:debouncer0|state.IDLE                                                                                              ; no                                                               ; yes                                        ;
+; debouncer:debouncer0|state.INSIDE_DELAY                                                                                      ; no                                                               ; yes                                        ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|state.INTERRUPTING            ; no                                                               ; yes                                        ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|state.SENDING                 ; no                                                               ; yes                                        ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|state.IDLE                    ; no                                                               ; yes                                        ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|state.WAITING_FOR_ACKNOWLEDGE ; no                                                               ; yes                                        ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|state.FINISHING               ; no                                                               ; yes                                        ;
+; Total number of protected registers is 37                                                                                    ;                                                                  ;                                            ;
++------------------------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                 ;
++------------------------------------------------------+-----------------------------------------------------+------------------------+
+; Latch Name                                           ; Latch Enable Signal                                 ; Free of Timing Hazards ;
++------------------------------------------------------+-----------------------------------------------------+------------------------+
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[13]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[15] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[12]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[15] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[11]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[15] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[10]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[15] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[9]   ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[15] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[8]   ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[15] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[7]   ; CheckPin:checkPin|SeqDetector:seqdetector|valid     ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[6]   ; CheckPin:checkPin|SeqDetector:seqdetector|valid     ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[5]   ; CheckPin:checkPin|SeqDetector:seqdetector|valid     ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[4]   ; CheckPin:checkPin|SeqDetector:seqdetector|valid     ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[3]   ; CheckPin:checkPin|SeqDetector:seqdetector|valid     ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[2]   ; CheckPin:checkPin|SeqDetector:seqdetector|valid     ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[1]   ; CheckPin:checkPin|SeqDetector:seqdetector|valid     ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[0]   ; CheckPin:checkPin|SeqDetector:seqdetector|valid     ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[15]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[15] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[16]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[23] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[17]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[23] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[18]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[23] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[19]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[23] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[20]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[23] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[21]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[23] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[22]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[23] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[23]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[23] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[24]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[31] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[25]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[31] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[26]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[31] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[27]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[31] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[28]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[31] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[29]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[31] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[30]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[31] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[31]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[31] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[32]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[39] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[33]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[39] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[34]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[39] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[35]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[39] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[36]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[39] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[37]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[39] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[38]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[39] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[39]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[39] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[40]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[47] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[41]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[47] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[42]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[47] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[43]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[47] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[44]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[47] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[45]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[47] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[46]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[47] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[47]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[47] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[48]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[55] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[49]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[55] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[50]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[55] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[51]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[55] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[52]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[55] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[53]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[55] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[54]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[55] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[55]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[55] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[56]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[63] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[57]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[63] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[58]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[63] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[59]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[63] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[60]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[63] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[61]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[63] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[62]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[63] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[63]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[63] ; yes                    ;
+; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[14]  ; CheckPin:checkPin|SeqDetector:seqdetector|s_pin[15] ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[0]    ; RegisterPin:regPin|SeqDetector:seq_detec|valid      ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[1]    ; RegisterPin:regPin|SeqDetector:seq_detec|valid      ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[2]    ; RegisterPin:regPin|SeqDetector:seq_detec|valid      ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[3]    ; RegisterPin:regPin|SeqDetector:seq_detec|valid      ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[4]    ; RegisterPin:regPin|SeqDetector:seq_detec|valid      ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[5]    ; RegisterPin:regPin|SeqDetector:seq_detec|valid      ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[6]    ; RegisterPin:regPin|SeqDetector:seq_detec|valid      ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[7]    ; RegisterPin:regPin|SeqDetector:seq_detec|valid      ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[8]    ; RegisterPin:regPin|SeqDetector:seq_detec|Selector8  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[9]    ; RegisterPin:regPin|SeqDetector:seq_detec|Selector8  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[10]   ; RegisterPin:regPin|SeqDetector:seq_detec|Selector8  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[11]   ; RegisterPin:regPin|SeqDetector:seq_detec|Selector8  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[12]   ; RegisterPin:regPin|SeqDetector:seq_detec|Selector8  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[13]   ; RegisterPin:regPin|SeqDetector:seq_detec|Selector8  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[14]   ; RegisterPin:regPin|SeqDetector:seq_detec|Selector8  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[15]   ; RegisterPin:regPin|SeqDetector:seq_detec|Selector8  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[16]   ; RegisterPin:regPin|SeqDetector:seq_detec|Selector7  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[17]   ; RegisterPin:regPin|SeqDetector:seq_detec|Selector7  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[18]   ; RegisterPin:regPin|SeqDetector:seq_detec|Selector7  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[19]   ; RegisterPin:regPin|SeqDetector:seq_detec|Selector7  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[20]   ; RegisterPin:regPin|SeqDetector:seq_detec|Selector7  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[21]   ; RegisterPin:regPin|SeqDetector:seq_detec|Selector7  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[22]   ; RegisterPin:regPin|SeqDetector:seq_detec|Selector7  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[23]   ; RegisterPin:regPin|SeqDetector:seq_detec|Selector7  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[24]   ; RegisterPin:regPin|SeqDetector:seq_detec|Selector6  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[25]   ; RegisterPin:regPin|SeqDetector:seq_detec|Selector6  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[26]   ; RegisterPin:regPin|SeqDetector:seq_detec|Selector6  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[27]   ; RegisterPin:regPin|SeqDetector:seq_detec|Selector6  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[28]   ; RegisterPin:regPin|SeqDetector:seq_detec|Selector6  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[29]   ; RegisterPin:regPin|SeqDetector:seq_detec|Selector6  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[30]   ; RegisterPin:regPin|SeqDetector:seq_detec|Selector6  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[31]   ; RegisterPin:regPin|SeqDetector:seq_detec|Selector6  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[32]   ; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[39]  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[33]   ; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[39]  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[34]   ; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[39]  ; yes                    ;
+; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[35]   ; RegisterPin:regPin|SeqDetector:seq_detec|s_pin[39]  ; yes                    ;
+; Number of user-specified and inferred latches = 128  ;                                                     ;                        ;
++------------------------------------------------------+-----------------------------------------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                                                           ;
++-------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
+; Register name                                                                                               ; Reason for Removal                                                                             ;
++-------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|ps2_clk~reg0 ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[0]                                                                             ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|txd_request                                                                                ; Stuck at VCC due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[3,7,9,10,12]                                                                   ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[13]                                                                            ; Stuck at VCC due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[15..17,19]                                                                     ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[21]                                                                            ; Stuck at VCC due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[23,27,28]                                                                      ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[29]                                                                            ; Stuck at VCC due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[31,34,39,40,42]                                                                ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[45]                                                                            ; Stuck at VCC due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[47,52]                                                                         ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[53]                                                                            ; Stuck at VCC due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[55]                                                                            ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[61]                                                                            ; Stuck at VCC due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[63,64,71,79,80]                                                                ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[85]                                                                            ; Stuck at VCC due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[87,90]                                                                         ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[93]                                                                            ; Stuck at VCC due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[95,99]                                                                         ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[101]                                                                           ; Stuck at VCC due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[103,107]                                                                       ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[109]                                                                           ; Stuck at VCC due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[111,112]                                                                       ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[117]                                                                           ; Stuck at VCC due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[119,121,122,127]                                                               ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|top_line[0..4]                                                                             ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|top_line[5]                                                                                ; Stuck at VCC due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|top_line[6..12]                                                                            ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|top_line[13]                                                                               ; Stuck at VCC due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|top_line[14..16,20]                                                                        ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|top_line[21]                                                                               ; Stuck at VCC due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|top_line[23,26]                                                                            ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|top_line[29]                                                                               ; Stuck at VCC due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|top_line[31,33,35,39]                                                                      ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|top_line[45]                                                                               ; Stuck at VCC due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|top_line[47]                                                                               ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|top_line[53]                                                                               ; Stuck at VCC due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|top_line[55,63,71,79]                                                                      ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|top_line[85]                                                                               ; Stuck at VCC due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|top_line[87]                                                                               ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|top_line[93]                                                                               ; Stuck at VCC due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|top_line[95]                                                                               ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|top_line[101]                                                                              ; Stuck at VCC due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|top_line[103,107]                                                                          ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|top_line[109]                                                                              ; Stuck at VCC due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|top_line[111,116]                                                                          ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|top_line[117]                                                                              ; Stuck at VCC due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|top_line[119,127]                                                                          ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDSelector:LCDSel|bot_message[3]                                                                           ; Stuck at GND due to stuck port data_in                                                         ;
+; Timer:timer|s_max[5]                                                                                        ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|bottom_line[2,8,11,14,25]                                                                  ; Merged with LCDModule:LCDMod|bottom_line[1]                                                    ;
+; LCDModule:LCDMod|bottom_line[6,18,20,22,24,30,32,38,76]                                                     ; Merged with LCDModule:LCDMod|bottom_line[4]                                                    ;
+; LCDModule:LCDMod|bottom_line[36]                                                                            ; Merged with LCDModule:LCDMod|bottom_line[26]                                                   ;
+; LCDModule:LCDMod|bottom_line[46,66,77,78]                                                                   ; Merged with LCDModule:LCDMod|bottom_line[44]                                                   ;
+; LCDModule:LCDMod|bottom_line[58,60,88,97,100,106,116,124]                                                   ; Merged with LCDModule:LCDMod|bottom_line[48]                                                   ;
+; LCDModule:LCDMod|bottom_line[54,62,92,94,96,102,104,110,113,118,126]                                        ; Merged with LCDModule:LCDMod|bottom_line[50]                                                   ;
+; LCDModule:LCDMod|bottom_line[68,82,84,86,98,105,108,114,115,120,123]                                        ; Merged with LCDModule:LCDMod|bottom_line[56]                                                   ;
+; LCDModule:LCDMod|top_line[19,24,27,36]                                                                      ; Merged with LCDModule:LCDMod|top_line[17]                                                      ;
+; LCDModule:LCDMod|top_line[22,30,38]                                                                         ; Merged with LCDModule:LCDMod|top_line[18]                                                      ;
+; LCDModule:LCDMod|top_line[28,32,34,57]                                                                      ; Merged with LCDModule:LCDMod|top_line[25]                                                      ;
+; LCDModule:LCDMod|top_line[97]                                                                               ; Merged with LCDModule:LCDMod|top_line[40]                                                      ;
+; LCDModule:LCDMod|top_line[91]                                                                               ; Merged with LCDModule:LCDMod|top_line[41]                                                      ;
+; LCDModule:LCDMod|top_line[104]                                                                              ; Merged with LCDModule:LCDMod|top_line[49]                                                      ;
+; LCDModule:LCDMod|top_line[115]                                                                              ; Merged with LCDModule:LCDMod|top_line[50]                                                      ;
+; LCDModule:LCDMod|top_line[114]                                                                              ; Merged with LCDModule:LCDMod|top_line[54]                                                      ;
+; LCDModule:LCDMod|top_line[102,110,118,126]                                                                  ; Merged with LCDModule:LCDMod|top_line[62]                                                      ;
+; LCDModule:LCDMod|top_line[80,99]                                                                            ; Merged with LCDModule:LCDMod|top_line[64]                                                      ;
+; LCDModule:LCDMod|top_line[81,83,121,124]                                                                    ; Merged with LCDModule:LCDMod|top_line[73]                                                      ;
+; LCDModule:LCDMod|top_line[105]                                                                              ; Merged with LCDModule:LCDMod|top_line[84]                                                      ;
+; LCDModule:LCDMod|top_line[108]                                                                              ; Merged with LCDModule:LCDMod|top_line[86]                                                      ;
+; LCDModule:LCDMod|top_line[100]                                                                              ; Merged with LCDModule:LCDMod|top_line[88]                                                      ;
+; LCDModule:LCDMod|top_line[113]                                                                              ; Merged with LCDModule:LCDMod|top_line[89]                                                      ;
+; LCDModule:LCDMod|top_line[96]                                                                               ; Merged with LCDModule:LCDMod|top_line[92]                                                      ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|keyboard_leds_state[2]                          ; Merged with ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|keyboard_leds_state[0] ;
+; Timer:timer|s_max[4]                                                                                        ; Merged with Timer:timer|s_max[2]                                                               ;
+; Timer:timer|s_max[3]                                                                                        ; Merged with Timer:timer|s_max[1]                                                               ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|txd_data[6,7]                                   ; Merged with ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|txd_data[5]            ;
+; LCDModule:LCDMod|bottom_line[83]                                                                            ; Merged with LCDModule:LCDMod|bottom_line[81]                                                   ;
+; LCDModule:LCDMod|bottom_line[67]                                                                            ; Merged with LCDModule:LCDMod|bottom_line[65]                                                   ;
+; LCDModule:LCDMod|bottom_line[51]                                                                            ; Merged with LCDModule:LCDMod|bottom_line[49]                                                   ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|keyboard_leds_state[1]                          ; Stuck at GND due to stuck port data_in                                                         ;
+; LCDModule:LCDMod|txd_rs_and_data[7]                                                                         ; Merged with LCDModule:LCDMod|txd_rs_and_data[8]                                                ;
+; LCDModule:LCDMod|bottom_line[69]                                                                            ; Merged with LCDModule:LCDMod|bottom_line[56]                                                   ;
+; LCDModule:LCDMod|top_line[61]                                                                               ; Merged with LCDModule:LCDMod|top_line[73]                                                      ;
+; LCDModule:LCDMod|bottom_line[5]                                                                             ; Merged with LCDModule:LCDMod|bottom_line[26]                                                   ;
+; debouncer:debouncer3|timer_counter[0..19]                                                                   ; Lost fanout                                                                                    ;
+; debouncer:debouncer3|sampled_dirty                                                                          ; Lost fanout                                                                                    ;
+; debouncer:debouncer3|level                                                                                  ; Lost fanout                                                                                    ;
+; debouncer:debouncer2|timer_counter[0..19]                                                                   ; Lost fanout                                                                                    ;
+; debouncer:debouncer2|sampled_dirty                                                                          ; Lost fanout                                                                                    ;
+; debouncer:debouncer2|level                                                                                  ; Lost fanout                                                                                    ;
+; debouncer:debouncer3|state.IDLE                                                                             ; Lost fanout                                                                                    ;
+; debouncer:debouncer3|state.INSIDE_WINDOW                                                                    ; Lost fanout                                                                                    ;
+; debouncer:debouncer3|state.INSIDE_DELAY                                                                     ; Lost fanout                                                                                    ;
+; debouncer:debouncer2|state.IDLE                                                                             ; Lost fanout                                                                                    ;
+; debouncer:debouncer2|state.INSIDE_WINDOW                                                                    ; Lost fanout                                                                                    ;
+; debouncer:debouncer2|state.INSIDE_DELAY                                                                     ; Lost fanout                                                                                    ;
+; LCDModule:LCDMod|bottom_line[125]                                                                           ; Merged with LCDModule:LCDMod|bottom_line[50]                                                   ;
+; LCDModule:LCDMod|top_line[37]                                                                               ; Merged with LCDModule:LCDMod|top_line[17]                                                      ;
+; LCDModule:LCDMod|bottom_line[37]                                                                            ; Merged with LCDModule:LCDMod|bottom_line[4]                                                    ;
+; LCDModule:LCDMod|top_line[62]                                                                               ; Merged with LCDModule:LCDMod|top_line[125]                                                     ;
+; Total Number of Removed Registers = 246                                                                     ;                                                                                                ;
++-------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                   ;
++----------------------------------------+--------------------+---------------------------------------------------------------------------------+
+; Register name                          ; Reason for Removal ; Registers Removed due to This Register                                          ;
++----------------------------------------+--------------------+---------------------------------------------------------------------------------+
+; debouncer:debouncer3|timer_counter[3]  ; Lost Fanouts       ; debouncer:debouncer3|timer_counter[4], debouncer:debouncer3|timer_counter[5],   ;
+;                                        ;                    ; debouncer:debouncer3|timer_counter[6], debouncer:debouncer3|timer_counter[7],   ;
+;                                        ;                    ; debouncer:debouncer3|timer_counter[8], debouncer:debouncer3|timer_counter[9],   ;
+;                                        ;                    ; debouncer:debouncer3|timer_counter[10], debouncer:debouncer3|timer_counter[11]  ;
+; debouncer:debouncer2|timer_counter[3]  ; Lost Fanouts       ; debouncer:debouncer2|timer_counter[4], debouncer:debouncer2|timer_counter[5],   ;
+;                                        ;                    ; debouncer:debouncer2|timer_counter[6], debouncer:debouncer2|timer_counter[7],   ;
+;                                        ;                    ; debouncer:debouncer2|timer_counter[8], debouncer:debouncer2|timer_counter[9],   ;
+;                                        ;                    ; debouncer:debouncer2|timer_counter[10], debouncer:debouncer2|timer_counter[11]  ;
+; debouncer:debouncer3|timer_counter[0]  ; Lost Fanouts       ; debouncer:debouncer3|timer_counter[1], debouncer:debouncer3|timer_counter[2],   ;
+;                                        ;                    ; debouncer:debouncer3|sampled_dirty, debouncer:debouncer3|level,                 ;
+;                                        ;                    ; debouncer:debouncer3|state.IDLE, debouncer:debouncer3|state.INSIDE_WINDOW,      ;
+;                                        ;                    ; debouncer:debouncer3|state.INSIDE_DELAY                                         ;
+; debouncer:debouncer2|timer_counter[0]  ; Lost Fanouts       ; debouncer:debouncer2|timer_counter[1], debouncer:debouncer2|timer_counter[2],   ;
+;                                        ;                    ; debouncer:debouncer2|sampled_dirty, debouncer:debouncer2|level,                 ;
+;                                        ;                    ; debouncer:debouncer2|state.IDLE, debouncer:debouncer2|state.INSIDE_WINDOW,      ;
+;                                        ;                    ; debouncer:debouncer2|state.INSIDE_DELAY                                         ;
+; debouncer:debouncer3|timer_counter[14] ; Lost Fanouts       ; debouncer:debouncer3|timer_counter[15], debouncer:debouncer3|timer_counter[16], ;
+;                                        ;                    ; debouncer:debouncer3|timer_counter[17], debouncer:debouncer3|timer_counter[18], ;
+;                                        ;                    ; debouncer:debouncer3|timer_counter[19]                                          ;
+; debouncer:debouncer2|timer_counter[14] ; Lost Fanouts       ; debouncer:debouncer2|timer_counter[15], debouncer:debouncer2|timer_counter[16], ;
+;                                        ;                    ; debouncer:debouncer2|timer_counter[17], debouncer:debouncer2|timer_counter[18], ;
+;                                        ;                    ; debouncer:debouncer2|timer_counter[19]                                          ;
++----------------------------------------+--------------------+---------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 523   ;
+; Number of registers using Synchronous Clear  ; 51    ;
+; Number of registers using Synchronous Load   ; 18    ;
+; Number of registers using Asynchronous Clear ; 2     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 224   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                                                             ;
++----------------------------------------------------------------------------------------------------------------+---------+
+; Inverted Register                                                                                              ; Fan out ;
++----------------------------------------------------------------------------------------------------------------+---------+
+; LCDModule:LCDMod|lcd_controller:DISPLAY|reset_counter[16]                                                      ; 2       ;
+; LCDModule:LCDMod|lcd_controller:DISPLAY|reset_counter[17]                                                      ; 2       ;
+; LCDModule:LCDMod|lcd_controller:DISPLAY|reset_counter[18]                                                      ; 2       ;
+; LCDModule:LCDMod|lcd_controller:DISPLAY|reset_counter[19]                                                      ; 2       ;
+; LCDModule:LCDMod|lcd_controller:DISPLAY|reset_counter[6]                                                       ; 2       ;
+; LCDModule:LCDMod|lcd_controller:DISPLAY|reset_counter[9]                                                       ; 2       ;
+; LCDModule:LCDMod|lcd_controller:DISPLAY|reset_counter[14]                                                      ; 2       ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|time_out_counter[7]                                ; 2       ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|time_out_counter[12]                               ; 2       ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|time_out_counter[13]                               ; 2       ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|time_out_counter[14]                               ; 2       ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|time_out_counter[15]                               ; 2       ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|time_out_counter[17]                               ; 2       ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|time_out_counter[19]                               ; 2       ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|time_out_counter[20]                               ; 2       ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|time_out_counter[21]                               ; 2       ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|time_out_counter[22]                               ; 2       ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|time_out_counter[23]                               ; 2       ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|time_out_counter[25]                               ; 2       ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|ps2_dat_1       ; 4       ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|ps2_clk_1       ; 3       ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|ps2_clk_0       ; 19      ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|idle_counter[8] ; 3       ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|idle_counter[4] ; 2       ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|idle_counter[7] ; 2       ;
+; ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|ps2_dat_0       ; 19      ;
+; LCDModule:LCDMod|top_line[125]                                                                                 ; 4       ;
+; LCDModule:LCDMod|top_line[69]                                                                                  ; 1       ;
+; LCDModule:LCDMod|top_line[77]                                                                                  ; 1       ;
+; Total number of inverted registers = 29                                                                        ;         ;
++----------------------------------------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 19 bits   ; 38 LEs        ; 38 LEs               ; 0 LEs                  ; Yes        ; |Fase_5|LCDModule:LCDMod|top_line[59]                                                                                      ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|idle_counter[0]     ;
+; 4:1                ; 18 bits   ; 36 LEs        ; 36 LEs               ; 0 LEs                  ; Yes        ; |Fase_5|LCDModule:LCDMod|top_line[54]                                                                                      ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; Yes        ; |Fase_5|LCDModule:LCDMod|bottom_line[49]                                                                                   ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Fase_5|LCDModule:LCDMod|lcd_controller:DISPLAY|write_enable_counter[3]                                                    ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |Fase_5|LCDModule:LCDMod|lcd_controller:DISPLAY|delay_counter[0]                                                           ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |Fase_5|LCDModule:LCDMod|lcd_controller:DISPLAY|delay_counter[12]                                                          ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |Fase_5|Timer:timer|s_count[3]                                                                                             ;
+; 4:1                ; 31 bits   ; 62 LEs        ; 31 LEs               ; 31 LEs                 ; Yes        ; |Fase_5|Timer:timer|s_count_freq[10]                                                                                       ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |Fase_5|LCDModule:LCDMod|top_line[51]                                                                                      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Fase_5|LCDModule:LCDMod|bottom_line[73]                                                                                   ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |Fase_5|LCDModule:LCDMod|top_line[50]                                                                                      ;
+; 7:1                ; 9 bits    ; 36 LEs        ; 9 LEs                ; 27 LEs                 ; Yes        ; |Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|data[4]             ;
+; 7:1                ; 20 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |Fase_5|debouncer:debouncer3|timer_counter[3]                                                                              ;
+; 7:1                ; 20 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |Fase_5|debouncer:debouncer2|timer_counter[12]                                                                             ;
+; 7:1                ; 20 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |Fase_5|debouncer:debouncer1|timer_counter[8]                                                                              ;
+; 7:1                ; 20 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |Fase_5|debouncer:debouncer0|timer_counter[16]                                                                             ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|n_bits[0]           ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|txd_data[5]                                            ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|txd_data[2]                                            ;
+; 10:1               ; 11 bits   ; 66 LEs        ; 22 LEs               ; 44 LEs                 ; Yes        ; |Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|time_out_counter[9] ;
+; 16:1               ; 12 bits   ; 120 LEs       ; 36 LEs               ; 84 LEs                 ; Yes        ; |Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|time_out_counter[26]                                   ;
+; 18:1               ; 4 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|time_out_counter[16]                                   ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |Fase_5|LCDModule:LCDMod|bottom_line[5]                                                                                    ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|idle_counter[4]     ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 24 LEs               ; 56 LEs                 ; Yes        ; |Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|time_out_counter[14]                                   ;
+; 18:1               ; 4 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; Yes        ; |Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|time_out_counter[13]                                   ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Fase_5|Bin7SegDecoder:decHex7|decOut_n[2]                                                                                 ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |Fase_5|LCDModule:LCDMod|lcd_controller:DISPLAY|state                                                                      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |Fase_5|LCDModule:LCDMod|bottom_line                                                                                       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Fase_5|Bin7SegDecoder:decHex7|decOut_n[5]                                                                                 ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |Fase_5|debouncer:debouncer3|state                                                                                         ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |Fase_5|debouncer:debouncer2|state                                                                                         ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |Fase_5|debouncer:debouncer1|state                                                                                         ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |Fase_5|debouncer:debouncer0|state                                                                                         ;
+; 18:1               ; 4 bits    ; 48 LEs        ; 16 LEs               ; 32 LEs                 ; No         ; |Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|state               ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; No         ; |Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|state               ;
+; 20:1               ; 6 bits    ; 78 LEs        ; 36 LEs               ; 42 LEs                 ; No         ; |Fase_5|AlarmControlUnit:alarmControl|s_cs                                                                                 ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; No         ; |Fase_5|AlarmControlUnit:alarmControl|s_cs                                                                                 ;
+; 21:1               ; 4 bits    ; 56 LEs        ; 20 LEs               ; 36 LEs                 ; No         ; |Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|Selector5                                              ;
+; 23:1               ; 2 bits    ; 30 LEs        ; 10 LEs               ; 20 LEs                 ; No         ; |Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|Selector16                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------+
+; Source assignments for debouncer:debouncer0 ;
++--------------------+-------+------+---------+
+; Assignment         ; Value ; From ; To      ;
++--------------------+-------+------+---------+
+; SAFE_STATE_MACHINE ; on    ; -    ; state   ;
++--------------------+-------+------+---------+
+
+
++---------------------------------------------+
+; Source assignments for debouncer:debouncer1 ;
++--------------------+-------+------+---------+
+; Assignment         ; Value ; From ; To      ;
++--------------------+-------+------+---------+
+; SAFE_STATE_MACHINE ; on    ; -    ; state   ;
++--------------------+-------+------+---------+
+
+
++---------------------------------------------+
+; Source assignments for debouncer:debouncer2 ;
++--------------------+-------+------+---------+
+; Assignment         ; Value ; From ; To      ;
++--------------------+-------+------+---------+
+; SAFE_STATE_MACHINE ; on    ; -    ; state   ;
++--------------------+-------+------+---------+
+
+
++---------------------------------------------+
+; Source assignments for debouncer:debouncer3 ;
++--------------------+-------+------+---------+
+; Assignment         ; Value ; From ; To      ;
++--------------------+-------+------+---------+
+; SAFE_STATE_MACHINE ; on    ; -    ; state   ;
++--------------------+-------+------+---------+
+
+
++----------------------------------------------------------------+
+; Source assignments for LCDModule:LCDMod|lcd_controller:DISPLAY ;
++--------------------+-------+------+----------------------------+
+; Assignment         ; Value ; From ; To                         ;
++--------------------+-------+------+----------------------------+
+; SAFE_STATE_MACHINE ; on    ; -    ; state                      ;
++--------------------+-------+------+----------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Source assignments for ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER ;
++--------------------+-------+------+------------------------------------------------+
+; Assignment         ; Value ; From ; To                                             ;
++--------------------+-------+------+------------------------------------------------+
+; SAFE_STATE_MACHINE ; on    ; -    ; state                                          ;
++--------------------+-------+------+------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Source assignments for ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL ;
++--------------------+-------+------+-----------------------------------------------------------------------------------+
+; Assignment         ; Value ; From ; To                                                                                ;
++--------------------+-------+------+-----------------------------------------------------------------------------------+
+; SAFE_STATE_MACHINE ; on    ; -    ; state                                                                             ;
++--------------------+-------+------+-----------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: debouncer:debouncer0 ;
++-----------------+------------+------------------------------------+
+; Parameter Name  ; Value      ; Type                               ;
++-----------------+------------+------------------------------------+
+; clock_frequency ; 50000000.0 ; Signed Float                       ;
+; window_duration ; 2.0E-05    ; Signed Float                       ;
+; delay_duration  ; 0.02       ; Signed Float                       ;
+; initial_level   ; '0'        ; Enumerated                         ;
++-----------------+------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: debouncer:debouncer1 ;
++-----------------+------------+------------------------------------+
+; Parameter Name  ; Value      ; Type                               ;
++-----------------+------------+------------------------------------+
+; clock_frequency ; 50000000.0 ; Signed Float                       ;
+; window_duration ; 2.0E-05    ; Signed Float                       ;
+; delay_duration  ; 0.02       ; Signed Float                       ;
+; initial_level   ; '0'        ; Enumerated                         ;
++-----------------+------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: debouncer:debouncer2 ;
++-----------------+------------+------------------------------------+
+; Parameter Name  ; Value      ; Type                               ;
++-----------------+------------+------------------------------------+
+; clock_frequency ; 50000000.0 ; Signed Float                       ;
+; window_duration ; 2.0E-05    ; Signed Float                       ;
+; delay_duration  ; 0.02       ; Signed Float                       ;
+; initial_level   ; '0'        ; Enumerated                         ;
++-----------------+------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: debouncer:debouncer3 ;
++-----------------+------------+------------------------------------+
+; Parameter Name  ; Value      ; Type                               ;
++-----------------+------------+------------------------------------+
+; clock_frequency ; 50000000.0 ; Signed Float                       ;
+; window_duration ; 2.0E-05    ; Signed Float                       ;
+; delay_duration  ; 0.02       ; Signed Float                       ;
+; initial_level   ; '0'        ; Enumerated                         ;
++-----------------+------------+------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ClkDividerN:pulse ;
++----------------+-----------+-----------------------------------+
+; Parameter Name ; Value     ; Type                              ;
++----------------+-----------+-----------------------------------+
+; k              ; 150000000 ; Signed Integer                    ;
++----------------+-----------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LCDModule:LCDMod ;
++--------------------+------------+-----------------------------+
+; Parameter Name     ; Value      ; Type                        ;
++--------------------+------------+-----------------------------+
+; clock_50_frequency ; 50000000.0 ; Signed Float                ;
++--------------------+------------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LCDModule:LCDMod|lcd_controller:DISPLAY ;
++-----------------+------------+-------------------------------------------------------+
+; Parameter Name  ; Value      ; Type                                                  ;
++-----------------+------------+-------------------------------------------------------+
+; clock_frequency ; 50000000.0 ; Signed Float                                          ;
++-----------------+------------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER ;
++-----------------+------------+---------------------------------------------------------------------------+
+; Parameter Name  ; Value      ; Type                                                                      ;
++-----------------+------------+---------------------------------------------------------------------------+
+; clock_frequency ; 50000000.0 ; Signed Float                                                              ;
++-----------------+------------+---------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL ;
++-----------------+------------+--------------------------------------------------------------------------------------------------------------+
+; Parameter Name  ; Value      ; Type                                                                                                         ;
++-----------------+------------+--------------------------------------------------------------------------------------------------------------+
+; clock_frequency ; 50000000.0 ; Signed Float                                                                                                 ;
++-----------------+------------+--------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER"                                    ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port             ; Type   ; Severity ; Details                                                                             ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+; reset            ; Input  ; Info     ; Stuck at GND                                                                        ;
+; keyboard_leds[2] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; keyboard_leds[1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; keyboard_leds[0] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; mouse_detected   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; mouse_delta_x    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; mouse_delta_y    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; mouse_buttons    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; valid_mouse_data ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "Bin7SegDecoder:decHex6" ;
++-------------+-------+----------+-------------------+
+; Port        ; Type  ; Severity ; Details           ;
++-------------+-------+----------+-------------------+
+; bininput[4] ; Input ; Info     ; Stuck at GND      ;
++-------------+-------+----------+-------------------+
+
+
++----------------------------------------------------+
+; Port Connectivity Checks: "Bin7SegDecoder:decHex7" ;
++-------------+-------+----------+-------------------+
+; Port        ; Type  ; Severity ; Details           ;
++-------------+-------+----------+-------------------+
+; bininput[4] ; Input ; Info     ; Stuck at GND      ;
++-------------+-------+----------+-------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Bin2BCDCase:bin2bcd"                                                                          ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; bininput[7..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; bcd2           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "LCDModule:LCDMod|lcd_controller:DISPLAY" ;
++-------+-------+----------+------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                  ;
++-------+-------+----------+------------------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                             ;
++-------+-------+----------+------------------------------------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "Timer:timer"  ;
++--------+-------+----------+--------------+
+; Port   ; Type  ; Severity ; Details      ;
++--------+-------+----------+--------------+
+; enable ; Input ; Info     ; Stuck at VCC ;
++--------+-------+----------+--------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "CheckPin:checkPin"          ;
++----------------------+-------+----------+--------------+
+; Port                 ; Type  ; Severity ; Details      ;
++----------------------+-------+----------+--------------+
+; correct_pin1[58..57] ; Input ; Info     ; Stuck at VCC ;
+; correct_pin1[50..49] ; Input ; Info     ; Stuck at VCC ;
+; correct_pin1[42..41] ; Input ; Info     ; Stuck at VCC ;
+; correct_pin1[34..33] ; Input ; Info     ; Stuck at VCC ;
+; correct_pin1[25..24] ; Input ; Info     ; Stuck at VCC ;
+; correct_pin1[20..18] ; Input ; Info     ; Stuck at VCC ;
+; correct_pin1[13..12] ; Input ; Info     ; Stuck at VCC ;
+; correct_pin1[1..0]   ; Input ; Info     ; Stuck at VCC ;
+; correct_pin1[63..61] ; Input ; Info     ; Stuck at GND ;
+; correct_pin1[56..54] ; Input ; Info     ; Stuck at GND ;
+; correct_pin1[52..51] ; Input ; Info     ; Stuck at GND ;
+; correct_pin1[48..45] ; Input ; Info     ; Stuck at GND ;
+; correct_pin1[40..37] ; Input ; Info     ; Stuck at GND ;
+; correct_pin1[32..30] ; Input ; Info     ; Stuck at GND ;
+; correct_pin1[28..26] ; Input ; Info     ; Stuck at GND ;
+; correct_pin1[23..21] ; Input ; Info     ; Stuck at GND ;
+; correct_pin1[17..14] ; Input ; Info     ; Stuck at GND ;
+; correct_pin1[11..9]  ; Input ; Info     ; Stuck at GND ;
+; correct_pin1[5..2]   ; Input ; Info     ; Stuck at GND ;
+; correct_pin1[60]     ; Input ; Info     ; Stuck at VCC ;
+; correct_pin1[59]     ; Input ; Info     ; Stuck at GND ;
+; correct_pin1[53]     ; Input ; Info     ; Stuck at VCC ;
+; correct_pin1[44]     ; Input ; Info     ; Stuck at VCC ;
+; correct_pin1[43]     ; Input ; Info     ; Stuck at GND ;
+; correct_pin1[36]     ; Input ; Info     ; Stuck at VCC ;
+; correct_pin1[35]     ; Input ; Info     ; Stuck at GND ;
+; correct_pin1[29]     ; Input ; Info     ; Stuck at VCC ;
+; correct_pin1[8]      ; Input ; Info     ; Stuck at VCC ;
+; correct_pin1[7]      ; Input ; Info     ; Stuck at GND ;
+; correct_pin1[6]      ; Input ; Info     ; Stuck at VCC ;
++----------------------+-------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "debouncer:debouncer3"                                                                            ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; clean             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero_to_one_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; one_to_zero_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "debouncer:debouncer2"                                                                            ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; clean             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero_to_one_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; one_to_zero_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "debouncer:debouncer1"                                                                            ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; clean             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero_to_one_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "debouncer:debouncer0"                                                                            ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; clean             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; zero_to_one_pulse ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 74                          ;
+; cycloneiii_ff         ; 523                         ;
+;     ENA               ; 203                         ;
+;     ENA CLR           ; 2                           ;
+;     ENA SCLR          ; 17                          ;
+;     ENA SLD           ; 2                           ;
+;     SCLR              ; 34                          ;
+;     SLD               ; 16                          ;
+;     plain             ; 249                         ;
+; cycloneiii_io_obuf    ; 10                          ;
+; cycloneiii_lcell_comb ; 1291                        ;
+;     arith             ; 197                         ;
+;         2 data inputs ; 197                         ;
+;     normal            ; 1094                        ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 33                          ;
+;         2 data inputs ; 112                         ;
+;         3 data inputs ; 285                         ;
+;         4 data inputs ; 663                         ;
+;                       ;                             ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 4.02                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:04     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Tue May 29 11:40:34 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Fase_5 -c Fase_5
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file reg64.vhd
+    Info (12022): Found design unit 1: Reg64-Behavioral File: C:/Data/Universidade/LSD/Projeto/Fase_5/Reg64.vhd Line: 12
+    Info (12023): Found entity 1: Reg64 File: C:/Data/Universidade/LSD/Projeto/Fase_5/Reg64.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ps2keyboard.vhd
+    Info (12022): Found design unit 1: ps2Keyboard-Behavioral File: C:/Data/Universidade/LSD/Projeto/Fase_5/ps2Keyboard.vhd Line: 14
+    Info (12023): Found entity 1: ps2Keyboard File: C:/Data/Universidade/LSD/Projeto/Fase_5/ps2Keyboard.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file fase_5.vhd
+    Info (12022): Found design unit 1: Fase_5-Behavioral File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 22
+    Info (12023): Found entity 1: Fase_5 File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file timer.vhd
+    Info (12022): Found design unit 1: Timer-Behavioral File: C:/Data/Universidade/LSD/Projeto/Fase_5/Timer.vhd Line: 13
+    Info (12023): Found entity 1: Timer File: C:/Data/Universidade/LSD/Projeto/Fase_5/Timer.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file seqdetector.vhd
+    Info (12022): Found design unit 1: SeqDetector-Behavioral File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 12
+    Info (12023): Found entity 1: SeqDetector File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file registerpin.vhd
+    Info (12022): Found design unit 1: RegisterPin-Behavioral File: C:/Data/Universidade/LSD/Projeto/Fase_5/RegisterPin.vhd Line: 13
+    Info (12023): Found entity 1: RegisterPin File: C:/Data/Universidade/LSD/Projeto/Fase_5/RegisterPin.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ps2keyboardpin.vhd
+    Info (12022): Found design unit 1: ps2KeyboardPin-Behavioral File: C:/Data/Universidade/LSD/Projeto/Fase_5/ps2KeyboardPin.vhd Line: 13
+    Info (12023): Found entity 1: ps2KeyboardPin File: C:/Data/Universidade/LSD/Projeto/Fase_5/ps2KeyboardPin.vhd Line: 5
+Info (12021): Found 4 design units, including 2 entities, in source file ps2_controller.vhd
+    Info (12022): Found design unit 1: ps2_controller-smart File: C:/Data/Universidade/LSD/Projeto/Fase_5/ps2_controller.vhd Line: 52
+    Info (12022): Found design unit 2: low_level_ps2_controller-ignore_errors File: C:/Data/Universidade/LSD/Projeto/Fase_5/ps2_controller.vhd Line: 342
+    Info (12023): Found entity 1: ps2_controller File: C:/Data/Universidade/LSD/Projeto/Fase_5/ps2_controller.vhd Line: 26
+    Info (12023): Found entity 2: low_level_ps2_controller File: C:/Data/Universidade/LSD/Projeto/Fase_5/ps2_controller.vhd Line: 321
+Info (12021): Found 2 design units, including 1 entities, in source file lcdselector.vhd
+    Info (12022): Found design unit 1: LCDSelector-Decoder File: C:/Data/Universidade/LSD/Projeto/Fase_5/LCDSelector.vhd Line: 12
+    Info (12023): Found entity 1: LCDSelector File: C:/Data/Universidade/LSD/Projeto/Fase_5/LCDSelector.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file lcdmodule.vhd
+    Info (12022): Found design unit 1: LCDModule-Behavioral File: C:/Data/Universidade/LSD/Projeto/Fase_5/LCDModule.vhd Line: 26
+    Info (12023): Found entity 1: LCDModule File: C:/Data/Universidade/LSD/Projeto/Fase_5/LCDModule.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file lcd_controller_example_tl.vhd
+    Info (12022): Found design unit 1: lcd_controller_example_tl-example File: C:/Data/Universidade/LSD/Projeto/Fase_5/lcd_controller_example_tl.vhd Line: 46
+    Info (12023): Found entity 1: lcd_controller_example_tl File: C:/Data/Universidade/LSD/Projeto/Fase_5/lcd_controller_example_tl.vhd Line: 26
+Info (12021): Found 2 design units, including 1 entities, in source file lcd_controller.vhd
+    Info (12022): Found design unit 1: lcd_controller-conservative File: C:/Data/Universidade/LSD/Projeto/Fase_5/lcd_controller.vhd Line: 34
+    Info (12023): Found entity 1: lcd_controller File: C:/Data/Universidade/LSD/Projeto/Fase_5/lcd_controller.vhd Line: 11
+Info (12021): Found 3 design units, including 1 entities, in source file debouncer.vhd
+    Info (12022): Found design unit 1: debouncer-fancy File: C:/Data/Universidade/LSD/Projeto/Fase_5/debouncer.vhd Line: 44
+    Info (12022): Found design unit 2: debouncer-basic File: C:/Data/Universidade/LSD/Projeto/Fase_5/debouncer.vhd Line: 140
+    Info (12023): Found entity 1: debouncer File: C:/Data/Universidade/LSD/Projeto/Fase_5/debouncer.vhd Line: 24
+Info (12021): Found 2 design units, including 1 entities, in source file clkdividern.vhd
+    Info (12022): Found design unit 1: ClkDividerN-RTL File: C:/Data/Universidade/LSD/Projeto/Fase_5/ClkDividerN.vhd Line: 11
+    Info (12023): Found entity 1: ClkDividerN File: C:/Data/Universidade/LSD/Projeto/Fase_5/ClkDividerN.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file checkpin.vhd
+    Info (12022): Found design unit 1: CheckPin-Behavioral File: C:/Data/Universidade/LSD/Projeto/Fase_5/CheckPin.vhd Line: 13
+    Info (12023): Found entity 1: CheckPin File: C:/Data/Universidade/LSD/Projeto/Fase_5/CheckPin.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bin7segdecoder.vhd
+    Info (12022): Found design unit 1: Bin7SegDecoder-Behavioral File: C:/Data/Universidade/LSD/Projeto/Fase_5/Bin7SegDecoder.vhd Line: 12
+    Info (12023): Found entity 1: Bin7SegDecoder File: C:/Data/Universidade/LSD/Projeto/Fase_5/Bin7SegDecoder.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file bin2bcdcase.vhd
+    Info (12022): Found design unit 1: Bin2BCDCase-Behavioral File: C:/Data/Universidade/LSD/Projeto/Fase_5/Bin2BCDCase.vhd Line: 13
+    Info (12023): Found entity 1: Bin2BCDCase File: C:/Data/Universidade/LSD/Projeto/Fase_5/Bin2BCDCase.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file alarmcontrolunit.vhd
+    Info (12022): Found design unit 1: AlarmControlUnit-Behavioral File: C:/Data/Universidade/LSD/Projeto/Fase_5/AlarmControlUnit.vhd Line: 11
+    Info (12023): Found entity 1: AlarmControlUnit File: C:/Data/Universidade/LSD/Projeto/Fase_5/AlarmControlUnit.vhd Line: 4
+Info (12127): Elaborating entity "Fase_5" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at Fase_5.vhd(8): used implicit default value for signal "LEDG" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 8
+Warning (10873): Using initial value X (don't care) for net "LEDR[17..16]" at Fase_5.vhd(9) File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 9
+Warning (10873): Using initial value X (don't care) for net "LEDR[14..7]" at Fase_5.vhd(9) File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 9
+Warning (10873): Using initial value X (don't care) for net "LEDR[5..0]" at Fase_5.vhd(9) File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 9
+Info (12129): Elaborating entity "debouncer" using architecture "A:fancy" for hierarchy "debouncer:debouncer0" File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 42
+Info (12129): Elaborating entity "AlarmControlUnit" using architecture "A:behavioral" for hierarchy "AlarmControlUnit:alarmControl" File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 92
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(44): signal "arm" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/AlarmControlUnit.vhd Line: 44
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(46): signal "pin_set" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/AlarmControlUnit.vhd Line: 46
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(57): signal "timer_finish" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/AlarmControlUnit.vhd Line: 57
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(58): signal "mode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/AlarmControlUnit.vhd Line: 58
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(63): signal "window_trigger" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/AlarmControlUnit.vhd Line: 63
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(63): signal "wrong_pin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/AlarmControlUnit.vhd Line: 63
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(65): signal "right_pin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/AlarmControlUnit.vhd Line: 65
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(76): signal "window_trigger" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/AlarmControlUnit.vhd Line: 76
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(78): signal "trigger" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/AlarmControlUnit.vhd Line: 78
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(90): signal "window_trigger" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/AlarmControlUnit.vhd Line: 90
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(92): signal "int_trigger" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/AlarmControlUnit.vhd Line: 92
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(103): signal "window_trigger" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/AlarmControlUnit.vhd Line: 103
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(103): signal "wrong_pin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/AlarmControlUnit.vhd Line: 103
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(103): signal "timer_finish" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/AlarmControlUnit.vhd Line: 103
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(105): signal "right_pin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/AlarmControlUnit.vhd Line: 105
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(127): signal "right_pin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/AlarmControlUnit.vhd Line: 127
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(127): signal "timer_finish" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/AlarmControlUnit.vhd Line: 127
+Warning (10492): VHDL Process Statement warning at AlarmControlUnit.vhd(139): signal "done_set" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/AlarmControlUnit.vhd Line: 139
+Info (12129): Elaborating entity "CheckPin" using architecture "A:behavioral" for hierarchy "CheckPin:checkPin" File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 114
+Warning (10492): VHDL Process Statement warning at CheckPin.vhd(44): signal "clk" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/CheckPin.vhd Line: 44
+Info (12129): Elaborating entity "SeqDetector" using architecture "A:behavioral" for hierarchy "CheckPin:checkPin|SeqDetector:seqdetector" File: C:/Data/Universidade/LSD/Projeto/Fase_5/CheckPin.vhd Line: 27
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(44): signal "start" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 44
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(52): signal "btn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 52
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(56): signal "s_pin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 56
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(65): signal "btn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 65
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(69): signal "s_pin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 69
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(77): signal "btn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 77
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(81): signal "s_pin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 81
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(89): signal "btn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 89
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(93): signal "s_pin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 93
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(101): signal "btn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 101
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(105): signal "s_pin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 105
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(113): signal "btn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 113
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(117): signal "s_pin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 117
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(125): signal "btn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 125
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(129): signal "s_pin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 129
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(137): signal "btn" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 137
+Warning (10492): VHDL Process Statement warning at SeqDetector.vhd(141): signal "s_pin" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 141
+Warning (10631): VHDL Process Statement warning at SeqDetector.vhd(35): inferring latch(es) for signal or variable "s_pin", which holds its previous value in one or more paths through the process File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[0]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[1]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[2]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[3]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[4]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[5]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[6]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[7]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[8]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[9]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[10]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[11]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[12]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[13]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[14]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[15]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[16]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[17]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[18]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[19]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[20]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[21]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[22]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[23]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[24]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[25]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[26]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[27]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[28]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[29]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[30]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[31]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[32]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[33]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[34]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[35]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[36]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[37]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[38]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[39]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[40]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[41]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[42]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[43]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[44]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[45]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[46]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[47]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[48]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[49]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[50]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[51]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[52]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[53]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[54]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[55]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[56]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[57]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[58]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[59]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[60]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[61]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[62]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (10041): Inferred latch for "s_pin[63]" at SeqDetector.vhd(35) File: C:/Data/Universidade/LSD/Projeto/Fase_5/SeqDetector.vhd Line: 35
+Info (12129): Elaborating entity "RegisterPin" using architecture "A:behavioral" for hierarchy "RegisterPin:regPin" File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 127
+Info (12129): Elaborating entity "Reg64" using architecture "A:behavioral" for hierarchy "RegisterPin:regPin|Reg64:reg8" File: C:/Data/Universidade/LSD/Projeto/Fase_5/RegisterPin.vhd Line: 30
+Info (12129): Elaborating entity "Timer" using architecture "A:behavioral" for hierarchy "Timer:timer" File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 139
+Info (12129): Elaborating entity "ClkDividerN" using architecture "A:rtl" for hierarchy "ClkDividerN:pulse" File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 148
+Info (12129): Elaborating entity "LCDSelector" using architecture "A:decoder" for hierarchy "LCDSelector:LCDSel" File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 156
+Info (12129): Elaborating entity "LCDModule" using architecture "A:behavioral" for hierarchy "LCDModule:LCDMod" File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 167
+Info (12129): Elaborating entity "lcd_controller" using architecture "A:conservative" for hierarchy "LCDModule:LCDMod|lcd_controller:DISPLAY" File: C:/Data/Universidade/LSD/Projeto/Fase_5/LCDModule.vhd Line: 60
+Info (12129): Elaborating entity "Bin2BCDCase" using architecture "A:behavioral" for hierarchy "Bin2BCDCase:bin2bcd" File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 184
+Info (12129): Elaborating entity "Bin7SegDecoder" using architecture "A:behavioral" for hierarchy "Bin7SegDecoder:decHex7" File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 192
+Info (12129): Elaborating entity "ps2Keyboard" using architecture "A:behavioral" for hierarchy "ps2Keyboard:keyboard" File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 203
+Info (12129): Elaborating entity "ps2_controller" using architecture "A:smart" for hierarchy "ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER" File: C:/Data/Universidade/LSD/Projeto/Fase_5/ps2Keyboard.vhd Line: 25
+Info (12129): Elaborating entity "low_level_ps2_controller" using architecture "A:ignore_errors" for hierarchy "ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL" File: C:/Data/Universidade/LSD/Projeto/Fase_5/ps2_controller.vhd Line: 113
+Info (10544): VHDL Assertion Statement at ps2_controller.vhd(383): assertion is false - report "Sampling period = 124 clock cycles" (NOTE) File: C:/Data/Universidade/LSD/Projeto/Fase_5/ps2_controller.vhd Line: 383
+Info (284007): State machine "|Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|state" will be implemented as a safe state machine. File: C:/Data/Universidade/LSD/Projeto/Fase_5/ps2_controller.vhd Line: 108
+Info (284007): State machine "|Fase_5|ps2Keyboard:keyboard|ps2_controller:PS2_KEYBOARD_CONTROLLER|low_level_ps2_controller:LOW_LEVEL|state" will be implemented as a safe state machine. File: C:/Data/Universidade/LSD/Projeto/Fase_5/ps2_controller.vhd Line: 370
+Info (284007): State machine "|Fase_5|LCDModule:LCDMod|lcd_controller:DISPLAY|state" will be implemented as a safe state machine. File: C:/Data/Universidade/LSD/Projeto/Fase_5/lcd_controller.vhd Line: 62
+Info (284007): State machine "|Fase_5|debouncer:debouncer3|state" will be implemented as a safe state machine. File: C:/Data/Universidade/LSD/Projeto/Fase_5/debouncer.vhd Line: 71
+Info (284007): State machine "|Fase_5|debouncer:debouncer2|state" will be implemented as a safe state machine. File: C:/Data/Universidade/LSD/Projeto/Fase_5/debouncer.vhd Line: 71
+Info (284007): State machine "|Fase_5|debouncer:debouncer1|state" will be implemented as a safe state machine. File: C:/Data/Universidade/LSD/Projeto/Fase_5/debouncer.vhd Line: 71
+Info (284007): State machine "|Fase_5|debouncer:debouncer0|state" will be implemented as a safe state machine. File: C:/Data/Universidade/LSD/Projeto/Fase_5/debouncer.vhd Line: 71
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "LEDG[0]" is stuck at GND File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 8
+    Warning (13410): Pin "LEDG[1]" is stuck at GND File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 8
+    Warning (13410): Pin "LEDG[2]" is stuck at GND File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 8
+    Warning (13410): Pin "LEDG[3]" is stuck at GND File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 8
+    Warning (13410): Pin "LEDG[4]" is stuck at GND File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 8
+    Warning (13410): Pin "LEDG[5]" is stuck at GND File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 8
+    Warning (13410): Pin "LEDR[0]" is stuck at GND File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 9
+    Warning (13410): Pin "LEDR[1]" is stuck at GND File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 9
+    Warning (13410): Pin "LEDR[2]" is stuck at GND File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 9
+    Warning (13410): Pin "LEDR[3]" is stuck at GND File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 9
+    Warning (13410): Pin "LEDR[4]" is stuck at GND File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 9
+    Warning (13410): Pin "LEDR[5]" is stuck at GND File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 9
+    Warning (13410): Pin "LEDR[7]" is stuck at GND File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 9
+    Warning (13410): Pin "LEDR[8]" is stuck at GND File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 9
+    Warning (13410): Pin "LEDR[9]" is stuck at GND File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 9
+    Warning (13410): Pin "LEDR[10]" is stuck at GND File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 9
+    Warning (13410): Pin "LEDR[11]" is stuck at GND File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 9
+    Warning (13410): Pin "LEDR[12]" is stuck at GND File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 9
+    Warning (13410): Pin "LEDR[13]" is stuck at GND File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 9
+    Warning (13410): Pin "LEDR[14]" is stuck at GND File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 9
+    Warning (13410): Pin "LEDR[16]" is stuck at GND File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 9
+    Warning (13410): Pin "LEDR[17]" is stuck at GND File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 9
+    Warning (13410): Pin "lcd_blon" is stuck at GND File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 12
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 50 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 7 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 7
+    Warning (15610): No output dependent on input pin "SW[11]" File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 7
+    Warning (15610): No output dependent on input pin "SW[12]" File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 7
+    Warning (15610): No output dependent on input pin "SW[13]" File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 7
+    Warning (15610): No output dependent on input pin "SW[14]" File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 7
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 6
+    Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Data/Universidade/LSD/Projeto/Fase_5/Fase_5.vhd Line: 6
+Info (21057): Implemented 1475 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 21 input pins
+    Info (21059): Implemented 43 output pins
+    Info (21060): Implemented 10 bidirectional pins
+    Info (21061): Implemented 1401 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 74 warnings
+    Info: Peak virtual memory: 4826 megabytes
+    Info: Processing ended: Tue May 29 11:40:51 2018
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:32
+
+

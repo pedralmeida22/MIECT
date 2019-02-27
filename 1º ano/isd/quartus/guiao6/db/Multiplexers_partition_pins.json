@@ -1,0 +1,165 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "y1",
+					"strict" : false
+				},
+				{
+					"name" : "y2",
+					"strict" : false
+				},
+				{
+					"name" : "y3",
+					"strict" : false
+				},
+				{
+					"name" : "y4",
+					"strict" : false
+				},
+				{
+					"name" : "i50",
+					"strict" : false
+				},
+				{
+					"name" : "s0",
+					"strict" : false
+				},
+				{
+					"name" : "i60",
+					"strict" : false
+				},
+				{
+					"name" : "s1",
+					"strict" : false
+				},
+				{
+					"name" : "i40",
+					"strict" : false
+				},
+				{
+					"name" : "i70",
+					"strict" : false
+				},
+				{
+					"name" : "i20",
+					"strict" : false
+				},
+				{
+					"name" : "i10",
+					"strict" : false
+				},
+				{
+					"name" : "i00",
+					"strict" : false
+				},
+				{
+					"name" : "i30",
+					"strict" : false
+				},
+				{
+					"name" : "s2",
+					"strict" : false
+				},
+				{
+					"name" : "i51",
+					"strict" : false
+				},
+				{
+					"name" : "i61",
+					"strict" : false
+				},
+				{
+					"name" : "i41",
+					"strict" : false
+				},
+				{
+					"name" : "i71",
+					"strict" : false
+				},
+				{
+					"name" : "i21",
+					"strict" : false
+				},
+				{
+					"name" : "i11",
+					"strict" : false
+				},
+				{
+					"name" : "i01",
+					"strict" : false
+				},
+				{
+					"name" : "i31",
+					"strict" : false
+				},
+				{
+					"name" : "i52",
+					"strict" : false
+				},
+				{
+					"name" : "i62",
+					"strict" : false
+				},
+				{
+					"name" : "i42",
+					"strict" : false
+				},
+				{
+					"name" : "i72",
+					"strict" : false
+				},
+				{
+					"name" : "i22",
+					"strict" : false
+				},
+				{
+					"name" : "i12",
+					"strict" : false
+				},
+				{
+					"name" : "i02",
+					"strict" : false
+				},
+				{
+					"name" : "i32",
+					"strict" : false
+				},
+				{
+					"name" : "i53",
+					"strict" : false
+				},
+				{
+					"name" : "i63",
+					"strict" : false
+				},
+				{
+					"name" : "i43",
+					"strict" : false
+				},
+				{
+					"name" : "i73",
+					"strict" : false
+				},
+				{
+					"name" : "i23",
+					"strict" : false
+				},
+				{
+					"name" : "i13",
+					"strict" : false
+				},
+				{
+					"name" : "i03",
+					"strict" : false
+				},
+				{
+					"name" : "i33",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

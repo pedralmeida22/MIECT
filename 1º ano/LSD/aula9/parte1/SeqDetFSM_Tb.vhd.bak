@@ -1,0 +1,21 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity SeqDetFSM_Tb is
+end SeqDetFSM_Tb;
+
+architecture Stimulus of SeqDetFSM_Tb is
+
+	signal s_clk, s_reset, s_xIn : in std_logic;
+	signal s_yOut ; out std_logic;
+	
+begin
+	
+	uut : entity work.SeqDetFSM(MealyArch)
+			port map(s_clk => clk,
+					   s_reset => reset,
+						s_xIn => xIn,
+						s_yout => yOut);
+	
+	
+end Stimulus;

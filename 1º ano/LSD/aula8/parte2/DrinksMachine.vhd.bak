@@ -1,0 +1,10 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity DrinksMachine is
+	port(
+end DrinksMachine;
+
+architecture Shell of DrinksMachine is
+
+end Shell;

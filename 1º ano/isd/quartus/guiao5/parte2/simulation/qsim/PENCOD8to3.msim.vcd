@@ -1,0 +1,154 @@
+$comment
+	File created using the following command:
+		vcd file PENCOD8to3.msim.vcd -direction
+$end
+$date
+	Tue Nov 06 15:43:11 2018
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module PENCOD8to3_vlg_vec_tst $end
+$var reg 1 ! enable $end
+$var reg 1 " in0 $end
+$var reg 1 # in1 $end
+$var reg 1 $ in2 $end
+$var reg 1 % in3 $end
+$var reg 1 & in4 $end
+$var reg 1 ' in5 $end
+$var reg 1 ( in6 $end
+$var reg 1 ) in7 $end
+$var wire 1 * EO $end
+$var wire 1 + out0 $end
+$var wire 1 , out1 $end
+$var wire 1 - out2 $end
+$var wire 1 . valido $end
+
+$scope module i1 $end
+$var wire 1 / gnd $end
+$var wire 1 0 vcc $end
+$var wire 1 1 unknown $end
+$var tri1 1 2 devclrn $end
+$var tri1 1 3 devpor $end
+$var tri1 1 4 devoe $end
+$var wire 1 5 out0~output_o $end
+$var wire 1 6 out1~output_o $end
+$var wire 1 7 out2~output_o $end
+$var wire 1 8 EO~output_o $end
+$var wire 1 9 valido~output_o $end
+$var wire 1 : in6~input_o $end
+$var wire 1 ; in5~input_o $end
+$var wire 1 < in7~input_o $end
+$var wire 1 = enable~input_o $end
+$var wire 1 > inst|8~0_combout $end
+$var wire 1 ? in4~input_o $end
+$var wire 1 @ in2~input_o $end
+$var wire 1 A in1~input_o $end
+$var wire 1 B in3~input_o $end
+$var wire 1 C inst|8~1_combout $end
+$var wire 1 D inst|8~2_combout $end
+$var wire 1 E inst|109~0_combout $end
+$var wire 1 F inst|109~1_combout $end
+$var wire 1 G inst|83~0_combout $end
+$var wire 1 H inst|9~0_combout $end
+$var wire 1 I in0~input_o $end
+$var wire 1 J inst|83~1_combout $end
+$var wire 1 K inst|83~2_combout $end
+$var wire 1 L inst|84~combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+0#
+0$
+0%
+0&
+0'
+0(
+0)
+1*
+0+
+0,
+0-
+0.
+0/
+10
+x1
+12
+13
+14
+05
+06
+07
+18
+09
+0:
+0;
+0<
+0=
+1>
+0?
+0@
+0A
+0B
+0C
+1D
+0E
+1F
+0G
+1H
+0I
+0J
+0K
+0L
+$end
+#80000
+1"
+1I
+#140000
+1#
+1A
+#240000
+1$
+1@
+#460000
+1%
+1B
+1J
+#520000
+1&
+1?
+#600000
+1'
+1;
+#680000
+1(
+1:
+#760000
+1)
+1<
+1G
+0F
+0>
+16
+1K
+0H
+0D
+1,
+1L
+19
+15
+17
+08
+0*
+1-
+1+
+1.
+#1000000

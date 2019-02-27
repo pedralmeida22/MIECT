@@ -1,0 +1,98 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/isd/guiao4/parte2/simulation/qsim
+vEqCmp16Demo
+Z1 !s110 1540304231
+!i10b 1
+!s100 =7DA@^`J@]hKjZ:79mR6J1
+IiMiok`oW?17Y^nXUiYk7?3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1540304230
+Z3 8EqCmpDemo.vo
+Z4 FEqCmpDemo.vo
+Z5 L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1540304231.000000
+Z8 !s107 EqCmpDemo.vo|
+Z9 !s90 -work|work|EqCmpDemo.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+n@eq@cmp16@demo
+vEqCmp16Demo_vlg_vec_tst
+R1
+!i10b 1
+!s100 B9GR?TaZVFZ9^JK8LzQXe3
+IHoRln88N;Alh<mR=7V?6l2
+R2
+R0
+w1540304228
+8EqCmp16Demo.vwf.vt
+FEqCmp16Demo.vwf.vt
+Z12 L0 29
+R6
+r1
+!s85 0
+31
+R7
+!s107 EqCmp16Demo.vwf.vt|
+!s90 -work|work|EqCmp16Demo.vwf.vt|
+!i113 1
+R10
+R11
+n@eq@cmp16@demo_vlg_vec_tst
+vEqCmp4
+!s110 1540303451
+!i10b 1
+!s100 SBLcflcMDCL?Z_k<ob2Z^0
+I:[OHH`ngN=?Uh08XG?jX01
+R2
+R0
+w1540303450
+R3
+R4
+R5
+R6
+r1
+!s85 0
+31
+!s108 1540303451.000000
+R8
+R9
+!i113 1
+R10
+R11
+n@eq@cmp4
+vEqCmp4_vlg_vec_tst
+!s110 1540303452
+!i10b 1
+!s100 95Ao9`N]m6gWUYF56d1Tb1
+IQD_UHKcBH9nf]9<NZK09D1
+R2
+R0
+w1540303448
+8EqCmpDemoBuzz.vwf.vt
+FEqCmpDemoBuzz.vwf.vt
+R12
+R6
+r1
+!s85 0
+31
+!s108 1540303452.000000
+!s107 EqCmpDemoBuzz.vwf.vt|
+!s90 -work|work|EqCmpDemoBuzz.vwf.vt|
+!i113 1
+R10
+R11
+n@eq@cmp4_vlg_vec_tst
