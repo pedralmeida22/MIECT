@@ -9,9 +9,9 @@
 # }
 
     .equ READ_CORE_TIMER,11
-    .equ RESET_CORE_TIMER,?
-    .equ PUT_CHAR,?
-    .equ PRINT_INT,?
+    .equ RESET_CORE_TIMER,12
+    .equ PUT_CHAR,3
+    .equ PRINT_INT,6
 
     .data
     .text
@@ -21,15 +21,21 @@ main:
 while:
     li $v0, READ_CORE_TIMER
     syscall
-    bge $v0,200000,???
-    li $v0,???
+
+    blt $v0,200000,while
+
+    li $v0,RESET_CORE_TIMER
     syscall
+
+    addi $t0,$t0,1
+    move $a0,$t0
+    li $a1,10
+    li $v0,PRINT_INT
+    syscall
+
     li $a0,' '
     li $v0, PUT_CHAR
     syscall
-    addi $t0,$t0,???
-    move $a0,$t0
-    li $v0,???
-    syscall
+
     j while
     jr $ra
