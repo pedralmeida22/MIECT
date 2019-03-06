@@ -11,6 +11,9 @@
     .equ SFR_BASE_HI, 0xBF88    # 16 MSbits of SFR area
     .equ TRISE, 0X6100          # TRISE address is 0xBF886100
     .equ LATE, 0x6120           # LATE address is 0xBF886120
+    .equ READ_CORE_TIMER,11
+    .equ RESET_CORE_TIMER,12
+    .equ WAIT,20000
 
     .data
     .globl main
@@ -29,7 +32,9 @@ while:
     sw $s2,LATE($s1)        # LATE0 = v;
 
     li $a0,500
-    jal delay               # LATE0 = v;
+    jal delay               # delay 500ms
+
+    xor $s0,$s0,1           # v ^= 1;
 
     j while
     jr $ra
