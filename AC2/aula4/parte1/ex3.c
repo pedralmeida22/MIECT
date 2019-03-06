@@ -13,7 +13,7 @@ void to7seg(char c){
             LATB = (LATB & 0x00FF) | 0x3900;
             break;
         case 'd' | 'D':
-            LATB = (LATB & 0x00FF) | 0x3F00;
+            LATB = (LATB & 0x00FF) | 0x6E00;
             break;
         case 'e' | 'E':
             LATB = (LATB & 0x00FF) | 0x7900;
