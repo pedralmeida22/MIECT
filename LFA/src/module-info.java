@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author pedralmeida
- *
- */
-module LFA {
-}
