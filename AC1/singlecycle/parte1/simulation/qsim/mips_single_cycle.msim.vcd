@@ -1,0 +1,330 @@
+$comment
+	File created using the following command:
+		vcd file mips_single_cycle.msim.vcd -direction
+$end
+$date
+	Mon Nov 05 23:28:37 2018
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module signextend_vhd_vec_tst $end
+$var wire 1 ! dataIn [15] $end
+$var wire 1 " dataIn [14] $end
+$var wire 1 # dataIn [13] $end
+$var wire 1 $ dataIn [12] $end
+$var wire 1 % dataIn [11] $end
+$var wire 1 & dataIn [10] $end
+$var wire 1 ' dataIn [9] $end
+$var wire 1 ( dataIn [8] $end
+$var wire 1 ) dataIn [7] $end
+$var wire 1 * dataIn [6] $end
+$var wire 1 + dataIn [5] $end
+$var wire 1 , dataIn [4] $end
+$var wire 1 - dataIn [3] $end
+$var wire 1 . dataIn [2] $end
+$var wire 1 / dataIn [1] $end
+$var wire 1 0 dataIn [0] $end
+$var wire 1 1 dataOut [31] $end
+$var wire 1 2 dataOut [30] $end
+$var wire 1 3 dataOut [29] $end
+$var wire 1 4 dataOut [28] $end
+$var wire 1 5 dataOut [27] $end
+$var wire 1 6 dataOut [26] $end
+$var wire 1 7 dataOut [25] $end
+$var wire 1 8 dataOut [24] $end
+$var wire 1 9 dataOut [23] $end
+$var wire 1 : dataOut [22] $end
+$var wire 1 ; dataOut [21] $end
+$var wire 1 < dataOut [20] $end
+$var wire 1 = dataOut [19] $end
+$var wire 1 > dataOut [18] $end
+$var wire 1 ? dataOut [17] $end
+$var wire 1 @ dataOut [16] $end
+$var wire 1 A dataOut [15] $end
+$var wire 1 B dataOut [14] $end
+$var wire 1 C dataOut [13] $end
+$var wire 1 D dataOut [12] $end
+$var wire 1 E dataOut [11] $end
+$var wire 1 F dataOut [10] $end
+$var wire 1 G dataOut [9] $end
+$var wire 1 H dataOut [8] $end
+$var wire 1 I dataOut [7] $end
+$var wire 1 J dataOut [6] $end
+$var wire 1 K dataOut [5] $end
+$var wire 1 L dataOut [4] $end
+$var wire 1 M dataOut [3] $end
+$var wire 1 N dataOut [2] $end
+$var wire 1 O dataOut [1] $end
+$var wire 1 P dataOut [0] $end
+
+$scope module i1 $end
+$var wire 1 Q gnd $end
+$var wire 1 R vcc $end
+$var wire 1 S unknown $end
+$var wire 1 T devoe $end
+$var wire 1 U devclrn $end
+$var wire 1 V devpor $end
+$var wire 1 W ww_devoe $end
+$var wire 1 X ww_devclrn $end
+$var wire 1 Y ww_devpor $end
+$var wire 1 Z ww_dataIn [15] $end
+$var wire 1 [ ww_dataIn [14] $end
+$var wire 1 \ ww_dataIn [13] $end
+$var wire 1 ] ww_dataIn [12] $end
+$var wire 1 ^ ww_dataIn [11] $end
+$var wire 1 _ ww_dataIn [10] $end
+$var wire 1 ` ww_dataIn [9] $end
+$var wire 1 a ww_dataIn [8] $end
+$var wire 1 b ww_dataIn [7] $end
+$var wire 1 c ww_dataIn [6] $end
+$var wire 1 d ww_dataIn [5] $end
+$var wire 1 e ww_dataIn [4] $end
+$var wire 1 f ww_dataIn [3] $end
+$var wire 1 g ww_dataIn [2] $end
+$var wire 1 h ww_dataIn [1] $end
+$var wire 1 i ww_dataIn [0] $end
+$var wire 1 j ww_dataOut [31] $end
+$var wire 1 k ww_dataOut [30] $end
+$var wire 1 l ww_dataOut [29] $end
+$var wire 1 m ww_dataOut [28] $end
+$var wire 1 n ww_dataOut [27] $end
+$var wire 1 o ww_dataOut [26] $end
+$var wire 1 p ww_dataOut [25] $end
+$var wire 1 q ww_dataOut [24] $end
+$var wire 1 r ww_dataOut [23] $end
+$var wire 1 s ww_dataOut [22] $end
+$var wire 1 t ww_dataOut [21] $end
+$var wire 1 u ww_dataOut [20] $end
+$var wire 1 v ww_dataOut [19] $end
+$var wire 1 w ww_dataOut [18] $end
+$var wire 1 x ww_dataOut [17] $end
+$var wire 1 y ww_dataOut [16] $end
+$var wire 1 z ww_dataOut [15] $end
+$var wire 1 { ww_dataOut [14] $end
+$var wire 1 | ww_dataOut [13] $end
+$var wire 1 } ww_dataOut [12] $end
+$var wire 1 ~ ww_dataOut [11] $end
+$var wire 1 !! ww_dataOut [10] $end
+$var wire 1 "! ww_dataOut [9] $end
+$var wire 1 #! ww_dataOut [8] $end
+$var wire 1 $! ww_dataOut [7] $end
+$var wire 1 %! ww_dataOut [6] $end
+$var wire 1 &! ww_dataOut [5] $end
+$var wire 1 '! ww_dataOut [4] $end
+$var wire 1 (! ww_dataOut [3] $end
+$var wire 1 )! ww_dataOut [2] $end
+$var wire 1 *! ww_dataOut [1] $end
+$var wire 1 +! ww_dataOut [0] $end
+$var wire 1 ,! \dataOut[0]~output_o\ $end
+$var wire 1 -! \dataOut[1]~output_o\ $end
+$var wire 1 .! \dataOut[2]~output_o\ $end
+$var wire 1 /! \dataOut[3]~output_o\ $end
+$var wire 1 0! \dataOut[4]~output_o\ $end
+$var wire 1 1! \dataOut[5]~output_o\ $end
+$var wire 1 2! \dataOut[6]~output_o\ $end
+$var wire 1 3! \dataOut[7]~output_o\ $end
+$var wire 1 4! \dataOut[8]~output_o\ $end
+$var wire 1 5! \dataOut[9]~output_o\ $end
+$var wire 1 6! \dataOut[10]~output_o\ $end
+$var wire 1 7! \dataOut[11]~output_o\ $end
+$var wire 1 8! \dataOut[12]~output_o\ $end
+$var wire 1 9! \dataOut[13]~output_o\ $end
+$var wire 1 :! \dataOut[14]~output_o\ $end
+$var wire 1 ;! \dataOut[15]~output_o\ $end
+$var wire 1 <! \dataOut[16]~output_o\ $end
+$var wire 1 =! \dataOut[17]~output_o\ $end
+$var wire 1 >! \dataOut[18]~output_o\ $end
+$var wire 1 ?! \dataOut[19]~output_o\ $end
+$var wire 1 @! \dataOut[20]~output_o\ $end
+$var wire 1 A! \dataOut[21]~output_o\ $end
+$var wire 1 B! \dataOut[22]~output_o\ $end
+$var wire 1 C! \dataOut[23]~output_o\ $end
+$var wire 1 D! \dataOut[24]~output_o\ $end
+$var wire 1 E! \dataOut[25]~output_o\ $end
+$var wire 1 F! \dataOut[26]~output_o\ $end
+$var wire 1 G! \dataOut[27]~output_o\ $end
+$var wire 1 H! \dataOut[28]~output_o\ $end
+$var wire 1 I! \dataOut[29]~output_o\ $end
+$var wire 1 J! \dataOut[30]~output_o\ $end
+$var wire 1 K! \dataOut[31]~output_o\ $end
+$var wire 1 L! \dataIn[0]~input_o\ $end
+$var wire 1 M! \dataIn[1]~input_o\ $end
+$var wire 1 N! \dataIn[2]~input_o\ $end
+$var wire 1 O! \dataIn[3]~input_o\ $end
+$var wire 1 P! \dataIn[4]~input_o\ $end
+$var wire 1 Q! \dataIn[5]~input_o\ $end
+$var wire 1 R! \dataIn[6]~input_o\ $end
+$var wire 1 S! \dataIn[7]~input_o\ $end
+$var wire 1 T! \dataIn[8]~input_o\ $end
+$var wire 1 U! \dataIn[9]~input_o\ $end
+$var wire 1 V! \dataIn[10]~input_o\ $end
+$var wire 1 W! \dataIn[11]~input_o\ $end
+$var wire 1 X! \dataIn[12]~input_o\ $end
+$var wire 1 Y! \dataIn[13]~input_o\ $end
+$var wire 1 Z! \dataIn[14]~input_o\ $end
+$var wire 1 [! \dataIn[15]~input_o\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0Q
+1R
+xS
+1T
+1U
+1V
+1W
+1X
+1Y
+0,!
+1-!
+0.!
+1/!
+10!
+01!
+12!
+03!
+14!
+15!
+06!
+07!
+08!
+09!
+0:!
+1;!
+1<!
+1=!
+1>!
+1?!
+1@!
+1A!
+1B!
+1C!
+1D!
+1E!
+1F!
+1G!
+1H!
+1I!
+1J!
+1K!
+0L!
+1M!
+0N!
+1O!
+1P!
+0Q!
+1R!
+0S!
+1T!
+1U!
+0V!
+0W!
+0X!
+0Y!
+0Z!
+1[!
+1!
+0"
+0#
+0$
+0%
+0&
+1'
+1(
+0)
+1*
+0+
+1,
+1-
+0.
+1/
+00
+1Z
+0[
+0\
+0]
+0^
+0_
+1`
+1a
+0b
+1c
+0d
+1e
+1f
+0g
+1h
+0i
+1j
+1k
+1l
+1m
+1n
+1o
+1p
+1q
+1r
+1s
+1t
+1u
+1v
+1w
+1x
+1y
+1z
+0{
+0|
+0}
+0~
+0!!
+1"!
+1#!
+0$!
+1%!
+0&!
+1'!
+1(!
+0)!
+1*!
+0+!
+11
+12
+13
+14
+15
+16
+17
+18
+19
+1:
+1;
+1<
+1=
+1>
+1?
+1@
+1A
+0B
+0C
+0D
+0E
+0F
+1G
+1H
+0I
+1J
+0K
+1L
+1M
+0N
+1O
+0P
+$end
+#1000000

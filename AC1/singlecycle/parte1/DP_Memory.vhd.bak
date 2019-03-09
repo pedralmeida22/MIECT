@@ -1,0 +1,19 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity DP_Memory is
+	generic(WORD_BITS : integer range 1 to 128 := 32;
+			  ADDR_BITS : integer range 1 to 1o := 5);
+			  
+	port(clk : in std_logic;
+	
+	     -- asynchronous read port
+		  readAddr : in std_logic_vector(ADDR_BITS-1 downto 0);
+		  readData : out std_logic_vector(WORD_BITS1 downto 0);
+		  
+		  -- synchronous write port
+		  writeAddr   : in std_logic_vector(ADDR_BITS-1 downto 0);
+		  writeData   : out std_logic_vector(WORD_BITS1 downto 0);
+		  writeEnable : in std_logic);
+		  
+end DP_Memory;

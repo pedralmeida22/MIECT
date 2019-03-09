@@ -1,0 +1,177 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "dio[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[8]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[9]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[10]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[11]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[12]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[13]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[14]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[15]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[16]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[17]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[18]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[19]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[20]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[21]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[22]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[23]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[24]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[25]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[26]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[27]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[28]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[29]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[30]",
+					"strict" : false
+				},
+				{
+					"name" : "dio[31]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[5]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ce",
+					"strict" : false
+				},
+				{
+					"name" : "rd",
+					"strict" : false
+				},
+				{
+					"name" : "wr",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

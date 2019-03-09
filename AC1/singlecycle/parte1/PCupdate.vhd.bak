@@ -1,0 +1,14 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity PCupdate is
+	port(clock    : in std_logic;
+		  reset    : in std_logic;
+		  zero     : in std_logic;
+		  branch   : in std_logic;
+		  jump     : in std_logic;
+		  offset32 : in std_logic_vector(31 downto 0);
+		  jAddr26  : in std_logic_vector(25 downto 0);
+		  PC       : out std_logic_vector(31 downto 0);
+	
+end PCupdate;

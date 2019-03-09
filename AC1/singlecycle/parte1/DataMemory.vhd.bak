@@ -1,0 +1,11 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity DataMemory is
+	port(
+	
+end DataMemory;
+
+architecture Behavioral of DataMemory is
+
+end Behavioral;

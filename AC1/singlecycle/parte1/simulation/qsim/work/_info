@@ -1,0 +1,186 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/AC1/aula8/parte1/simulation/qsim
+Epcupdate
+Z1 w1541431149
+Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 N5CzKW88F^ShIK@<7Vek12
+Z3 DPx10 cycloneive 21 cycloneive_components 0 22 K8IbX`K5[Y1gJUKg2X_071
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 ?bDUB9Db2N8iCCALNL;CT3
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z9 DPx6 altera 28 altera_primitives_components 0 22 c]VUMXSEi8Z`KM1bem<:B3
+R0
+Z10 8mips_single_cycle.vho
+Z11 Fmips_single_cycle.vho
+l0
+L36
+VoRI;6]1<_X:^P>oh@=jRL1
+!s100 R5<]3T8P50^3zW1PQ^[Z00
+Z12 OV;C;10.5b;63
+32
+Z13 !s110 1541431150
+!i10b 1
+Z14 !s108 1541431150.000000
+Z15 !s90 -work|work|mips_single_cycle.vho|
+Z16 !s107 mips_single_cycle.vho|
+!i113 1
+Z17 o-work work
+Z18 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 8 pcupdate 0 22 oRI;6]1<_X:^P>oh@=jRL1
+l313
+L49
+V=26R:E;NZa<i^kKWzcER21
+!s100 Ek[<]Y6T;_cTFXHV^4AOc1
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Epcupdate_vhd_vec_tst
+Z19 w1541431147
+R7
+R8
+R0
+Z20 8PCupdate.vwf.vht
+Z21 FPCupdate.vwf.vht
+l0
+L31
+V^JeX:7mGgbi@nG]f;3Plb1
+!s100 a3G^540J7k01i@eD?;U^g3
+R12
+32
+R13
+!i10b 1
+R14
+Z22 !s90 -work|work|PCupdate.vwf.vht|
+Z23 !s107 PCupdate.vwf.vht|
+!i113 1
+R17
+R18
+Apcupdate_arch
+R7
+R8
+DEx4 work 20 pcupdate_vhd_vec_tst 0 22 ^JeX:7mGgbi@nG]f;3Plb1
+l56
+L33
+VDdKAzE2JGii62VVG=MBhJ3
+!s100 Moe:N7AJI_iMjED9Ac1iS3
+R12
+32
+R13
+!i10b 1
+R14
+R22
+R23
+!i113 1
+R17
+R18
+Esignextend
+Z24 w1541456915
+R4
+R2
+R6
+R7
+R8
+R3
+R0
+R10
+R11
+l0
+L34
+VGPHi0BA^XXS0Q1RKTE9JZ2
+!s100 iiVYX:0EU@jaLNRW6?[jU0
+R12
+32
+Z25 !s110 1541456916
+!i10b 1
+Z26 !s108 1541456916.000000
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R4
+R2
+R6
+R7
+R8
+R3
+DEx4 work 10 signextend 0 22 GPHi0BA^XXS0Q1RKTE9JZ2
+l102
+L41
+VcaL6Km@0eACV4GflUSC3U0
+!s100 T0l:^?R`Ye=bTFMdRmYE93
+R12
+32
+R25
+!i10b 1
+R26
+R15
+R16
+!i113 1
+R17
+R18
+Esignextend_vhd_vec_tst
+Z27 w1541456913
+R7
+R8
+R0
+Z28 8SignExtend.vwf.vht
+Z29 FSignExtend.vwf.vht
+l0
+L31
+V71;WDOn?nbE^O;Y>MGJhW0
+!s100 aeMMZ2Mnoh:CP;48mTFNl1
+R12
+32
+R25
+!i10b 1
+R26
+Z30 !s90 -work|work|SignExtend.vwf.vht|
+Z31 !s107 SignExtend.vwf.vht|
+!i113 1
+R17
+R18
+Asignextend_arch
+R7
+R8
+Z32 DEx4 work 22 signextend_vhd_vec_tst 0 22 71;WDOn?nbE^O;Y>MGJhW0
+l44
+L33
+V3:=5fK@W7U:kC8c_o:PIN3
+!s100 oVhDk_DLb;A3M_]>Xi45i2
+R12
+32
+R25
+!i10b 1
+R26
+R30
+R31
+!i113 1
+R17
+R18
