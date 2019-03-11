@@ -18,7 +18,7 @@ void send2displays(unsigned char value){
     LATB = (LATB & 0x80FF) | ((int) display7Scodes[(value >> 4)] << 8);
 
     // send digit_low (dl) to display_low: dl = value & 0x0F
-    LATD = LATD ^ 0x0060;
+    LATD = LATD ^ 0x0060;       // toggle display selection
     LATB = (LATB & 0x80FF) | ((int) display7Scodes[(value & 0x0F)] << 8);
 }
 

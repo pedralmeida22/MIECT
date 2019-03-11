@@ -52,9 +52,9 @@ int main(void){
     while(1){
         int i = 0;
         do{
-            delay(50);
-            // delay(20);
-            // delay(10);
+            //delay(50);
+            //delay(20);
+            delay(10);
             send2displays(count);
         }while(++i < 4);        
         count++;
