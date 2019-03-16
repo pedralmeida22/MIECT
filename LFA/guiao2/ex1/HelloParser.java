@@ -89,6 +89,7 @@ public class HelloParser extends Parser {
 	}
 
 	public static class TopContext extends ParserRuleContext {
+		public TerminalNode EOF() { return getToken(HelloParser.EOF, 0); }
 		public List<GreetingsContext> greetings() {
 			return getRuleContexts(GreetingsContext.class);
 		}
@@ -150,6 +151,8 @@ public class HelloParser extends Parser {
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
+			setState(15);
+			match(EOF);
 			}
 		}
 		catch (RecognitionException re) {
@@ -188,9 +191,9 @@ public class HelloParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(15);
+			setState(17);
 			match(T__0);
-			setState(16);
+			setState(18);
 			((GreetingsContext)_localctx).names = names();
 
 			    System.out.println("Ola " + ((GreetingsContext)_localctx).names.list);
@@ -233,9 +236,9 @@ public class HelloParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(19);
+			setState(21);
 			match(T__1);
-			setState(20);
+			setState(22);
 			((ByeContext)_localctx).names = names();
 
 			    System.out.println("Adeus " + ((ByeContext)_localctx).names.list);
@@ -281,18 +284,18 @@ public class HelloParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(25); 
+			setState(27); 
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			do {
 				{
 				{
-				setState(23);
+				setState(25);
 				((NamesContext)_localctx).ID = match(ID);
 				 ((NamesContext)_localctx).list =  _localctx.list + (_localctx.list.isEmpty() ? "" : ", ") + (((NamesContext)_localctx).ID!=null?((NamesContext)_localctx).ID.getText():null); 
 				}
 				}
-				setState(27); 
+				setState(29); 
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			} while ( _la==ID );
@@ -310,15 +313,16 @@ public class HelloParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\6 \4\2\t\2\4\3\t"+
-		"\3\4\4\t\4\4\5\t\5\3\2\3\2\7\2\r\n\2\f\2\16\2\20\13\2\3\3\3\3\3\3\3\3"+
-		"\3\4\3\4\3\4\3\4\3\5\3\5\6\5\34\n\5\r\5\16\5\35\3\5\2\2\6\2\4\6\b\2\2"+
-		"\2\36\2\16\3\2\2\2\4\21\3\2\2\2\6\25\3\2\2\2\b\33\3\2\2\2\n\r\5\4\3\2"+
-		"\13\r\5\6\4\2\f\n\3\2\2\2\f\13\3\2\2\2\r\20\3\2\2\2\16\f\3\2\2\2\16\17"+
-		"\3\2\2\2\17\3\3\2\2\2\20\16\3\2\2\2\21\22\7\3\2\2\22\23\5\b\5\2\23\24"+
-		"\b\3\1\2\24\5\3\2\2\2\25\26\7\4\2\2\26\27\5\b\5\2\27\30\b\4\1\2\30\7\3"+
-		"\2\2\2\31\32\7\5\2\2\32\34\b\5\1\2\33\31\3\2\2\2\34\35\3\2\2\2\35\33\3"+
-		"\2\2\2\35\36\3\2\2\2\36\t\3\2\2\2\5\f\16\35";
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\6\"\4\2\t\2\4\3\t"+
+		"\3\4\4\t\4\4\5\t\5\3\2\3\2\7\2\r\n\2\f\2\16\2\20\13\2\3\2\3\2\3\3\3\3"+
+		"\3\3\3\3\3\4\3\4\3\4\3\4\3\5\3\5\6\5\36\n\5\r\5\16\5\37\3\5\2\2\6\2\4"+
+		"\6\b\2\2\2 \2\16\3\2\2\2\4\23\3\2\2\2\6\27\3\2\2\2\b\35\3\2\2\2\n\r\5"+
+		"\4\3\2\13\r\5\6\4\2\f\n\3\2\2\2\f\13\3\2\2\2\r\20\3\2\2\2\16\f\3\2\2\2"+
+		"\16\17\3\2\2\2\17\21\3\2\2\2\20\16\3\2\2\2\21\22\7\2\2\3\22\3\3\2\2\2"+
+		"\23\24\7\3\2\2\24\25\5\b\5\2\25\26\b\3\1\2\26\5\3\2\2\2\27\30\7\4\2\2"+
+		"\30\31\5\b\5\2\31\32\b\4\1\2\32\7\3\2\2\2\33\34\7\5\2\2\34\36\b\5\1\2"+
+		"\35\33\3\2\2\2\36\37\3\2\2\2\37\35\3\2\2\2\37 \3\2\2\2 \t\3\2\2\2\5\f"+
+		"\16\37";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {
