@@ -12,16 +12,16 @@ int main (void)
     /* declaração dos arrays de teste - usar o pretendido para cada execução */
 
     //int Array[] = { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }; 
-    // int Array[] = { 1, 1, 1, 1, 1, 3, 1, 1, 1, 1 }; 
-    // int Array[] = { 1, 1, 1, 4, 1, 1, 4, 1, 1, 1 }; 
-    // int Array[] = { 1, 1, 1, 1, 1, 1, 2, 5, 1, 9 }; 
-    // int Array[] = { 1, 1, 1, 1, 9, 1, 2, 5, 1, 9 }; 
-    // int Array[] = { 1, 1, 1, 9, 1, 2, 8, 3, 7, 1 }; 
+    //int Array[] = { 1, 1, 1, 1, 1, 3, 1, 1, 1, 1 }; 
+    int Array[] = { 1, 1, 1, 4, 1, 1, 4, 1, 1, 1 }; 
+    //int Array[] = { 1, 1, 1, 1, 1, 1, 2, 5, 1, 9 }; 
+    //int Array[] = { 1, 1, 1, 1, 9, 1, 2, 5, 1, 9 }; 
+    //int Array[] = { 1, 1, 1, 9, 1, 2, 8, 3, 7, 1 }; 
     //int Array[] = { 1, 1, 1, 9, 5, 2, 8, 1, 9, 9 }; 
     //int Array[] = { 1, 1, 3, 9, 5, 2, 8, 7, 9, 9 }; 
     //int Array[] = { 1, 1, 6, 0, 5, 2, 8, 7, 9, 9 }; 
     //int Array[] = { 1, 4, 6, 0, 5, 2, 8, 7, 9, 9 }; 
-    int Array[] = { 1, 3, 6, 0, 5, 2, 8, 7, 11, 9 };
+    //int Array[] = { 1, 3, 6, 0, 5, 2, 8, 7, 11, 9 };
   
     int NElem = sizeof (Array) / sizeof (int); int Result;
 
@@ -39,22 +39,20 @@ int main (void)
 int MaxRepetition (int array[], int n)
 {
     /* acrescentar o código do algoritmo - insert your code */
-    int num_reps = 0;
-    int max_reps = 0;
-    for(int i = 0; i < n-1; i++){
-        num_reps = 0;
-        for(int j = i; j < n; j++){
+    int num_reps = 1;
+    int max_reps = 1;
+    for(int i = 0; i < n - max_reps; i++){
+        for(int j = i+1; j < n; j++){
             Count++;
             if(array[i] == array[j]){
                 num_reps++;
             }
-
-            // break 
         }
         Count++;
         if(max_reps < num_reps){
             max_reps = num_reps;
         }
+        num_reps = 1;
     }
     return max_reps;
 }
