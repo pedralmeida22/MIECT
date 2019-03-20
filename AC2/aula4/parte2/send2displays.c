@@ -1,6 +1,6 @@
 #include <detpic32.h>
 
-// 1 version
+// 1 version  (not good)
 void send2displays(unsigned char value){
     static const char display7Scodes[] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07,
              0x7F, 0x67, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71};
@@ -50,6 +50,32 @@ void send2displays(int intei, int deci){
 
     int digit_low = deci;
     int digit_high = intei;
+
+    if(!displayFlag){   // if "displayFlag" is 0 then send digit_low to display_low
+
+        LATB = (LATB & 0x00FF) | ((int) display7Scodes[(digit_low)] << 8);
+
+    }
+    else{   // else send digit_high to didplay_high
+       
+        LATB = (LATB & 0x80FF) | ((int) display7Scodes[digit_high] << 8);
+        LATBbits.LATB15 = 1;
+    }
+    // toggle "displayFlag" variable
+    displayFlag = !displayFlag;
+    LATDbits.LATD5 = !LATDbits.LATD5;
+    LATDbits.LATD6 = !LATDbits.LATD6;
+}
+
+// 4 version
+void send2displays(unsigned char v){
+    static const char display7Scodes[] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07,
+             0x7F, 0x67, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71};
+
+    static char displayFlag = 0;
+
+    int digit_low = v % 10;
+    int digit_high = v / 10;
 
     if(!displayFlag){   // if "displayFlag" is 0 then send digit_low to display_low
 
