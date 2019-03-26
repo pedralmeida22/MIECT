@@ -132,13 +132,41 @@ PtFraction FractionSymmetrical (PtFraction pfrac)	/* construtor simétrico - sym
 
 PtFraction FractionAddition (PtFraction pfrac1, PtFraction pfrac2)
 {
-    
-	return NULL;
+    Error = OK;
+
+	if(FractionIsNull(pfrac1) || FractionIsNull(pfrac2)){
+        Error = NO_FRACTION;
+        return FractionCreate(0, 1);    // zero
+    }
+
+    if(FractionIsNull(pfrac1)) return pfrac2;
+    if(FractionIsNull(pfrac2)) return pfrac1;  
+
+    int num = pfrac1->Den * pfrac2->Num + pfrac2->Den * pfrac1->Num;
+    int den = pfrac1->Den * pfrac2->Den;
+
+    PtFraction sum = FractionCreate(num, den);
+
+	return sum;
 }
  
 PtFraction FractionSubtraction (PtFraction pfrac1, PtFraction pfrac2)
 {
-	return NULL;
+    Error = OK;
+
+	if(FractionIsNull(pfrac1) || FractionIsNull(pfrac2)){
+        Error = NO_FRACTION;
+        return FractionCreate(0, 1);    // zero
+    }
+
+    PtFraction temp = FractionCopy(pfrac2);
+    temp = FractionSymmetrical(temp);
+
+    PtFraction sub = FractionAddition(pfrac1, temp);
+
+    FractionDestroy(&temp);
+
+	return sub;
 }
 
 PtFraction FractionMultiplication (PtFraction pfrac1, PtFraction pfrac2)
@@ -154,41 +182,68 @@ PtFraction FractionMultiplication (PtFraction pfrac1, PtFraction pfrac2)
 
 PtFraction FractionDivision (PtFraction pfrac1, PtFraction pfrac2)  // ta mal
 {
+    Error = OK;
 	if(FractionIsNull(pfrac1) || FractionIsNull(pfrac2)){
         Error = NO_FRACTION;
-        return FractionCreate(0, 1);
+        return FractionCreate(0, 1);    // zero
     }
-    PtFraction mulFactor = FractionCreate(pfrac2->Den, 1);
-    PtFraction div = FractionMultiplication(pfrac1, mulFactor);
-
-    free (mulFactor);
-    
-    return div;
+    return FractionCreate((pfrac1->Num * pfrac2->Den),(pfrac1->Den * pfrac2->Num));
 }
 
 int FractionIsNull (PtFraction pfrac)
 {
     Error = OK;
 
-    if(pfrac->Num == 0){
+    if (pfrac->Den == 0) {
         Error = NO_FRACTION;
-        return 1;
+        return 0;
     }
-	return 0;
+    
+    if(pfrac->Num == 0) return 1;
+	
+    return 0;
 }
 
 int FractionEquals (PtFraction pfrac1, PtFraction pfrac2)
 {
+    Error = OK;
+
+    if(pfrac1->Den == 0 || pfrac2->Den == 0){
+        Error = NO_FRACTION;
+        return 0;
+    }
+
+    if(pfrac1->Den == pfrac2->Den && pfrac1->Num == pfrac2->Num){   // so funciona para fracoes minimas
+        return 1;
+    }
+
 	return 0;
 }
 
 int FractionCompareTo (PtFraction pfrac1, PtFraction pfrac2)
 {
-	return 0;
+    Error = OK;
+    if(FractionEquals(pfrac1, pfrac2)) return 0;
+
+    PtFraction sub = FractionSubtraction(pfrac1, pfrac2);
+    double value = sub->Num;
+
+    FractionDestroy(&sub);
+
+    if(value < 0) return -1;
+    else return 1;
 }
 
 int FractionIsProper (PtFraction pfrac)
 {
+    Error = OK;
+    if(pfrac->Den == 0){
+        Error = NO_FRACTION;
+        return 0;
+    }
+
+    if(pfrac->Num < pfrac->Den) return 1;
+
 	return 0;
 }
 
