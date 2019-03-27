@@ -242,9 +242,7 @@ int FractionIsProper (PtFraction pfrac)
         return 0;
     }
 
-    if(pfrac->Num < pfrac->Den) return 1;
-
-	return 0;
+    return pfrac->Num < pfrac->Den;
 }
 
 void FractionSet (PtFraction pfrac, int pnum, int pden)

@@ -2,6 +2,14 @@
 
 volatile int adc_value; 
 
+void delay(int ms){
+   for(; ms > 0; ms--)
+    {
+        resetCoreTimer();
+        while(readCoreTimer() < PBCLK/1000);
+    } 
+}
+
 // Interrupt Handler
 void _int_(27) isr_adc(void) // Replace VECTOR by the A/D vector        Vector = 27
 {                               // number - see "PIC32 family data
@@ -9,16 +17,20 @@ void _int_(27) isr_adc(void) // Replace VECTOR by the A/D vector        Vector =
     // Reset RE0 // LATE0 = 0 
     LATEbits.LATE0 = 0;
 
+    delay(2);
+    
     // Read ADC1BUF0 value to "adc_value"
     adc_value = (ADC1BUF0, 16 | 3 << 16);
 
     // Set RE0
     LATEbits.LATE0 = 1;
 
-    // Start A/D conversion
-    AD1CON1bits.ASAM = 1;
+    delay(2);
 
     IFS1bits.AD1IF = 0; // Reset AD1IF flag
+
+    // Start A/D conversion
+    AD1CON1bits.ASAM = 1;
 }
 
 int main(void)
@@ -50,6 +62,7 @@ int main(void)
 
     IEC1bits.AD1IE = 1; // enable A/D interrupts 
 
+    LATEbits.LATE0 = 0;
     TRISEbits.TRISE0 = 0; // RE0
 
     EnableInterrupts(); // Global Interrupt Enable
