@@ -34,15 +34,20 @@ void to7seg(char c){
 }
 
 int main(void){
-    TRISB = TRISB & 0x00FF;     // RB8 a RB15 -> output
-    TRISD = TRISD & 0xFF9F;     // RD5 e RD6 -> output
+    LATB = LATB & 0x00FF;
+    LATD = LATD & 0xFF9F;
 
-    LATDbits.LATD5 = 1;       // display low
+    TRISB = TRISB & 0x00FF;
+    TRISD = TRISD & 0xFF9F;
+
+    LATDbits.LATD5 = 1;
     LATDbits.LATD6 = 0;
 
     while(1){
         char c = getChar();
-        printf("%c\n", c);
+        printf("%c\r", c);
         to7seg(c);
     }
+
+    return 0;
 }

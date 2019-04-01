@@ -1,5 +1,12 @@
 #include <detpic32.h>
 
+void delay(int ms){
+    for(; ms > 0; ms--){
+        resetCoreTimer();
+        while(readCoreTimer() < 20000);
+    }
+}
+
 void to7seg(char c){
     switch (c)
     {
@@ -34,15 +41,25 @@ void to7seg(char c){
 }
 
 int main(void){
-    TRISB = TRISB & 0x00FF;     // RB8 a RB15 -> output
-    TRISD = TRISD & 0xFF9F;     // RD5 e RD6 -> output
-
-    LATDbits.LATD5 = 1;       // display low
+    unsigned char segment;
     LATDbits.LATD6 = 0;
+    LATDbits.LATD5 = 1;
+    LATB = LATB & 0x80FF;
 
+    TRISDbits.TRISD6 = 0;
+    TRISDbits.TRISD5 = 0;
+    TRISB = TRISB & 0x80FF;
+
+    to7seg('c');
     while(1){
-        char c = getChar();
-        printf("%c\n", c);
-        to7seg(c);
+        LATDbits.LATD6 = !LATDbits.LATD6;
+        LATDbits.LATD5 = !LATDbits.LATD5;
+
+        segment = 'a';
+        int i;
+        for(i=0; i < 7; i++){
+            to7seg(segment++);
+            delay(500);
+        }
     }
 }
