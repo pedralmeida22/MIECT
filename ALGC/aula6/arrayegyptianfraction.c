@@ -74,46 +74,185 @@ char *EgyptianFractionErrorMessage (void)
 
 PtEgyptianFraction EgyptianFractionCreate (PtFraction pfraction)	/* construtor inicializador - initializer constructor */
 {
-	return NULL;
+	Error = OK;
+
+	PtEgyptianFraction frac;
+	if (pfraction==NULL) { 
+		Error = NO_FRACTION; 
+		return NULL;
+	}
+	if (FractionIsProper(pfraction)==0){
+		Error=NOT_PROPER;
+		return NULL;
+	}
+	PtFraction copy; 
+	if((copy = FractionCopy(pfraction))==NULL){
+		Error=NO_MEM;
+		return NULL;
+	}	
+	if ((frac = malloc(sizeof(struct egyptianfraction)))==NULL){
+		Error=NO_MEM; 
+		FractionDestroy(&copy); 
+		return NULL;
+	}
+	int complete = 0;
+	int i = 0;
+	for(; i < MAX_SIZE; i++){
+		PtFraction ptFrac = CreateUnitFraction(&copy);
+
+		if(ptFrac == NULL){
+			Error = NO_MEM;
+			FractionDestroy(&copy);
+			EgyptianFractionDestroy(&frac);
+			return NULL;
+		}
+
+		frac->Array[i++] = ptFrac;
+		if(copy == NULL) break;
+		if(FractionIsNull(copy)) {
+			complete=1;
+			break;
+		}
+	}
+	frac->Size = i;
+	frac->Complete = complete;
+	FractionDestroy(&copy);
+
+	return frac;
 }
 
 void EgyptianFractionDestroy (PtEgyptianFraction *pegyp)	/* destrutor - destructor */
 {
+	Error = OK;
+
+	PtEgyptianFraction frac = *pegyp;
+
+	if(frac == NULL){
+		Error = NO_FRACTION;
+		return;
+	}
+
+	for(int i = 0; i < frac->Size; i++)
+	{
+		FractionDestroy(&frac->Array[i]);
+	}
+	free(frac);
+	*pegyp = NULL;	
 }
 
 int  EgyptianFractionGetSize (PtEgyptianFraction pegyp)
 {
-	return 0;
+	Error = OK;
+
+	if(pegyp == NULL){
+		Error = NO_FRACTION;
+		return 0;
+	}
+	return pegyp->Size;
 }
 
 int  EgyptianFractionIsComplete (PtEgyptianFraction pegyp)
 {
-	return 0;
+	Error = OK;
+	
+	if(pegyp == NULL){
+		Error = NO_FRACTION;
+		return 0;
+	}
+	return pegyp->Complete;
 }
 
 PtEgyptianFraction EgyptianFractionCopy (PtEgyptianFraction pegyp)	/* construtor cópia - copy constructor */
 {
-	return NULL;
+	Error = OK;
+	
+	if(pegyp == NULL){
+		Error = NO_FRACTION;
+		return NULL;
+	}
+	PtFraction frac = EgyptianFractionToFraction(pegyp);
+
+	PtEgyptianFraction copy = EgyptianFractionCreate(frac);
+
+	if(copy == NULL){
+		Error = NO_MEM;
+		return NULL;
+	}
+
+	return copy;
 }
 
 PtFraction EgyptianFractionToFraction (PtEgyptianFraction pegyp)
 {
-	return NULL;
+	Error = OK;
+	
+	if(pegyp == NULL){
+		Error = NO_FRACTION;
+		return NULL;
+	}
+
+	PtFraction frac = FractionCreate(0,1);
+
+	if(frac == NULL){
+		Error = NO_MEM;
+		return NULL;
+	}
+
+	for(int i = 0; i < pegyp->Size; i++){
+		frac = FractionAddition(frac, pegyp->Array[i]);
+	}
+
+	return frac;
 }
 
 int EgyptianFractionEquals (PtEgyptianFraction pegy1, PtEgyptianFraction pegy2)
 {
-	return 0;
+	Error = OK;
+
+	if (pegy1 == NULL ||pegy2 == NULL){
+		Error = NO_FRACTION;
+		return 0;
+	}
+
+	PtFraction frac1 = EgyptianFractionToFraction(pegy1);
+	PtFraction frac2 = EgyptianFractionToFraction(pegy2);
+
+	return FractionEquals(frac1, frac2);
 }
 
 int EgyptianFractionBelongs (PtEgyptianFraction pegyptian, PtFraction pfraction)
 {
+	if(pegyptian == NULL || pfraction == NULL){
+		Error = NO_FRACTION; 
+		return 0;
+	}
+	if(FractionIsProper(pfraction) == 0){
+		Error= NOT_PROPER; 
+		return 0;
+	}
+	for(int i = 0; i < pegyptian->Size; i++){
+		if (FractionEquals(pfraction,pegyptian->Array[i])) {
+			return 1;
+		}
+	}
 	return 0;
 }
 
 PtFraction EgyptianFractionGetPos (PtEgyptianFraction pegyp, int pindex)
 {
-	return 0;
+	Error = OK;
+	
+	if(pegyp == NULL){
+		Error = NO_FRACTION;
+		return NULL;
+	}
+
+	if(pindex < 0 || pindex > pegyp->Size){
+		Error = BAD_INDEX; 
+		return NULL;
+	}
+
+	return pegyp->Array[pindex];
 }
 
 /*********************** Definição das Funções Internas ***********************/
