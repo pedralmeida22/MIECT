@@ -12,8 +12,8 @@ public class NumbersMain {
       // create a parser that feeds off the tokens buffer:
       NumbersParser parser = new NumbersParser(tokens);
       // replace error listener:
-      //parser.removeErrorListeners(); // remove ConsoleErrorListener
-      //parser.addErrorListener(new ErrorHandlingListener());
+      // parser.removeErrorListeners(); // remove ConsoleErrorListener
+      // parser.addErrorListener(new ErrorHandlingListener());
       // begin parsing at file rule:
       ParseTree tree = parser.file();
       if (parser.getNumberOfSyntaxErrors() == 0) {

@@ -77,21 +77,21 @@ PtEgyptianFraction EgyptianFractionCreate (PtFraction pfraction)	/* construtor i
 	Error = OK;
 
 	PtEgyptianFraction frac;
-	if (pfraction==NULL) { 
+	if (pfraction == NULL) { 
 		Error = NO_FRACTION; 
 		return NULL;
 	}
-	if (FractionIsProper(pfraction)==0){
-		Error=NOT_PROPER;
+	if (FractionIsProper(pfraction) == 0){
+		Error = NOT_PROPER;
 		return NULL;
 	}
 	PtFraction copy; 
-	if((copy = FractionCopy(pfraction))==NULL){
-		Error=NO_MEM;
+	if((copy = FractionCopy(pfraction)) == NULL){
+		Error = NO_MEM;
 		return NULL;
 	}	
-	if ((frac = malloc(sizeof(struct egyptianfraction)))==NULL){
-		Error=NO_MEM; 
+	if ((frac = malloc(sizeof(struct egyptianfraction))) == NULL){
+		Error = NO_MEM; 
 		FractionDestroy(&copy); 
 		return NULL;
 	}
@@ -110,7 +110,7 @@ PtEgyptianFraction EgyptianFractionCreate (PtFraction pfraction)	/* construtor i
 		frac->Array[i++] = ptFrac;
 		if(copy == NULL) break;
 		if(FractionIsNull(copy)) {
-			complete=1;
+			complete = 1;
 			break;
 		}
 	}
@@ -227,7 +227,7 @@ int EgyptianFractionBelongs (PtEgyptianFraction pegyptian, PtFraction pfraction)
 		return 0;
 	}
 	if(FractionIsProper(pfraction) == 0){
-		Error= NOT_PROPER; 
+		Error = NOT_PROPER; 
 		return 0;
 	}
 	for(int i = 0; i < pegyptian->Size; i++){
