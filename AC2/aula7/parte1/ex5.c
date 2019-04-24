@@ -2,14 +2,6 @@
 
 volatile unsigned char voltage = 0; // Global variable
 
-void delay(int ms){
-   for(; ms > 0; ms--)
-    {
-        resetCoreTimer();
-        while(readCoreTimer() < PBCLK/1000);
-    } 
-}
-
 void send2displays(unsigned char v){
     static const char display7Scodes[] = {0x3F, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07,
              0x7F, 0x67, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71};
@@ -58,9 +50,50 @@ void _int_(27) isr_adc(void)
     IFS1bits.AD1IF = 0; // Reset AD1IF flag
 } 
 
+void configTimer(){
+    // Configure Timer T3 (100 Hz with interrupts disabled)
+    T3CONbits.TCKPS = 2;    // 1:4 prescaler (fout_presc = 5 MHz)
+    PR3 = 49999;            // Fout = 100 Hz
+    TMR3 = 0;               // reset timer T3 count register
+    T3CONbits.TON = 1;      // Enable timer T3
+
+    // Configure Timer T3 with interrupts enabled
+    IPC3bits.T3IP = 2;  // Interrupt priority (must be in range [1..6])
+    IEC0bits.T3IE = 1;  // Enable timer T3 interrupts
+    IFS0bits.T3IF = 0;  // Reset timer T3 interrupt flag
+
+    //--------------------------------------------------
+
+    // Configure Timer T1 (4 Hz with interrupts disabled)
+    T1CONbits.TCKPS = 7;    // 1:256 prescaler (fout_presc = 78,125KHz)
+    PR1 = 19531;            // Fout = 4 Hz
+    TMR1 = 0;               // reset timer T3 count register
+    T1CONbits.TON = 1;      // Enable timer T3
+
+    // Configure Timer T1 with interrupts enabled
+    IPC1bits.T1IP = 2;  // Interrupt priority (must be in range [1..6])
+    IEC0bits.T1IE = 1;  // Enable timer T1 interrupts
+    IFS0bits.T1IF = 0;  // Reset timer T1 interrupt flag
+}
+
+void _int_(12) isr_T3(void){
+    // Send "voltage" to displays
+    send2displays(voltage);
+    
+    // Reset T3IF
+    IFS0bits.T3IF = 0;
+}
+
+void _int_(4) isr_T1(void){
+    // start A/D conversion
+    AD1CON1bits.ASAM = 1;
+
+    // Reset T3IF
+    IFS0bits.T1IF = 0;
+}
+
 int main(void)
 {
-    unsigned int cnt = 0;
     // Configure all (digital I/O, analog input, A/D module, interrupts)
     LATDbits.LATD5 = 0;
     LATDbits.LATD6 = 1;
@@ -95,19 +128,11 @@ int main(void)
 
     IEC1bits.AD1IE = 1; // enable A/D interrupts
 
+    configTimer();
+
     EnableInterrupts(); // Global Interrupt Enable
-    while(1)
-    {
-        if(cnt % 25 == 0) // 250 ms (4 samples/second)
-        {
-            // Start A/D conversion
-            AD1CON1bits.ASAM = 1;
-        }
-    // Send "voltage" variable to displays
-    send2displays(voltage);
-    cnt++;
-    // Wait 10 ms
-    delay(10);
-    }
+
+    while(1);
+    
     return 0;
 }
