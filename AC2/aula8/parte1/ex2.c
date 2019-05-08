@@ -44,6 +44,7 @@ void putc(char byte2send){
 
 int main(void)
 {
+    configUART1();
     while(1){
         putc('A');
         delay(1000);
