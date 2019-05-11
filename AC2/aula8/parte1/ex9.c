@@ -81,7 +81,7 @@ int main(void){
     configUART(115200,'N',1);
 
     while(1){
-        puts( getc() );
+        putc( getc() );
     }
 
     return 0;
