@@ -172,20 +172,75 @@ static PtFraction SearchTree (PtABPNode proot, PtFraction pelem)
 void ABPInsert (PtABP ptree, PtFraction pelem)	/*  */
 {
 	/* Insira o seu código - Insert your code */
+	Error = OK;
+
+	if(ptree == NULL){ Error = NO_ABP; return; }
+	if(pelem == NULL){ Error = NULL_PTR; return; }
+
+	PtABPNode node = ptree->Root;
+	PtABPNode previous = NULL;
+
+	if(ABPSize(ptree) == 0){
+		ptree->Root = ABPNodeCreate(pelem);
+		ptree->Size++;
+		return;
+	}
+	Error = OK;
+
+	while(node != NULL){
+		previous = node;
+		int result = FractionCompareTo(node->PtElem, pelem);
+		if(result > 0){
+			node = node->PtLeft;
+		}else if(result < 0){
+			node = node->PtRight;
+		}else{
+			Error = REP_ELEM;
+			return;
+		}
+	}
+	int result2 = FractionCompareTo(previous->PtElem, pelem);
+	if(result2 > 0){
+		previous->PtLeft = ABPNodeCreate(pelem);
+	}else{
+		previous->PtRight = ABPNodeCreate(pelem);
+	}
+	ptree->Size++;
 }
 
 /* seleção não recursiva do mínimo da abp - non recursive selection of bst minimum */
 PtFraction ABPMin (PtABP ptree)
 {
 	/* Insira o seu código - Insert your code */
-	return NULL;
+	if(ptree == NULL){Error = NO_ABP; return NULL; }
+	if(ABPSize(ptree) == 0){ Error = ABP_EMPTY; return NULL; }
+
+	Error = OK;
+
+	PtABPNode node = ptree->Root;
+	PtABPNode previous = NULL;
+
+	while(node != NULL){
+		previous = node;
+		node = node->PtLeft;
+	}
+
+	return previous->PtElem;
 }
 
 /* seleção recursiva do máximo da abp - recursive selection of bst maximum */
 PtFraction ABPMax (PtABP ptree)
 {
 	/* Insira o seu código usando MaxTree - Insert your code using MaxTree */
-	return NULL;
+	if(ptree == NULL){Error = NO_ABP; return NULL; }
+	if(ABPSize(ptree) == 0){ Error = ABP_EMPTY; return NULL; }
+
+	Error = OK;
+
+	PtFraction maxElem;
+	maxElem = MaxTree(ptree->Root);
+	
+	return maxElem;
 }
 
 /*******************************************************************************
@@ -196,7 +251,8 @@ PtFraction ABPMax (PtABP ptree)
 static PtFraction MaxTree (PtABPNode proot)
 {
 	/* Insira o seu código usando MaxTree - Insert your code using MaxTree */
-	return NULL;
+	if(proot->PtRight == NULL){ return proot->PtElem; }
+	return MaxTree(proot->PtRight);
 }
 
 /* construtor cópia da abp fazendo uma travessia não recursiva em pré-ordem */
@@ -220,26 +276,81 @@ PtABP ABPCopy (PtABP ptree)
 *******************************************************************************/
 static PtQueue ABPFillQueue (PtABP ptree)
 {
+	PtQueue fila;
+	PtABPNode node = ptree->Root;
+	int filaSize = 0;
+
 	/* Insira o seu código - Insert your code */
-	return NULL;
+	if(ptree == NULL){ NO_ABP; return NULL; }
+
+	if(fila = QueueCreate( sizeof(PtABPNode)) == NULL){
+		Error = NO_MEM;
+		return NULL;
+	}
+
+	QueueEnqueue (fila, &node);	/* armazenar a raiz - storing the root */
+	filaSize++;
+	printf("\nNumero de elementos arvore: %d\n", ptree->Size);
+	printf("\nNumero de elementos fila: %d\n", filaSize);
+
+	while (filaSize < ptree->Size)
+	{
+		/* armazenar a raiz da subarvore esquerda - storing the left subtree root */
+		if (node->PtLeft != NULL) QueueEnqueue (fila, &node->PtLeft); filaSize++;
+
+		/* armazenar a raiz da subarvore direita - storing the right subtree root */
+		if (node->PtRight != NULL) QueueEnqueue (fila, &node->PtRight); filaSize++;
+	}
+	printf("\nNumero de elementos fila (after): %d\n", filaSize);
+    Error = OK;
+	
+	return fila;
 }
 
 /* Reunião de duas abps usando a função ABPFillQueue - Reunion of two bsts using ABPFillQueue */
 void ABPReunion (PtABP ptree1, PtABP ptree2)
 {
 	/* Insira o seu código - Insert your code */
+	if(ptree1 == NULL || ptree2 == NULL){ Error = NO_ABP; return; }
+	
+	PtQueue fila = ABPFillQueue(ptree2);
+	PtABPNode node;
+	while(!QueueIsEmpty(fila)){
+		QueueDequeue(fila, &node);
+		ABPInsert(ptree1, node);
+	}
+	Error = OK;
 }
 
 /* Diferença de duas abps usando a função ABPFillQueue - Difference of two bsts using ABPFillQueue */
 void ABPDifference (PtABP ptree1, PtABP ptree2)
 {
 	/* Insira o seu código - Insert your code */
+	if(ptree1 == NULL || ptree2 == NULL){ Error = NO_ABP; return; }
+
+	PtQueue fila = ABPFillQueue(ptree2);
+	PtABPNode node;
+	while(!QueueIsEmpty(fila)){
+		QueueDequeue(fila, &node);
+		ABPDelete(ptree1, node);
+	}
+	Error = OK;
 }
 
 /* Interseção de duas abps usando a função ABPFillQueue - Intersection of two bsts using ABPFillQueue */
 void ABPIntersection (PtABP ptree1, PtABP ptree2)
 {
 	/* Insira o seu código - Insert your code */
+	if(ptree1 == NULL || ptree2 == NULL){ Error = NO_ABP; return; }
+
+	PtQueue fila = ABPFillQueue(ptree2);
+	PtABPNode node;
+	while(!QueueIsEmpty(fila)){
+		QueueDequeue(fila, &node);
+		if(!SearchTree(ptree1, node)){
+			ABPDelete(ptree1, node);
+		}
+	}
 }
 
 /******************************************************************************
