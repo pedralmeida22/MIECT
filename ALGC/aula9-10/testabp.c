@@ -19,7 +19,7 @@ int main (void)
 	printf ("Arvore listada hierarquicamente - Tree listed hierarchically\n");
 	ABPDisplay (abp1); printf ("\n");
 	printf ("Press a key"); scanf ("%*c");
-	/*
+	
 	printf ("Copiar a arvore e comparar - Copy and compare the tree\n");
 	printf ("Copy (abp3 = abp1) and compare using Equals (abp3 == abp1 ? true)\n");
 	abp3 = ABPCopy (abp1);
@@ -31,11 +31,11 @@ int main (void)
 	ABPDisplay (abp3); printf ("\n");
 	assert (ABPEquals (abp3, abp1) == 1);
 	printf ("Press a key"); scanf ("%*c");
-	*/
+	
 	printf ("Retirar 3/4 da arvore abp1 e pesquisar 3/4 na abp3 - Remove 3/4 from abp1 and search 3/4 in abp3\n");
 	f1 = FractionCreate (3, 4);
 	ABPDelete (abp1, f1);
-	//assert (ABPSearch (abp3, f1) == 1);
+	assert (ABPSearch (abp3, f1) == 1);
 	
 	printf ("Inserir 3/4 na arvore abp1 - Insert 3/4 in abp1\n");
 	ABPInsert (abp1, f1);
@@ -95,7 +95,7 @@ int main (void)
 	printf ("Destruir as arvores - Releasing the trees\n\n");
 	ABPDestroy (&abp1);
 	ABPDestroy (&abp2);
-	//ABPDestroy (&abp3);
+	ABPDestroy (&abp3);
 
 	return 0;
 }

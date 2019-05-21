@@ -155,16 +155,11 @@ int ABPSearch (PtABP ptree, PtFraction pelem)
 static PtFraction SearchTree (PtABPNode proot, PtFraction pelem)
 {
 	/* Insira o seu código - Insert your code */
-    if(proot == NULL){
-        return NULL;
-    }
+  	if(proot == NULL){ return NULL; }
+
     int result = FractionCompareTo(proot->PtElem, pelem);
-    if(result == 0){
-        return proot->PtElem;
-    }
-    if(result < 0){
-        return SearchTree(proot->PtRight, pelem);
-    }
+    if(result == 0){ return proot->PtElem; }
+    if(result < 0){ return SearchTree(proot->PtRight, pelem); }
     return SearchTree(proot->PtLeft, pelem);
 }
 
@@ -172,27 +167,34 @@ static PtFraction SearchTree (PtABPNode proot, PtFraction pelem)
 void ABPInsert (PtABP ptree, PtFraction pelem)	/*  */
 {
 	/* Insira o seu código - Insert your code */
-	Error = OK;
-
 	if(ptree == NULL){ Error = NO_ABP; return; }
 	if(pelem == NULL){ Error = NULL_PTR; return; }
+
+	PtABPNode new = ABPNodeCreate(pelem);
+	if(new == NULL) { Error = NO_MEM; return; }
+
+	new->PtElem = FractionCopy(pelem);
+	if(new->PtElem == NULL) { return; }
+	new->PtLeft = NULL;
+	new->PtRight = NULL;
 
 	PtABPNode node = ptree->Root;
 	PtABPNode previous = NULL;
 
-	if(ABPSize(ptree) == 0){
-		ptree->Root = ABPNodeCreate(pelem);
+	if(node == NULL)
+	{
+		ptree->Root = new;
 		ptree->Size++;
 		return;
 	}
-	Error = OK;
 
 	while(node != NULL){
-		previous = node;
 		int result = FractionCompareTo(node->PtElem, pelem);
 		if(result > 0){
+			previous = node;
 			node = node->PtLeft;
 		}else if(result < 0){
+			previous = node;
 			node = node->PtRight;
 		}else{
 			Error = REP_ELEM;
@@ -201,11 +203,12 @@ void ABPInsert (PtABP ptree, PtFraction pelem)	/*  */
 	}
 	int result2 = FractionCompareTo(previous->PtElem, pelem);
 	if(result2 > 0){
-		previous->PtLeft = ABPNodeCreate(pelem);
+		previous->PtLeft = new;
 	}else{
-		previous->PtRight = ABPNodeCreate(pelem);
+		previous->PtRight = new;
 	}
 	ptree->Size++;
+	Error = OK;
 }
 
 /* seleção não recursiva do mínimo da abp - non recursive selection of bst minimum */
@@ -260,7 +263,29 @@ static PtFraction MaxTree (PtABPNode proot)
 PtABP ABPCopy (PtABP ptree)
 {
 	/* Insira o seu código - Insert your code */
-	return NULL;
+	if(ptree == NULL){ Error = NO_ABP; return NULL; }
+
+	PtABP tree = ABPCreate();
+
+	PtABPNode node = ptree->Root;
+	PtStack stack1;
+
+	if(ptree->Root == NULL){ Error = ABP_EMPTY; return NULL; }
+	if((stack1 = StackCreate(sizeof(PtABPNode))) == NULL){ Error = NO_MEM; return NULL; }
+
+	StackPush(stack1, &node);
+	while (!StackIsEmpty(stack1)){
+		StackPop(stack1, &node);
+		ABPInsertRec(tree, FractionCopy(node->PtElem));
+
+		if(node->PtRight != NULL) StackPush(stack1, &node->PtRight);
+		if(node->PtLeft != NULL) StackPush(stack1, &node->PtLeft);
+	}
+	StackDestroy(&stack1);
+
+	Error = OK;
+	
+	return tree;
 }
 
 /*******************************************************************************
@@ -276,34 +301,46 @@ PtABP ABPCopy (PtABP ptree)
 *******************************************************************************/
 static PtQueue ABPFillQueue (PtABP ptree)
 {
-	PtQueue fila;
-	PtABPNode node = ptree->Root;
-	int filaSize = 0;
-
 	/* Insira o seu código - Insert your code */
-	if(ptree == NULL){ NO_ABP; return NULL; }
+	PtQueue fila = QueueCreate(sizeof(PtFraction*));
+	PtQueue temp = QueueCreate(sizeof(PtABPNode));
+	if (fila == NULL || temp == NULL) { Error = NO_MEM; return NULL; }
 
-	if(fila = QueueCreate( sizeof(PtABPNode)) == NULL){
-		Error = NO_MEM;
-		return NULL;
+	if(QueueEnqueue(temp, &(ptree->Root)) != OK) { 
+		Error = NO_MEM; QueueDestroy(&fila); 
+		QueueDestroy(&temp); 
+		return NULL; 
 	}
 
-	QueueEnqueue (fila, &node);	/* armazenar a raiz - storing the root */
-	filaSize++;
-	printf("\nNumero de elementos arvore: %d\n", ptree->Size);
-	printf("\nNumero de elementos fila: %d\n", filaSize);
+	PtABPNode pop;
+	while(!QueueIsEmpty(temp)){
+		QueueDequeue(temp, &pop);
+		if(QueueEnqueue(fila, &(pop->PtElem)) != OK) { 
+			Error = NO_MEM; QueueDestroy(&fila); 				
+			QueueDestroy(&temp); 
+			return NULL; 
+		}
 
-	while (filaSize < ptree->Size)
-	{
-		/* armazenar a raiz da subarvore esquerda - storing the left subtree root */
-		if (node->PtLeft != NULL) QueueEnqueue (fila, &node->PtLeft); filaSize++;
+		if(pop->PtLeft != NULL)
+		{
+			if(QueueEnqueue(temp, &(pop->PtLeft)) != OK) { 
+				Error = NO_MEM; QueueDestroy(&fila);
+				QueueDestroy(&temp); return NULL; 
+			}
+		}
 
-		/* armazenar a raiz da subarvore direita - storing the right subtree root */
-		if (node->PtRight != NULL) QueueEnqueue (fila, &node->PtRight); filaSize++;
+		if(pop->PtRight != NULL)
+		{
+			if(QueueEnqueue(temp, &(pop->PtRight)) != OK) { 
+				Error = NO_MEM; 
+				QueueDestroy(&fila); 
+				QueueDestroy(&temp); 
+				return NULL; 
+			}
+		}
 	}
-	printf("\nNumero de elementos fila (after): %d\n", filaSize);
-    Error = OK;
-	
+
+	Error = OK;
 	return fila;
 }
 
@@ -314,11 +351,12 @@ void ABPReunion (PtABP ptree1, PtABP ptree2)
 	if(ptree1 == NULL || ptree2 == NULL){ Error = NO_ABP; return; }
 	
 	PtQueue fila = ABPFillQueue(ptree2);
-	PtABPNode node;
+	PtFraction frac;
 	while(!QueueIsEmpty(fila)){
-		QueueDequeue(fila, &node);
-		ABPInsert(ptree1, node);
+		QueueDequeue(fila, &frac);
+		ABPInsert(ptree1, frac);
 	}
+	QueueDestroy(&fila);
 	Error = OK;
 }
 
@@ -329,11 +367,14 @@ void ABPDifference (PtABP ptree1, PtABP ptree2)
 	if(ptree1 == NULL || ptree2 == NULL){ Error = NO_ABP; return; }
 
 	PtQueue fila = ABPFillQueue(ptree2);
-	PtABPNode node;
+	if(fila == NULL) return;
+
+	PtFraction frac;
 	while(!QueueIsEmpty(fila)){
-		QueueDequeue(fila, &node);
-		ABPDelete(ptree1, node);
+		QueueDequeue(fila, &frac);
+		if(ABPSearch(ptree1, frac)) ABPDelete(ptree1, frac);
 	}
+	QueueDestroy(&fila);
 	Error = OK;
 }
 
@@ -343,14 +384,18 @@ void ABPIntersection (PtABP ptree1, PtABP ptree2)
 	/* Insira o seu código - Insert your code */
 	if(ptree1 == NULL || ptree2 == NULL){ Error = NO_ABP; return; }
 
-	PtQueue fila = ABPFillQueue(ptree2);
-	PtABPNode node;
+	PtQueue fila = ABPFillQueue(ptree1);
+	if(fila == NULL) return;
+
+	PtFraction frac;
 	while(!QueueIsEmpty(fila)){
-		QueueDequeue(fila, &node);
-		if(!SearchTree(ptree1, node)){
-			ABPDelete(ptree1, node);
+		QueueDequeue(fila, &frac);
+		if(!ABPSearch(ptree2, frac)){
+			ABPDelete(ptree1, frac);
 		}
 	}
+	QueueDestroy(&fila);
+	Error = OK;
 }
 
 /******************************************************************************
