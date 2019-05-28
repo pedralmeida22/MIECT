@@ -42,7 +42,12 @@ void comDrv_putc(char ch){
     txb.data[txb.tail] = ch;        // Copy character to the transmission buffer at position tail
     txb.tail = (txb.tail + 1) & INDEX_MASK; // Increment tail index (mod. BUF_SIZE)
     DisableUart1TxInterrupt();  // Begin of critical section
-    txb.count += 1;             // Increment count variable
+    if(txb.count == BUF_SIZE){
+        txb.count = 0;
+    }
+    else{
+        txb.count += 1;           // Increment count variable
+    }
     EnableUart1TxInterrupt();    // End of critical section
 }
 
@@ -126,7 +131,7 @@ void configInterrupst(){    //UART1
 
 void _int_(24) isr_uart1(void) {
     // Rotina de Transmissao
-    if(IFS0bits.U1TXIF){
+    if(IFS0bits.U1TXIF == 1){
         if(txb.count > 0){
             U1TXREG = txb.data[txb.head];  // Copy character pointed by "head" to U1TXREG register   
             txb.head = (txb.head + 1) & INDEX_MASK;     // Increment "head" variable (mod BUF_SIZE)
@@ -142,13 +147,13 @@ void _int_(24) isr_uart1(void) {
     if(IFS0bits.U1RXIF){    // If U1RXIF is set
         // Read character from UART and write it to the "tail" position of the reception buffer
         rxb.data[rxb.tail] = U1RXREG;
-        txb.tail = (txb.tail + 1) & INDEX_MASK;     // Increment "tail" variable (mod BUF_SIZE)
+        rxb.tail = (rxb.tail + 1) & INDEX_MASK;     // Increment "tail" variable (mod BUF_SIZE)
         // If reception buffer is not full (e.g. count < BUF_SIZE) then
         if(rxb.count < BUF_SIZE){
             rxb.count++;    // Increment "count" variable
         }
         else{
-            rxb.head++;     // Increment "head" variable (discard oldest character)
+            rxb.head = (rxb.head + 1) & INDEX_MASK;     // Increment "head" variable (discard oldest character)
         }
         // Reset UART1 RX interrupt flag
         IFS0bits.U1RXIF = 0;
