@@ -127,7 +127,7 @@ void _int_(4) isr_T1(void){
     // start A/D conversion
     AD1CON1bits.ASAM = 1;
 
-    // Reset T3IF
+    // Reset T1IF
     IFS0bits.T1IF = 0;
 }
 
