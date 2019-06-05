@@ -32,7 +32,7 @@ int main (int argc, char *argv[])
 	printf ("Vertexes = %d / Edges = %d\n", NVertexes, NEdges);
 	DisplayDigraph (Digraph);
 
-	printf ("-------------------------------------------------------------------\n");
+	printf ("===================================================================\n");
 	for (Vertex = 1; Vertex <= NVertexes; Vertex++)
 	{
 		Error = VertexType (Digraph, Vertex);
@@ -45,7 +45,7 @@ int main (int argc, char *argv[])
 			default     : WriteErrorMessage (Error, "Teste do Vertice - Vertex Test");
 		}
 	}
-	printf ("-------------------------------------------------------------------\n");
+	printf ("===================================================================\n");
 
 	for (Vertex = 1; Vertex <= NVertexes; Vertex++)
 	{
@@ -53,7 +53,7 @@ int main (int argc, char *argv[])
 		if (Error) WriteErrorMessage (Error, "Classificacao do Vertice - Vertex Classification");
 		else printf ("Classificacao do vertice (Vertex Classification) %d = %f\n", Vertex, Class);
 	}
-	printf ("-------------------------------------------------------------------\n");
+	printf ("===================================================================\n");
 
 	Error = AllSuccDist (Digraph, 2, 1, &Queue);
 	printf ("Sucessores do vertice 2 a distancia inferior a 1\n");
@@ -62,7 +62,7 @@ int main (int argc, char *argv[])
 	else if (QueueIsEmpty (Queue)) printf ("Nao existem vertices sucessores - There are no successor vertexes\n");
 		 else PrintQueue (Queue);
 	QueueDestroy (&Queue);
-	printf ("-------------------------------------------------------------------\n");
+	printf ("===================================================================\n");
 
 	Error = AllSuccDist (Digraph, 1, 5, &Queue);
 	printf ("Sucessores do vertice 1 a distancia inferior a 5\n");
@@ -71,7 +71,15 @@ int main (int argc, char *argv[])
 	else if (QueueIsEmpty (Queue)) printf ("Nao existem vertices sucessores - There are no successor vertexes\n");
 		 else PrintQueue (Queue);
 	QueueDestroy (&Queue);
-	printf ("-------------------------------------------------------------------\n");
+	printf ("===================================================================\n");
+
+	Error = AllInEdgesVertex (Digraph, 1, &Queue);
+	printf ("Arestas incidentes no vertice 1 - Edges incident on vertex 1\n");
+	if (Error) WriteErrorMessage (Error, "Arestas Incidentes - edges");
+	else if (QueueIsEmpty (Queue)) printf ("Nao existem arestas incidentes - There are no incident edges\n");
+		 else PrintQueuePair (Queue);
+	QueueDestroy (&Queue);
+	printf ("===================================================================\n");
 
 	Error = AllInEdgesVertex (Digraph, 3, &Queue);
 	printf ("Arestas incidentes no vertice 3 - Edges incident on vertex 3\n");
@@ -79,7 +87,7 @@ int main (int argc, char *argv[])
 	else if (QueueIsEmpty (Queue)) printf ("Nao existem arestas incidentes - There are no incident edges\n");
 		 else PrintQueuePair (Queue);
 	QueueDestroy (&Queue);
-	printf ("-------------------------------------------------------------------\n");
+	printf ("===================================================================\n");
 
 	DigraphCopy = Copy (Digraph);
 	printf ("Subdividir aresta 1->3 - Split edge 1->3\n");
@@ -95,7 +103,7 @@ int main (int argc, char *argv[])
 	EdgeNumber (Digraph, &NEdges);
 	printf ("Vertexes = %d / Edges = %d\n", NVertexes, NEdges);
 	DisplayDigraph (Digraph);
-	printf ("-------------------------------------------------------------------\n");
+	printf ("===================================================================\n");
 
 	printf ("Cindir vertice 3 - Split vertex 3\n");
 	printf ("---- Apresentar Digrafo Original - Presenting Original Digraph ----\n");
@@ -110,12 +118,8 @@ int main (int argc, char *argv[])
 	EdgeNumber (DigraphCopy, &NEdges);
 	printf ("Vertexes = %d / Edges = %d\n", NVertexes, NEdges);
 	DisplayDigraph (DigraphCopy);
-	printf ("-------------------------------------------------------------------\n");
+	printf ("===================================================================\n");
 
-/*
-	printf ("\nPrima uma tecla para continuar - Hit key to continue");
-	scanf ("%*[^\n]"); scanf ("%*c");
-*/
 	return 0;
 }
 

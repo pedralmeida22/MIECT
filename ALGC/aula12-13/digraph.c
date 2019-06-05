@@ -418,24 +418,78 @@ PtDigraph DigraphComplement (PtDigraph pdig)
 
 int VertexType (PtDigraph pdig, unsigned int pv)
 {
-  /* Insira o seu código - Insert your code */
-  if(pdig == NULL){ return NO_DIGRAPH; }
-  if(pv == NULL){ return NO_VERTEX; }
-  
-  return OK;
+	/* Insira o seu código - Insert your code */
+  	if(pdig == NULL){ return NO_DIGRAPH; }
+  	if(pdig->NVertexes == 0){ return DIGRAPH_EMPTY; }
+	if(pv > pdig->NVertexes){ return NO_VERTEX; }
+
+	PtVertex v = OutPosition(pdig->Head, pv)->PtElem;
+
+	if(v->InDeg == 0){
+		if(v->OutDeg == 0) return DISC;
+		return SOURCE;
+	}
+	if(v->OutDeg == 0) return SINK;
+	
+  	return OK;
 }
 
 int VertexClassification (PtDigraph pdig, unsigned int pv, double *pclass)
 {
   /* Insira o seu código - Insert your code */
-  return OK;
+  	if(pdig == NULL){ return NO_DIGRAPH; }
+  	if(pdig->NVertexes == 0){ return DIGRAPH_EMPTY; }
+	if(pv > pdig->NVertexes){ return NO_VERTEX; }
+	if(pclass == NULL) { return NULL_PTR; }
+
+	PtVertex v = OutPosition(pdig->Head, pv)->PtElem;
+
+	*pclass = (double) (v->InDeg + v->OutDeg) / 2 * (pdig->NVertexes - 1);
+
+	return OK;
 }
 
 PtDigraph DigraphTranspose (PtDigraph pdig)
 {
-  /* Insira o seu código - Insert your code */
-  return NULL;
+	PtDigraph pdigt;
+    PtBiNode Vert, Edge;
+
+    /* verificar se o digrafo é válido */
+    if (pdig == NULL) return NULL;
+
+    /* criar novo digrafo nulo */
+    if((pdigt = Create (pdig->Type)) == NULL) return NULL;
+
+    Vert = pdig->Head;
+	/* copiar todos os vértices */
+    while(Vert != NULL) {
+        /* verificar se é possivel inserir o vértice */
+        if(InVertex(pdigt, Vert->Number)){
+            Destroy(&pdigt);
+            return NULL;
+        };
+        Vert = Vert->PtNext;
+    }
+
+	/* percorrer todos os vértices */
+    Vert = pdig->Head;
+    while(Vert != NULL) {
+		/* percorer todas as arestas */
+        Edge = Vert->PtAdj;
+        while(Edge != NULL) {
+			/* inverter o sentido */
+            if(InEdge(pdigt,Edge->Number, Vert->Number, ((PtEdge)Edge->PtElem)->Cost)){
+                Destroy(&pdigt);
+                return NULL;
+            }
+            Edge = Edge->PtNext;
+        }
+        Vert = Vert->PtNext;
+    }
+
+    return pdigt;
 }
+
 
 int DigraphEdgeSplit (PtDigraph pdig, unsigned int pve, unsigned int pvi)
 {
