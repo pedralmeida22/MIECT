@@ -1,0 +1,86 @@
+AULA2
+
+Slides 12 a 33
+Importante os primeiros slides (12 a 25) e slides 31 e 33
+
+Aulas 3 a 5
+slides 37 a 44
+	48 a 64 -> importante
+	65 a 74 -> meio cagativo se perceberes bem de vhd (saber ler vhdl != saber escrever vhdl)
+	75 a 94 -> meio cagativo se souberes como funcionam as cenas da pratica
+
+Aulas 6 a 8
+	-> É tudo importante
+	-> Mas não é necessário saber tudo letra a letra
+	-> Se leres os slides por alto e perceberes mais ou menos a logica, esta bom que chegue
+
+-> A partir de slide ~139
+	-> Necessário saber como é um DMA e saber como funciona
+	-> O que é, modos de funcionamento, etc...
+	->138-156 (+/-)
+
+Aula 10
+	-> necessário saber como funcionam os timers no pic32
+	-> modelação é desnecessário saber se souberes como funciona no pic32
+		(da para extrapolar a logica nos exerciceos)
+	-> necessário saber calcular as frequencias tho
+	->watchdog timer é importante
+		->há exeerciceos em que te perguntam se o watchdog timer dispara ou não
+
+
+Aulas 11 e 12 -> Bastante Importante. Não há grande coisa para passar á frente
+	(Slides 182-228)
+	
+
+	-> Saber diferença entre os 3 barramentos
+	
+	->Arquitetura de Barramentos(Master-Slave)
+		->Single Master
+		->Multi Master
+		->Barramento Paralelo
+		->Barramento série
+	^^
+	Pontos Bastante importantes
+
+Aula 13
+	Poucos Slides, mas importantes
+
+
+Aula 14
+	->SPI
+	-> Necessários saber arquitetura da ligação (full-duplex,master-slave)
+	-> transmissão na fase negativa do clock
+	-> Modo de operação
+
+Aula 15
+	->I2C
+	->Ver o mesmo que no SPI
+	->Ver também como funciona a trama do I2C
+
+Aula 16
+	->USB
+	->Same as above
+
+
+Aula 17
+	-> CAN
+	->Same as above
+
+Aula x
+	->Reptir o mesmo que em cima para todos os protocolos de comunicação de I/O
+
+
+Aulas 20 a 22
+
+	-> Saber a hierarquia de memoria
+	-> Saber como funcionam os ciclos de leitura e escrita
+		-> sobretudo com tabelas de sinais
+
+
+Resto das aulas
+	-> Saber como funciona a organização em memoria da cache
+	-> Importante saber as politicas de escrita
+
+	-> Saber o que é memoria virtual
+	-> Saber como e feita a organização da memoria virtual
+	->Perceber os mecanismos de proteção
