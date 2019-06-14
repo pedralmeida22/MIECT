@@ -416,6 +416,15 @@ PtDigraph DigraphComplement (PtDigraph pdig)
   return Comp;  /* devolver a referência do Digrafo criado */
 }
 
+/* Função auxiliar - Devolve o último número utilizado por um binó */
+static int LastVertexNumber(PtDigraph pdig){
+	if(pdig == NULL) return -1;
+	PtBiNode Node = pdig->Head;
+
+	for (; Node->PtNext != NULL; Node = Node->PtNext);
+	return Node->Number;
+}
+
 int VertexType (PtDigraph pdig, unsigned int pv)
 {
 	/* Insira o seu código - Insert your code */
@@ -444,7 +453,7 @@ int VertexClassification (PtDigraph pdig, unsigned int pv, double *pclass)
 
 	PtVertex v = OutPosition(pdig->Head, pv)->PtElem;
 
-	*pclass = (double) (v->InDeg + v->OutDeg) / 2 * (pdig->NVertexes - 1);
+	*pclass = (double) (v->InDeg + v->OutDeg) / (2 * (pdig->NVertexes - 1));
 
 	return OK;
 }
@@ -455,7 +464,7 @@ PtDigraph DigraphTranspose (PtDigraph pdig)
     PtBiNode Vert, Edge;
 
     /* verificar se o digrafo é válido */
-    if (pdig == NULL) return NULL;
+    if(pdig == NULL) return NULL;
 
     /* criar novo digrafo nulo */
     if((pdigt = Create (pdig->Type)) == NULL) return NULL;
@@ -490,29 +499,140 @@ PtDigraph DigraphTranspose (PtDigraph pdig)
     return pdigt;
 }
 
-
 int DigraphEdgeSplit (PtDigraph pdig, unsigned int pve, unsigned int pvi)
 {
-  /* Insira o seu código - Insert your code */
-  return OK;
+	/* Insira o seu código - Insert your code */
+	if(pdig == NULL) return NO_DIGRAPH;
+	if(pdig->NVertexes == 0 || pdig->Head == NULL) return DIGRAPH_EMPTY;
+
+	PtBiNode origin = OutPosition(pdig->Head, pve);
+	if(origin == NULL || origin->Number != pve) return NO_VERTEX;
+	PtBiNode destination = OutPosition(origin->PtAdj, pvi);
+	if(destination == NULL || destination->Number != pvi) return NO_EDGE;
+	int cost = ((PtEdge) (destination->PtElem))->Cost;
+
+	int newNodeNum = LastVertexNumber(pdig) + 1; 
+
+	int returnCode = InVertex(pdig, newNodeNum);
+	if(returnCode != OK) { return returnCode; }
+
+	returnCode = InEdge(pdig, pve, newNodeNum, cost/2);
+	if(returnCode != OK) { OutVertex(pdig, newNodeNum); return returnCode; }
+
+	returnCode = InEdge(pdig, newNodeNum, pvi, (cost+1)/2);
+	if(returnCode != OK) { OutVertex(pdig, newNodeNum); return returnCode; }
+
+	returnCode = OutEdge(pdig,pve,pvi);
+	if(returnCode != OK) { OutVertex(pdig, newNodeNum); return returnCode; } 
+
+
+	if (!pdig->Type){
+		returnCode = InEdge(pdig, pvi, newNodeNum, (cost+1)/2);
+		if(returnCode != OK) { OutVertex(pdig, newNodeNum); return returnCode; }
+
+		returnCode = InEdge(pdig, newNodeNum, pve, cost/2);
+		if(returnCode != OK) { OutVertex(pdig, newNodeNum); return returnCode; }
+
+		int returnCode = OutEdge(pdig,pvi,pve);
+		if(returnCode != OK) { OutVertex(pdig, newNodeNum); return returnCode; }
+	}
+
+	return OK;
 }
 
 int DigraphVertexSplit (PtDigraph pdig, unsigned int pv)
 {
-  /* Insira o seu código - Insert your code */
-  return OK;
+	/* Insira o seu código - Insert your code */
+	if(pdig == NULL) return NO_DIGRAPH;
+	if(pdig->NVertexes == 0 || pdig->Head == NULL) return DIGRAPH_EMPTY;
+
+	PtBiNode origin = OutPosition(pdig->Head, pv);
+	if(origin == NULL || origin->Number != pv) return NO_VERTEX;
+
+	int newNodeNum = LastVertexNumber(pdig) + 1; 
+
+	int returnCode = InVertex(pdig, newNodeNum);
+	if(returnCode != OK) { return returnCode; }
+
+	for(PtBiNode Node = pdig->Head; Node != NULL; Node = Node->PtNext){
+		if(Node->Number != pv){
+			for(PtBiNode Adj = Node->PtAdj; Adj != NULL; Adj = Adj->PtNext){
+				if(Adj->Number == pv){
+					returnCode = InEdge(pdig, Node->Number, newNodeNum, ((PtEdge)(Adj->PtElem))->Cost);
+					if(returnCode != OK) { OutVertex(pdig, newNodeNum); return returnCode; }
+				}
+			}
+		}
+	}
+
+	returnCode = InVertex(pdig, newNodeNum+1);
+	if(returnCode != OK) { return returnCode; }
+
+	for(PtBiNode Node = origin->PtAdj; Node != NULL; Node = Node->PtNext){
+		returnCode = InEdge(pdig, newNodeNum+1, Node->Number, ((PtEdge)(Node->PtElem))->Cost);
+		if(returnCode != OK) { OutVertex(pdig, newNodeNum); OutVertex(pdig, newNodeNum+1); return returnCode; }
+	}
+
+	returnCode = InEdge(pdig, newNodeNum, newNodeNum+1, 0);
+	if(returnCode != OK) { OutVertex(pdig, newNodeNum); OutVertex(pdig, newNodeNum+1); return returnCode; }
+
+
+	returnCode = OutVertex(pdig, pv);
+	if(returnCode != OK) { OutVertex(pdig, newNodeNum); OutVertex(pdig, newNodeNum+1); return returnCode; }
+
+	return OK;
 }
 
 int AllSuccDist (PtDigraph pdig, unsigned int pv, double pdst, PtQueue *pqueue)
 {
-  /* Insira o seu código - Insert your code */
-  return OK;
+	/* Insira o seu código - Insert your code */
+	if(pdig == NULL) return NO_DIGRAPH;
+	if(pqueue == NULL) return NULL_PTR;
+	*pqueue = QueueCreate(sizeof(int));
+	if(*pqueue == NULL) return NO_MEM;
+	if(pdig->NVertexes == 0 || pdig->Head == NULL) return DIGRAPH_EMPTY;
+	PtBiNode node = OutPosition(pdig->Head,pv);
+	if(node == NULL || node->Number != pv) return NO_VERTEX;
+
+	PtBiNode adj = node->PtAdj;
+	while(adj != NULL){
+		if(((PtEdge) adj->PtElem)->Cost < pdst){
+			int code = QueueEnqueue(*pqueue, &(adj->Number));
+			if(code != OK) return code;
+		}
+		adj = adj->PtNext;
+	}
+	return OK;
 }
 
 int AllInEdgesVertex (PtDigraph pdig, unsigned int pv, PtQueue *pqueue)
 {
-  /* Insira o seu código - Insert your code */
-  return OK;
+	/* Insira o seu código - Insert your code */
+	if(pdig == NULL) return NO_DIGRAPH;
+	if(pqueue == NULL) return NULL_PTR;
+	*pqueue = QueueCreate(sizeof(int));
+	if(*pqueue == NULL) return NO_MEM;
+	if(pdig->NVertexes == 0 || pdig->Head == NULL) return DIGRAPH_EMPTY;
+
+	PtBiNode node = pdig->Head;
+
+	while (node != NULL){
+		if(node->Number != pv){
+			PtBiNode adj =node->PtAdj;
+			while ((adj != NULL)){
+				if(adj->Number == pv){
+					int code = QueueEnqueue(*pqueue,&(node->Number));
+					if(code != OK) return code;
+					code = QueueEnqueue(*pqueue,&pv);
+					if(code != OK) return code;
+					break;
+				}
+				adj = adj->PtNext;
+			}
+		}
+		node = node->PtNext;
+	}
+	return OK;
 }
 
 /***************** Definição dos Subprogramas Internos *****************/
