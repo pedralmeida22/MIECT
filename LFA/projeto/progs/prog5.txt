@@ -1,0 +1,13 @@
+unidade a = 2 km
+unidade b = 1 m
+unidade c = 5 dm
+unidade d = 1 mm
+
+unidade res = a - b
+show(res)
+
+unidade res2 = b - c
+show(res2)
+
+unidade res3 = b - d
+show(res3)

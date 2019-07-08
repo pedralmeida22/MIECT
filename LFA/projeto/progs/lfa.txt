@@ -1,0 +1,41 @@
+simpleUnit kilograma <- kg
+simpleUnit metro <- m
+simpleUnit grama <- g
+composeUnit m*kg <- gds
+converterValue kg <-  1000 g
+
+
+grammar VarGrammar;
+
+main: instruction* EOF;
+
+instruction:  declaration
+            | assignment
+            | show
+            ;
+
+declaration : 'var' IDENTIFIER;
+
+
+assignment: 'var'? IDENTIFIER '<-' expression;
+
+show: 'show' '(' expression ')';
+
+expression: '(' expression ')'
+            | expression op=('*'|'/') expression
+            | expression op=('+'|'-') expression
+            | constant
+            | IDENTIFIER
+            ; 
+
+constant: (REAL|INT) IDENTIFIER;
+
+//pow: 'e^' (signal='-')? INT;
+
+
+IDENTIFIER :[a-zA-Z][a-zA-Z]*;
+INT: [0-9]+;
+REAL : INT '.' INT;
+WHITESPACE: [ \t\r\n]+ -> skip;
+COMMENT : '//' .*? '\n' -> skip;
+ERROR: .;

@@ -1,0 +1,32 @@
+unidade d1 = 1m
+unidade d2 = 2m
+
+unidade d3 = d1 + d2
+unidade d4 = d2 - d1
+
+show(d3)
+show(d4)
+
+integer d5 = 1
+integer d6 = 2
+
+integer d7 = d5 + d6
+integer d8 = d5 - d6
+
+show(d7)
+show(d8)
+
+real d9 = 3.0
+real d10 = 2.0
+
+real d11 = d9 + d10
+real d12 = d9 - d10
+
+show(d11)
+show(d12)
+
+d11++
+show(d11)
+
+d11--
+show(d11)

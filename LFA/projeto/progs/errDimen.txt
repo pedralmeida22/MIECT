@@ -1,0 +1,4 @@
+m = [1,0,0] //[metro,segundo,kilograma]
+s = [0,1,0]
+m = [0,0,1]
+m/s = [1,-1,0]

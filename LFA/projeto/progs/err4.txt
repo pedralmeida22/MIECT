@@ -1,0 +1,15 @@
+unidade a = 1m
+unidade b = 1s
+real c = 2.5
+integer d = 2
+
+if(a < b){
+    show(a)
+}
+
+if(a > c){
+    show(c)
+}
+if(c <= d){
+    show(d)
+}

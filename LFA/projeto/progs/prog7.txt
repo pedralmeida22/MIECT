@@ -1,0 +1,12 @@
+unidade peso = 10 kg
+show(peso)
+
+unidade pesopequeno = 1 g
+
+unidade res = peso + pesopequeno
+show(res)
+
+show(1 kg + 1 ton)
+show(1 kg - 1 g)
+show(1 kg * 1 dag)
+show(1 kg \ 1 g)

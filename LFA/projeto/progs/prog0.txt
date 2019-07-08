@@ -1,0 +1,10 @@
+unidade de = 1s
+unidade da = 2m
+integer as = 01
+real ff = 2
+
+unidade d5 = de\da
+da++
+show(d5)
+
+

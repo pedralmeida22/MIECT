@@ -1,0 +1,9 @@
+unidade a= 4s
+
+unidade b = 7
+integer b =1
+
+unidade l = a + b
+l++
+show(l)
+

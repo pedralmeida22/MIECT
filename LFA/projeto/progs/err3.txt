@@ -1,0 +1,6 @@
+unidade d = 1m + 1s
+unidade r = 1 m/s
+real f = 2.5 + 1
+unidade a = 1m
+show(a+f)
+show(f\a)

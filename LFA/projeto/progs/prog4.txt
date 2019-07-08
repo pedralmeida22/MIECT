@@ -1,0 +1,30 @@
+unidade dist = 2 m
+unidade mass = 3 kg
+unidade time = 4 s
+
+unidade newton = (dist*mass)\(time*time)
+show(newton)
+
+unidade v = 20k
+unidade p = 10k
+
+unidade b = v\p
+show(b)
+
+unidade joule = mass*(dist*dist)\(time*time)
+show(joule)
+
+unidade pascal = mass\(dist*(time*time))
+show(pascal)
+
+//unidade hertz = 1\time
+//show(hertz)
+
+unidade watt =  mass*(dist*dist)\(time*time*time)
+show(watt)
+
+unidade cel = 3 celsius
+show(cel)
+
+unidade f = 5 fah
+show(f)

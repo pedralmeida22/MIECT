@@ -1,0 +1,11 @@
+unidade sem = 7 dia
+show(sem)
+
+unidade mes = 4 semana
+
+unidade res = mes - sem
+show(res)
+
+show(1 s - 1 ms)
+show(1 s * 1 s)
+show(1 s \ 1 ns)

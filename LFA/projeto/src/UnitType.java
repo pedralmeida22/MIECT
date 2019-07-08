@@ -1,0 +1,4 @@
+
+public enum UnitType {
+	DISTANCE, MASS, VOLUME, PRESSURE, TIME, TEMPERATURE; 
+}

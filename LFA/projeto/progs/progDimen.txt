@@ -1,0 +1,44 @@
+//[metro,segundo,kilograma,kelvin]
+m = [1,0,0,0] 
+s = [0,1,0,0]
+kg = [0,0,1,0]
+k = [0,0,0,1]
+
+m/s = [1,-1,0,0]    // velocidade
+m/ss = [1,-2,0,0]   // aceleracao
+n = [1,-2,1,0]      // newton
+Pa = [-1,-2,1,0]    // pascal
+J = [2,-2,1,0]      // joule
+W = [2,-3,1,0]      // watt
+
+// Conversoes distancia
+km -> 1000 m
+hm -> 100 m
+dam -> 10 m
+dm -> 0.1 m
+cm -> 0.01 m 
+mm -> 0.001 m 
+
+// Conversoes tempo
+ano -> 29030400 s
+mes -> 2419200 s
+semana -> 604800 s
+dia -> 86400 s
+h -> 3600 s
+min -> 60 s
+ms -> 0.001 s
+ys -> 0.000001 s 
+ns -> 0.000000001 s 
+
+// Conversoes massa
+ton -> 1000 kg
+Hg -> 0.1 kg
+dag -> 0.01 kg
+g -> 0.001 kg
+dg -> 0.0001 kg
+cg -> 0.00001 kg
+mg -> 0.000001 kg
+
+// Conversoes temperatura
+celsius -> 273.15 k
+fah -> 1 k 

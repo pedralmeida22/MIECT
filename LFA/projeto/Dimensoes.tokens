@@ -1,0 +1,10 @@
+T__0=1
+T__1=2
+ID=3
+NUM=4
+ARRAY=5
+WS=6
+COMMENT=7
+ERROR=8
+'='=1
+'->'=2

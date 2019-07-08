@@ -1,0 +1,166 @@
+// dictionaries: allows simple translations
+
+booleanValue ::= [
+   "true":"1",
+   "false":"0",
+   default:"null"
+]
+
+typeValue ::= [
+   "integer":"int",
+   "int":"int",
+   "real":"double",
+   "boolean":"int",
+   "unit":"Unit",
+   default:"null"
+]
+
+typeFormat ::= [
+   "int":"%d",
+   "real":"%lg",
+   "boolean":"%d",
+   default:"null"
+]
+
+operators ::= [
+   "*":"*",
+   "/":"/",
+   "\\":"/",
+   "\\\\":"%",
+   "+":"+",
+   "-":"-",
+   "++":"++",
+   "--":"--",
+   default:"null"
+]
+
+condiOperators ::= [
+   ">":">",
+   ">=":">=",
+   "<":"<",
+   "<=":"<=",
+   "==":"==",
+   "!=":"!=",
+   default:"null"
+]
+
+
+// templates:
+
+module(name,stat) ::= <<
+#include \<stdio.h>
+#include \<math.h>
+#include "Utils.h"
+
+int main()
+{
+   <stats(stat)>
+}
+
+>>
+
+stats(stat) ::= <<
+<if(stat)><stat; separator="\n"><endif>
+>>
+
+assign(stat,var,value) ::= <<
+<stats(stat)>
+<var> = <value>;
+>>
+
+init(value) ::= "<if(value)> = <value><endif>"
+decl(type,var,value) ::= "<typeValue.(type)> <var><init(value)>;"
+
+show(stat,type,expr) ::= <<
+<stats(stat)>
+printf("<typeFormat.(type)>\n", <expr>);
+>>
+
+condition(left,op,right) ::=<<
+<left> <condiOperators.(op)> <right>
+>>
+
+if(condition,stat,statif) ::=<<
+<stats(stat)>
+if(<condition>){
+    <stats(statif)>
+}
+>>
+
+else(condition,stat) ::=<<
+else{
+    <stats(stat)>
+}
+>>
+
+while(condition,stat,statWhile) ::=<<
+<stats(stat)>
+while (<condition>){
+    <stats(statWhile)>
+}
+>>
+
+increDecrement(var,op)::=<<
+   <var><operators.(op)>;
+>>
+
+
+binaryExpression(type,var,e1,op,e2) ::= "<decl(type,var,[e1,\" \",operators.(op),\" \",e2])>"
+
+powerTypeCast ::= [
+   "integer":"(int)",
+   "real":"",
+   default:"null"
+]
+
+powerExpression(type,var,e1,e2) ::= "<decl(type,var,[powerTypeCast.(type),\"pow(\",e1,\",\",e2,\")\"])>"
+
+literalBoolean(value) ::= "<booleanValue.(value)>"
+
+declUnit(var, value) ::= <<
+   Unit <var> = <value>;
+>>
+
+CreateUnit(var, value, m, s, kg, k, convert, convValue) ::= <<
+   Unit <var> = CreateUnit(<value>, <m>, <s>, <kg>, <k>, <convert>, <convValue>);
+>>
+
+UnitCompareTo(unit1, unit2, op) ::= <<
+   UnitCompareTo(<unit1>, <unit2>) <condiOperators.(op)> 0
+>>
+
+PrintUnit(unit) ::= <<
+   PrintUnit(<unit>);
+>>
+
+UnitMultConst(var, unit, const) ::= <<
+   Unit <var> = UnitMultConst(<unit>, <const>);
+>>
+
+UnitMult(var, unit1, unit2) ::=<<
+   Unit <var> = UnitMult(<unit1>, <unit2>);
+>>
+
+UnitDivConst(var, unit, const) ::=<<
+   Unit <var> = UnitDivConst(<unit>, <const>);
+>>
+
+UnitDiv(var, unit1, unit2) ::=<<
+   Unit <var> = UnitDiv(<unit1>, <unit2>);
+>>
+
+UnitAdd(var, unit1, unit2) ::= <<
+   Unit <var> = UnitAdd(<unit1>, <unit2>);
+>>
+
+UnitSub(var, unit1, unit2) ::= <<
+   Unit <var> = UnitSub(<unit1>, <unit2>);
+>>
+
+UnitIncrement(var) ::= <<
+   <var>.value +=1;
+>>
+
+UnitDecrement(var) ::= <<
+   <var>.value -= 1;
+>>

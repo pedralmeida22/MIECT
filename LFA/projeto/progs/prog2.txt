@@ -1,0 +1,20 @@
+unidade a = 5 kg
+unidade b = 0.5 kg
+
+unidade c = a*b
+
+show(c)
+
+integer a1 = 3
+integer b1 = 7
+
+integer c1 = a1 - b1
+
+show(c1)
+
+real a2 = 1.375
+real b2 = 0.125
+
+real c2 = a2 + b2
+
+show(c2)

@@ -1,0 +1,14 @@
+unidade x = 1 m/s
+unidade y = 5 m/s
+
+unidade z = x*y
+show(z)
+
+unidade ac = x \ 1s
+show(ac)
+
+unidade a = 1s*2s
+show(a)
+
+// unidade b = a * 3s
+// show(b)

@@ -1,0 +1,9 @@
+real w = 2.5
+integer z = 2
+
+while(w > z){
+	z++
+	show(z)
+}
+
+

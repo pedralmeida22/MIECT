@@ -1,0 +1,12 @@
+
+integer a = 5
+unidade b = 2 m/s
+
+if(a<b){
+    a++
+}
+else{
+    a--
+}
+
+a = 3

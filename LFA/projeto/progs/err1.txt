@@ -1,0 +1,7 @@
+real a  = 1
+unidade g = 1ms
+b = 3
+real f = 3
+integer f = 4
+show(d)
+f = 1m

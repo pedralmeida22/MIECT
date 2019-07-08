@@ -1,0 +1,7 @@
+unidade x = 1kg
+unidade y = 3m
+
+while(y > x){
+	x++
+	show(x)
+}
