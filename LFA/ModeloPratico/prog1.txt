@@ -1,0 +1,8 @@
+t1 : "pissa"
+print t1
+t2 : input("Nome: ")
+print t2
+
+print t1 + t2
+
+print ("dia"/"i"/"iii")
