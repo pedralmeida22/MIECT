@@ -35,8 +35,23 @@ def capicua(list):  # return list == invert(list)
     if list == []:
         return True
     return list[0] == list[-1] and capicua(list[1:-1])
+
+def concatList(list):
+    if list == []:
+        return []
+    return list[0] + concatList(list[1:])
     
     
+def replace(list, x, y):
+    if list == []:
+        return []
+
+    if list[0] == x:
+        list[0] = y
+
+    return [list[0]] + replace(list[1:], x, y)
+
+
 
 lista = [1,2,3,4,5]
 print(list_len(lista))
@@ -52,3 +67,9 @@ print(invert(lista))
 lista3 = [1,3,5,3,1]
 print(capicua(lista))
 print(capicua(lista3))
+
+lista4 = [[1,2], [2,3], [4,5]]
+print(concatList(lista4))
+
+print(f'Substituir "5" por "2" na lista: {lista3} ')
+print(replace(lista3, 5, 2))

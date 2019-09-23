@@ -37,18 +37,23 @@ def smallest(list):
         return list[0]
     return m
 
-def smallest_others(list):
+def smallest_others(list):  # continue
     if list == []:
-        return None
-    
+        return None, None
 
+    s = smallest(list)
+
+    return None
+    
+    
 def max_min(list):
     if list == []:
-        return None
+        return None, None
 
     mx, mn = max_min(list[1:])
-    if mx, mn = None, None:
-        return mx, mn
+
+    if mx == None and mn == None:
+        return list[0], list[0]
 
     if list[0] > mx:
         return list[0], mn
@@ -56,23 +61,19 @@ def max_min(list):
     if list[0] < mn:
         return mx, list[0]
 
-
-def max_min2(lista):
-    if lista == []:
-        return None, None
-
-    mx, mn = max_min(lista[1:])
-    if mx, mn = None, None:
-        return lista[0], lista[0]
-    if lista[0] > mx:
-        return lista[0], mn
-    if lista[0] < mn:
-        return mx, lista[0]:
     return mx, mn
 
 
-lista = [(1,'a'),(2,'b'), (3,'c')]
+
+
+lista = [(1,'a'), (2,'b'), (3,'c')]
 lista2 = [5,4,6,3,7,2,8,1,9]
+
 print(separate(lista))
 print(juntar(*separate(lista)))
-print(smallest(lista2))
+
+print('smallest: ' + str(smallest(lista2)))
+print(smallest_others(lista2))
+
+mx, mn = max_min(lista2)
+print(f'Max:{mx} | Min:{mn}')
