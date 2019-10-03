@@ -52,6 +52,7 @@ class SearchProblem:
         self.domain = domain
         self.initial = initial
         self.goal = goal
+    
     def goal_test(self, state):
         return state == self.goal
 

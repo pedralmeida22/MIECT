@@ -14,6 +14,7 @@ class Cidades(SearchDomain):
     def __init__(self,connections, coordinates):
         self.connections = connections
         self.coordinates = coordinates
+
     def actions(self,cidade):
         actlist = []
         for (C1,C2,D) in self.connections:
@@ -22,12 +23,17 @@ class Cidades(SearchDomain):
             elif (C2==cidade):
                actlist += [(C2,C1)]
         return actlist 
+
     def result(self,cidade,action):
         (C1,C2) = action
         if C1==cidade:
             return C2
+
     def cost(self, state, action):
-        pass
+        #(C1,C2) = action
+        #return
+        pass 
+
     def heuristic(self, state, goal_state):
         pass
 
