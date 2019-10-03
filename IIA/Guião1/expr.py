@@ -30,10 +30,20 @@ class Soma(Value):
 
         self.v = e1.value() + e2.value()
 
+
+class Produto(Value):
+    
+    def __init__(self, e1, e2):
+        assert isinstance(e1, Value)
+        assert isinstance(e2, Value)
+
+        self.v = e1.value() * e2.value()
+
     
 
 
 x = Variavel()
 x.atribuir(Soma(Constante(4), Constante(3)))
-
+print('x = ' + x.__str__())
 print(Soma(Constante(5), x))
+print('2 * 3 = ' + Produto(Constante(2), Constante(3)).__str__())
