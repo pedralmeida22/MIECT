@@ -58,10 +58,11 @@ class SearchProblem:
 
 # Nos de uma arvore de pesquisa
 class SearchNode:
-    def __init__(self,state,parent,depth): 
+    def __init__(self, state, parent, depth, cost): 
         self.state = state
         self.parent = parent
-        self.depth = 0
+        self.depth = depth
+        self.cost = cost
 
     def in_parent(self, state):
         if self.parent == None:
@@ -82,13 +83,14 @@ class SearchTree:
     # construtor
     def __init__(self,problem, strategy='breadth'): 
         self.problem = problem
-        root = SearchNode(problem.initial, None, 0)
+        root = SearchNode(problem.initial, None, 0, 0)
         self.open_nodes = [root]
         self.strategy = strategy
         self.length = 0
         self.terminal = 1
         self.non_terminal = 1
         self.ramification = 0
+        self.totalcost = 0
 
     # obter o caminho (sequencia de estados) da raiz ate um no
     def get_path(self,node):
@@ -103,6 +105,7 @@ class SearchTree:
         while self.open_nodes != []:
             node = self.open_nodes.pop(0)
             self.length += 1
+            self.totalcost += node.cost
             if self.problem.goal_test(node.state):
                 self.ramification = (self.non_terminal + self.terminal -1)/ self.non_terminal
                 return self.get_path(node)
@@ -110,7 +113,7 @@ class SearchTree:
             for a in self.problem.domain.actions(node.state):
                 newstate = self.problem.domain.result(node.state,a)
                 if not node.in_parent(newstate) and node.depth < limit:
-                    lnewnodes += [SearchNode(newstate,node, node.depth+1)]
+                    lnewnodes += [SearchNode(newstate,node, node.depth+1, node.cost + self.problem.domain.cost(node.state, a))]
             
             if len(lnewnodes):
                 self.terminal += len(lnewnodes)
@@ -128,5 +131,5 @@ class SearchTree:
         elif self.strategy == 'depth':
             self.open_nodes[:0] = lnewnodes
         elif self.strategy == 'uniform':
-            pass
+            self.open_nodes = sorted(self.open_nodes + lnewnodes, key= lambda node: node.cost)
 
