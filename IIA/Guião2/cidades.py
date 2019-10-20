@@ -9,6 +9,7 @@
 
 
 from tree_search import *
+import math
 
 class Cidades(SearchDomain):
     def __init__(self,connections, coordinates):
@@ -42,7 +43,10 @@ class Cidades(SearchDomain):
         
 
     def heuristic(self, state, goal_state):
-        pass
+        c1_x, c1_y = self.coordinates[state]
+        c2_x, c2_y = self.coordinates[goal_state]
+
+        return math.hypot(c1_x - c2_x, c1_y - c2_y)
 
 cidades_portugal = Cidades( 
                     # Ligacoes por estrada
@@ -111,9 +115,11 @@ cidades_portugal = Cidades(
 
 
 p = SearchProblem(cidades_portugal,'Braga','Faro')
-#t = SearchTree(p,'breadth')
-#t = SearchTree(p,'depth')
-t = SearchTree(p,'uniform')
+t = SearchTree(p,'breadth')
+t2 = SearchTree(p,'depth')
+t3 = SearchTree(p,'uniform')
+t4 = SearchTree(p,'greedy')
+t5 = SearchTree(p,'a*')
 
 # Atalho para obter caminho de c1 para c2 usando strategy:
 def search_path(c1,c2,strategy):
@@ -122,6 +128,17 @@ def search_path(c1,c2,strategy):
     my_tree.strategy = strategy
     return my_tree.search()
 
+print("Breadth".center(40, '-'))
 print(t.search(9), t.length, t.terminal, t.non_terminal, t.ramification, t.totalcost)
 
+print("Depth".center(40, '-'))
+print(t2.search(9), t2.length, t2.terminal, t2.non_terminal, t2.ramification, t2.totalcost)
 
+print("Uniform".center(40, '-'))
+print(t3.search(9), t3.length, t3.terminal, t3.non_terminal, t3.ramification, t3.totalcost)
+
+print("Greedy".center(40, '-'))
+print(t4.search(9), t4.length, t4.terminal, t4.non_terminal, t4.ramification, t4.totalcost)
+
+print("A*".center(40, '-'))
+print(t5.search(9), t5.length, t5.terminal, t5.non_terminal, t5.ramification, t5.totalcost)
