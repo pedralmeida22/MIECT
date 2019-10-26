@@ -133,8 +133,8 @@ class SearchTree:
             
             if len(lnewnodes):
                 self.terminal += len(lnewnodes)
-            else:
-                self.non_terminal += 1
+            
+            self.non_terminal += 1
             self.terminal -= 1
 
             self.add_to_open(lnewnodes)
