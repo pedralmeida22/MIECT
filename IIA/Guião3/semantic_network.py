@@ -167,6 +167,9 @@ class SemanticNetwork:
 
         return [item for sublist in pd for item in sublist if item.relation not in [d.relation.name for d in local_decl]] + local_decl
 
+    def query_down(self, entity, relation=None, skip1st=True):
+        pass
+
 # Funcao auxiliar para converter para cadeias de caracteres
 # listas cujos elementos sejam convertiveis para
 # cadeias de caracteres
