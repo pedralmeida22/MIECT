@@ -128,6 +128,45 @@ class SemanticNetwork:
         
         return any([self.predecessor(a, p1) for p1 in p])
 
+    def predecessor_path(self, a, b):
+        p = [d.relation.entity2 for d in self.declarations if
+            (isinstance(d.relation, Member) or isinstance(d.relation, Subtype)) 
+            and d.relation.entity1 == b]
+
+        if a in p:
+            return [a, b]
+
+        for path in [self.predecessor_path(a, p1) for p1 in p]:
+            if a in path:
+                return path + [b]
+        return []
+
+    def query(self, entity, relation=None):
+        pd = [self.query(d.relation.entity2, relation) for d in self.declarations if
+            (isinstance(d.relation, Member) or isinstance(d.relation, Subtype)) 
+            and d.relation.entity1 == entity]
+
+        return [item for sublist in pd for item in sublist] + [d for d in self.query_local(e1 = entity, rel = relation)
+                if (isinstance(d.relation, Association))]
+
+    
+    def query2(self, entity, relation=None):
+        pd = [self.query2(d.relation.entity2, relation) for d in self.declarations if
+            (isinstance(d.relation, Member) or isinstance(d.relation, Subtype)) 
+            and d.relation.entity1 == entity]
+
+        return [item for sublist in pd for item in sublist if isinstance(item.relation, Association)] + self.query_local(e1=entity, rel=relation)
+
+
+    def query_cancel(self, entity, relation=None):
+        pd = [self.query_cancel(d.relation.entity2, relation) for d in self.declarations if
+            (isinstance(d.relation, Member) or isinstance(d.relation, Subtype)) 
+            and d.relation.entity1 == entity]
+
+        local_decl = [d for d in self.query_local(e1=entity, rel=relation) if isinstance(d.relation, Association)]
+
+        return [item for sublist in pd for item in sublist if item.relation not in [d.relation.name for d in local_decl]] + local_decl
+
 # Funcao auxiliar para converter para cadeias de caracteres
 # listas cujos elementos sejam convertiveis para
 # cadeias de caracteres

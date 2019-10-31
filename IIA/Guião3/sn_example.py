@@ -106,3 +106,15 @@ print(z.list_local_associations('socrates'))
 
 print('predecessor'.center(40, '-'))
 print(z.predecessor('vertebrado', 'socrates'))
+
+print('predecessor_path'.center(40, '-'))
+print(z.predecessor_path('vertebrado', 'socrates'))
+
+print('query'.center(40, '-'))
+print(z.query('socrates', 'altura'))
+
+print('query2'.center(40, '-'))
+print(z.query2('homem', 'mamar'))
+
+print('query_cancel'.center(40, '-'))
+print(z.query_cancel('homem', 'altura'))
