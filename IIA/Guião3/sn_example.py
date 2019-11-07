@@ -62,23 +62,23 @@ z.insert(Declaration('damasio', Member('socrates','filosofo')))
 
 # Extra - descomentar as restantes declaracoes para o exercicio II.2.16
 
-#z.insert(Declaration('descartes', AssocNum('socrates','pulsacao',51)))
-#z.insert(Declaration('darwin', AssocNum('socrates','pulsacao',61)))
-#z.insert(Declaration('darwin', AssocNum('platao','pulsacao',65)))
+z.insert(Declaration('descartes', AssocNum('socrates','pulsacao',51)))
+z.insert(Declaration('darwin', AssocNum('socrates','pulsacao',61)))
+z.insert(Declaration('darwin', AssocNum('platao','pulsacao',65)))
 
-#z.insert(Declaration('descartes',AssocNum('homem','temperatura',36.8)))
-#z.insert(Declaration('simao',AssocNum('homem','temperatura',37.0)))
-#z.insert(Declaration('darwin',AssocNum('homem','temperatura',37.1)))
-#z.insert(Declaration('descartes',AssocNum('mamifero','temperatura',39.0)))
+z.insert(Declaration('descartes',AssocNum('homem','temperatura',36.8)))
+z.insert(Declaration('simao',AssocNum('homem','temperatura',37.0)))
+z.insert(Declaration('darwin',AssocNum('homem','temperatura',37.1)))
+z.insert(Declaration('descartes',AssocNum('mamifero','temperatura',39.0)))
 
-#z.insert(Declaration('simao',Association('homem','gosta','carne')))
-#z.insert(Declaration('darwin',Association('homem','gosta','peixe')))
-#z.insert(Declaration('simao',Association('homem','gosta','peixe')))
-#z.insert(Declaration('simao',Association('homem','gosta','couves')))
+z.insert(Declaration('simao',Association('homem','gosta','carne')))
+z.insert(Declaration('darwin',Association('homem','gosta','peixe')))
+z.insert(Declaration('simao',Association('homem','gosta','peixe')))
+z.insert(Declaration('simao',Association('homem','gosta','couves')))
 
-#z.insert(Declaration('damasio', AssocOne('socrates','pai','sofronisco')))
-#z.insert(Declaration('darwin', AssocOne('socrates','pai','pericles')))
-#z.insert(Declaration('descartes', AssocOne('socrates','pai','sofronisco')))
+z.insert(Declaration('damasio', AssocOne('socrates','pai','sofronisco')))
+z.insert(Declaration('darwin', AssocOne('socrates','pai','pericles')))
+z.insert(Declaration('descartes', AssocOne('socrates','pai','sofronisco')))
 
 print('list_associations'.center(40, '-'))
 print(z.list_associations())
@@ -118,3 +118,14 @@ print(z.query2('homem', 'mamar'))
 
 print('query_cancel'.center(40, '-'))
 print(z.query_cancel('homem', 'altura'))
+
+print('query_down'.center(40, '-'))
+print(z.query_down('mamifero', 'altura'))
+
+print('query_induce'.center(40, '-'))
+print(z.query_induce('vertebrado', 'altura'))
+
+print('query_local_assoc'.center(40, '-'))
+print(z.query_local_assoc('socrates', 'pai'))
+print(z.query_local_assoc('socrates', 'pulsacao'))
+print(z.query_local_assoc('homem', 'gosta'))

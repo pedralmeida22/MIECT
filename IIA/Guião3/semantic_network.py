@@ -16,6 +16,8 @@
 #     - Member      - uma relacao de pertenca de uma instancia a um tipo
 #
 
+from collections import Counter
+
 class Relation:
     def __init__(self,e1,rel,e2):
         self.entity1 = e1
@@ -58,6 +60,15 @@ class Member(Relation):
 # -- associa um utilizador a uma relacao por si inserida
 #    na rede semantica
 #
+
+class AssocOne(Relation):
+    def __init__(self, e1, rel, e2):
+        super().__init__(e1, rel, e2)
+
+class AssocNum(Relation):
+    def __init__(self, e1, rel, e2):
+        super().__init__(e1, rel, e2)
+
 class Declaration:
     def __init__(self,user,rel):
         self.user = user
@@ -167,9 +178,55 @@ class SemanticNetwork:
 
         return [item for sublist in pd for item in sublist if item.relation not in [d.relation.name for d in local_decl]] + local_decl
 
-    def query_down(self, entity, relation=None, skip1st=True):
-        pass
+    def query_down(self, entity, relation=None, first=True):
+        pd = [self.query_down(d.relation.entity1, relation, False) for d in self.declarations if (isinstance(d.relation, Member) or isinstance(d.relation, Subtype)) and d.relation.entity2 == entity]
+       
+        if first:
+            l = []
+        else:
+            l = [d for d in self.query_local(e1 = entity, rel=relation) if isinstance(d.relation, Association)]
+       
+        return [item for sublist in pd for item in sublist] + l
 
+    def query_induce(self, entity, relation):
+        suc = self.query_down(entity, relation)
+
+        c = Counter([d.relation.entity2 for d in suc])
+
+        for v,count in c.most_common(1):
+            return v
+
+
+    def query_local_assoc(self, entity, relation):
+        local = self.query_local(e1=entity, rel=relation)
+
+        if local == []:
+            return []
+
+        if isinstance(local[0].relation, AssocNum):
+            return sum([l.relation.entity2 for l in local]) / len(local)
+
+        elif isinstance(local[0].relation, AssocOne):
+            c = Counter([l.relation.entity2 for l in local])
+
+            for c, count in c.most_common(1):
+                return c, count/len(local)
+
+        elif isinstance(local[0].relation, Association):
+            c = Counter([l.relation.entity2 for l in local])
+
+            l = []
+            sumf = 0
+            for v, count in c.most_common():
+                l.append((v, count/len(local)))
+                sumf += count/len(local)
+                if sumf > 0.75:
+                    break
+            return l
+
+    #def query_assoc_value(self)
+
+        
 # Funcao auxiliar para converter para cadeias de caracteres
 # listas cujos elementos sejam convertiveis para
 # cadeias de caracteres
