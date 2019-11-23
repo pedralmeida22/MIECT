@@ -1,4 +1,4 @@
-
+from itertools import product
 
 class BayesNet:
 
@@ -23,6 +23,27 @@ class BayesNet:
                 if mothers.issubset(conjunction):
                     prob*=(p if val else 1-p)
         return prob
+
+
+    def individualProb(self, var, val):
+        #all_conjunctions = [c for c in self._gen_conjunctions(list(self.dependencies.keys())) if (var, val) in c]
+
+        all_conjunctions = [c for c in (list(zip(self.dependencies.keys(), list(line))) for line in (product([True, False], repeat=len(self.dependencies.keys())))) if (var, val) in c]
+
+        return sum([self.jointProb(c) for c in all_conjunctions])
+
+
+    def _gen_conjunctions(self, variables):
+        if len(variables) == 1:
+            return [[(variables[0], True)], [(variables[0], False)]]
+
+        l = []
+        for c in self._gen_conjunctions(variables[1:]):
+            l.append(c + [(variables[0], True)])
+            l.append(c + [(variables[0], False)])
+
+        return l
+
 
 
 # Footnote 1:

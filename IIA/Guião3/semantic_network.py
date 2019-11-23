@@ -224,7 +224,7 @@ class SemanticNetwork:
                     break
             return l
 
-    #def query_assoc_value(self)
+    #def query_assoc_value(self):
 
         
 # Funcao auxiliar para converter para cadeias de caracteres
