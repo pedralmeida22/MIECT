@@ -73,7 +73,8 @@ c='c'
 d='d'
 e='e'
 
-initial_state = [ HandFree(), Floor(a), On(b,a), Free(b), Free(c), Floor(c) ] 
+initial_state = [ Floor(a), Floor(b), Floor(d), Holds(e), On(c,d), 
+                  Free(a), Free(b), Free(c) ]
 #    _
 #   / \
 #  |  (e)
@@ -82,7 +83,7 @@ initial_state = [ HandFree(), Floor(a), On(b,a), Free(b), Free(c), Floor(c) ]
 # _|___|a|____|b|_____|d|_    
 # 
 
-goal_state    = [ Floor(c), On(b,c), On(a,b) ]
+goal_state    = [ Floor(c), On(d,c), On(e,d), On(a,e), Floor(b) ]
 
 #    _
 #   / \
@@ -110,10 +111,12 @@ print('Actions:',bwdomain.actions(initial_state))
 inittime = time.time()
 
 p = SearchProblem(bwdomain,initial_state,goal_state)
-t = SearchTree(p)
-t.search()
+t = SearchTree(p, "a*")
+(path, plan), n_nodes = t.search(limit=10)
 
-print(t.plan)
+for p in plan:
+    print("\t", p)
+
 print('time=',time.time()-inittime)
 print(len(t.open_nodes),' nodes')
 

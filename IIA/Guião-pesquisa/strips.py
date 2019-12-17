@@ -113,7 +113,7 @@ class STRIPS(SearchDomain):
         newstate = [s for s in state if s not in action.neg]
         newstate += action.pos
         print("Newstate: ", newstate)
-        return newstate
+        return sorted(newstate, key=lambda s: str(s))
 
     def cost(self, state, action):
         return 1
