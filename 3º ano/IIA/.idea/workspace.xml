@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="637e949f-af8f-4b05-8f44-0f8e1e18df90" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../1º ano/P1/p1_melhoria/ex1/problema1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../1º ano/P1/p1_melhoria/ex1/problema1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex1/Hello.g4" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex1/Hello.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex1/HelloLexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex1/HelloLexer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex1/HelloLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex1/HelloLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex1/HelloLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex1/HelloLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex1/HelloParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex1/HelloParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex1/HelloParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex1/HelloParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculator.g4" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculator.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculator.interp" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculator.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculator.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculator.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculatorLexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculatorLexer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculatorLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculatorLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculatorLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculatorLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculatorLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculatorLexer.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculatorMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculatorMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculatorMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculatorMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculatorParser$ExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculatorParser$ExprContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculatorParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculatorParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculatorParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex2/SuffixCalculatorParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex3/CalculatorMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex3/CalculatorMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex3/CalculatorMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex3/CalculatorMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex3/CalculatorParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex3/CalculatorParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex4/Numbers.g4" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex4/Numbers.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex4/NumbersMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex4/NumbersMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex5/Calculator.g4" beforeDir="false" afterPath="$PROJECT_DIR$/../2º ano/LFA/guiao2/Ex5/Calculator.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/IIA.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/IIA.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/IIA.iml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1UYpldj9YlwCUu7HxZ6gICd3CTS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunManager" selected="Python.list (1)">
+    <configuration name="list (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="IIA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Guião1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Guião1/list.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="list" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="IIA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/aula1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/aula1/list.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="list_tuple" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="IIA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/aula1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/aula1/list_tuple.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="none" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="IIA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/aula1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/aula1/none.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="none_funcs" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="IIA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/aula1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/aula1/none_funcs.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.list (1)" />
+        <item itemvalue="Python.none_funcs" />
+        <item itemvalue="Python.none" />
+        <item itemvalue="Python.list_tuple" />
+        <item itemvalue="Python.list" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="637e949f-af8f-4b05-8f44-0f8e1e18df90" name="Default Changelist" comment="" />
+      <created>1569074184508</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569074184508</updated>
+      <workItem from="1575543535852" duration="267000" />
+      <workItem from="1580139937801" duration="38000" />
+      <workItem from="1580141081021" duration="1038000" />
+      <workItem from="1580162345719" duration="141000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="548" y="173" key="FileChooserDialogImpl" timestamp="1580162428291">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="548" y="173" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1580162428291" />
+    <state width="1342" height="199" key="GridCell.Tab.0.bottom" timestamp="1580162490401">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1342" height="199" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1580162490401" />
+    <state width="1342" height="199" key="GridCell.Tab.0.center" timestamp="1580162490400">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1342" height="199" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1580162490400" />
+    <state width="1342" height="199" key="GridCell.Tab.0.left" timestamp="1580162490400">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1342" height="199" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1580162490400" />
+    <state width="1342" height="199" key="GridCell.Tab.0.right" timestamp="1580162490401">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1342" height="199" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1580162490401" />
+    <state x="277" y="61" key="SettingsEditor" timestamp="1580162442007">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="277" y="61" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1580162442007" />
+    <state x="470" y="243" key="com.intellij.ide.util.TipDialog" timestamp="1580162346672">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="470" y="243" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1580162346672" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/IIA$list__1_.coverage" NAME="list (1) Coverage Results" MODIFIED="1580162468164" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Guião1" />
+  </component>
+</project>
