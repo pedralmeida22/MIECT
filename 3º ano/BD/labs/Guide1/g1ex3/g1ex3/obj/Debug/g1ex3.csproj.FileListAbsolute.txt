@@ -1,0 +1,9 @@
+C:\Users\pedra\source\repos\BD_labs\Guião1\g1ex3\g1ex3\bin\Debug\g1ex3.exe.config
+C:\Users\pedra\source\repos\BD_labs\Guião1\g1ex3\g1ex3\bin\Debug\g1ex3.exe
+C:\Users\pedra\source\repos\BD_labs\Guião1\g1ex3\g1ex3\bin\Debug\g1ex3.pdb
+C:\Users\pedra\source\repos\BD_labs\Guião1\g1ex3\g1ex3\obj\Debug\g1ex3.csprojAssemblyReference.cache
+C:\Users\pedra\source\repos\BD_labs\Guião1\g1ex3\g1ex3\obj\Debug\g1ex3.Form1.resources
+C:\Users\pedra\source\repos\BD_labs\Guião1\g1ex3\g1ex3\obj\Debug\g1ex3.Properties.Resources.resources
+C:\Users\pedra\source\repos\BD_labs\Guião1\g1ex3\g1ex3\obj\Debug\g1ex3.csproj.GenerateResource.cache
+C:\Users\pedra\source\repos\BD_labs\Guião1\g1ex3\g1ex3\obj\Debug\g1ex3.exe
+C:\Users\pedra\source\repos\BD_labs\Guião1\g1ex3\g1ex3\obj\Debug\g1ex3.pdb
