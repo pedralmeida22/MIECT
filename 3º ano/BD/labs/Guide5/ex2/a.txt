@@ -1,0 +1,1 @@
+﻿π nif, nome, fax, endereco, condpag, tipo σ numero=null (fornecedor ⟕ fornecedor.nif=encomenda.fornecedor encomenda)

@@ -1,0 +1,1 @@
+﻿π nif, nome, codProd, unidades (item ⨝ numEnc=numero (encomenda ⨝ encomenda.fornecedor=nif (fornecedor)))

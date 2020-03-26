@@ -1,0 +1,1 @@
+﻿π Fname, Lname (σ num_dependents>2 (γ Fname, Lname; count(Essn)->num_dependents (employee ⨝ Ssn=Essn (dependent))))

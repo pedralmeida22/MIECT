@@ -1,0 +1,1 @@
+﻿γ nome; count(numPresc)->n_presc (prescricao ⨝ farmacia=nome (farmacia))

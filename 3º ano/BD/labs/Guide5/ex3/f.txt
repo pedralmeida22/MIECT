@@ -1,0 +1,1 @@
+﻿π paciente.numUtente, nome, dataNasc, endereco (σ n_medc>1 (γ paciente.numUtente, nome, dataNasc, endereco; count(prescricao.numMedico)->n_medc (prescricao ⨝ prescricao.numUtente=paciente.numUtente (paciente))))

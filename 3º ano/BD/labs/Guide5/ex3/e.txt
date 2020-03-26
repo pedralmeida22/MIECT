@@ -1,0 +1,1 @@
+﻿γ farmacia.nome, numRegFarm; COUNT(prescricao.numPresc)→num_vendidos (presc_farmaco ⨝ presc_farmaco.numPresc = prescricao.numPresc (prescricao ⨝ farmacia = nome (farmacia)))
