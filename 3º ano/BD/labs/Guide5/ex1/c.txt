@@ -1,4 +1,0 @@
-﻿projetos = (project) ⨝ Pnumber=Pno (works_on)
-γ Pname; sum(works_on.Hours) -> total_hours (projetos)
-
-γ Pname; SUM(works_on.Hours)→total_hours (project) ⨝ Pnumber = Pno (works_on)

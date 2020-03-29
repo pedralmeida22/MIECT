@@ -1,4 +1,0 @@
-﻿gestores = employee ⨝ Ssn=Mgr_ssn (department)
-π Fname, Lname (σ num_dependents=0 (γ Fname, Lname; count(Essn)->num_dependents (gestores ⟕ Ssn=Essn (dependent))))
-
-π Fname, Lname ( σ num_dependents = 0 ( γ Fname, Lname; COUNT(Essn)→num_dependents (employee ⨝ Ssn = Mgr_ssn (department) ⟕ Ssn = Essn (dependent))))

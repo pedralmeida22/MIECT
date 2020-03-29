@@ -1,1 +1,0 @@
-﻿γ codProd; avg(item.unidades)->media (item)
