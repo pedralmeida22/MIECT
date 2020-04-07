@@ -1,9 +1,9 @@
 use pubs;
 
 -- a
-/*
+
 select * from authors; 
-*/
+
 
 -- b
 /*
@@ -100,11 +100,37 @@ from (authors as au join titleauthor as tau on au.au_id=tau.au_id)
 */
 
 -- o
+/*
+select title, ytd_sales,
+	   ytd_sales*price as faturacao,
+	   ytd_sales*price * royalty/100 as auths_revenue,	-- faturacao * royalty
+	   (ytd_sales*price) - (ytd_sales*price * royalty/100) as publisher_revenue	-- faturacao - auths_revenue
+from titles
+where ytd_sales is not null
+*/
 
 --p
+/*
+select title, ytd_sales, au.au_fname as author,
+	   ytd_sales*price * royalty/100 as auths_revenue,	-- faturacao * royalty
+	   (ytd_sales*price) - (ytd_sales*price * royalty/100) as publisher_revenue	-- faturacao - auths_revenue
+from titles as t join titleauthor as ta on t.title_id=ta.title_id
+		join authors as au on ta.au_id=au.au_id
+where ytd_sales is not null
+*/
 
 -- q
-
+/*
+select *
+from (select count(*) as n_titles
+	  from titles) as total_t
+	join
+	  (select st.stor_id, st.stor_name, count(t.title_id) as t_per_st
+	   from (stores as st join sales as sa on st.stor_id=sa.stor_id)
+			join titles as t on sa.title_id=t.title_id
+	   group by st.stor_id, st.stor_name) as per_st
+	 on n_titles=t_per_st
+*/
 
 -- r
 /*

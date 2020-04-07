@@ -1,0 +1,1 @@
+﻿π Fname, Minit, Lname (employee ⨝ Super_ssn = super.Ssn ρ super π Ssn ( σ Fname = 'Carlos' and Minit = 'D' and Lname = 'Gomes' (employee)))

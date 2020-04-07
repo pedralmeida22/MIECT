@@ -1,0 +1,2 @@
+drop table g6prescrition.medico, g6prescrition.paciente, g6prescrition.farmacia, g6prescrition.farmaceutica, g6prescrition.farmaco, g6prescrition.prescricao, g6prescrition.presc_farmaco;
+drop schema g6prescrition;

@@ -1,0 +1,4 @@
+﻿mulheres = (σ Sex='F' (employee ⨝ Dno=Dnumber (department)))
+γ Dname; avg(Salary)->avg_salary (mulheres)
+
+γ Dname; AVG(Salary)→avg_salary ( σ Sex = 'F' (employee ⨝ Dno = Dnumber (department)))

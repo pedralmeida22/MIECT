@@ -1,0 +1,9 @@
+﻿num_prod = γ numero; count(codProd)->prod (item ⨝ numEnc=numero (encomenda))
+γ numero; avg(prod)->media (num_prod)
+
+γ numero; AVG(prod)→media γ numero; COUNT(codProd)→prod (item ⨝ numEnc = numero (encomenda))
+
+--- dario
+num_prod = γ item.numEnc; count(codProd)->prod (item)
+γ avg(prod)->media (num_prod)
+γ ; AVG(prod)→media γ item.numEnc; COUNT(codProd)→prod (item)

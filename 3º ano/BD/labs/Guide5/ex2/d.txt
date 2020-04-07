@@ -1,0 +1,4 @@
+﻿π nif, nome, codProd, unidades (item ⨝ numEnc=numero (encomenda ⨝ encomenda.fornecedor=nif (fornecedor)))
+
+por ordem:
+τ fornecedor.nome (π nif, nome, codProd, unidades (item ⨝ numEnc=numero (encomenda ⨝ encomenda.fornecedor=nif (fornecedor))))

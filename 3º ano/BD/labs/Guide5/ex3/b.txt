@@ -1,0 +1,1 @@
+﻿γ especialidade; count(numPresc)->n_presc (medico ⨝ numSNS=numMedico (prescricao))
