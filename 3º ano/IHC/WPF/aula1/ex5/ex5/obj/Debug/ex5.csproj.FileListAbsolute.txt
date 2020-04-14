@@ -1,0 +1,14 @@
+C:\Users\pedra\source\repos\ihc\aula1\ex5\ex5\bin\Debug\ex5.exe.config
+C:\Users\pedra\source\repos\ihc\aula1\ex5\ex5\bin\Debug\ex5.exe
+C:\Users\pedra\source\repos\ihc\aula1\ex5\ex5\bin\Debug\ex5.pdb
+C:\Users\pedra\source\repos\ihc\aula1\ex5\ex5\obj\Debug\ex5.csprojAssemblyReference.cache
+C:\Users\pedra\source\repos\ihc\aula1\ex5\ex5\obj\Debug\MainWindow.g.cs
+C:\Users\pedra\source\repos\ihc\aula1\ex5\ex5\obj\Debug\App.g.cs
+C:\Users\pedra\source\repos\ihc\aula1\ex5\ex5\obj\Debug\ex5_MarkupCompile.cache
+C:\Users\pedra\source\repos\ihc\aula1\ex5\ex5\obj\Debug\ex5_MarkupCompile.lref
+C:\Users\pedra\source\repos\ihc\aula1\ex5\ex5\obj\Debug\MainWindow.baml
+C:\Users\pedra\source\repos\ihc\aula1\ex5\ex5\obj\Debug\ex5.g.resources
+C:\Users\pedra\source\repos\ihc\aula1\ex5\ex5\obj\Debug\ex5.Properties.Resources.resources
+C:\Users\pedra\source\repos\ihc\aula1\ex5\ex5\obj\Debug\ex5.csproj.GenerateResource.cache
+C:\Users\pedra\source\repos\ihc\aula1\ex5\ex5\obj\Debug\ex5.exe
+C:\Users\pedra\source\repos\ihc\aula1\ex5\ex5\obj\Debug\ex5.pdb

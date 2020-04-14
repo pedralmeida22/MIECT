@@ -1,0 +1,14 @@
+C:\Users\pedra\source\repos\ihc\aula1\intro\intro\bin\Debug\intro.exe.config
+C:\Users\pedra\source\repos\ihc\aula1\intro\intro\bin\Debug\intro.exe
+C:\Users\pedra\source\repos\ihc\aula1\intro\intro\bin\Debug\intro.pdb
+C:\Users\pedra\source\repos\ihc\aula1\intro\intro\obj\Debug\intro.csprojAssemblyReference.cache
+C:\Users\pedra\source\repos\ihc\aula1\intro\intro\obj\Debug\MainWindow.g.cs
+C:\Users\pedra\source\repos\ihc\aula1\intro\intro\obj\Debug\App.g.cs
+C:\Users\pedra\source\repos\ihc\aula1\intro\intro\obj\Debug\intro_MarkupCompile.cache
+C:\Users\pedra\source\repos\ihc\aula1\intro\intro\obj\Debug\intro_MarkupCompile.lref
+C:\Users\pedra\source\repos\ihc\aula1\intro\intro\obj\Debug\MainWindow.baml
+C:\Users\pedra\source\repos\ihc\aula1\intro\intro\obj\Debug\intro.g.resources
+C:\Users\pedra\source\repos\ihc\aula1\intro\intro\obj\Debug\intro.Properties.Resources.resources
+C:\Users\pedra\source\repos\ihc\aula1\intro\intro\obj\Debug\intro.csproj.GenerateResource.cache
+C:\Users\pedra\source\repos\ihc\aula1\intro\intro\obj\Debug\intro.exe
+C:\Users\pedra\source\repos\ihc\aula1\intro\intro\obj\Debug\intro.pdb

@@ -1,0 +1,21 @@
+﻿<Cursos xmlns="">
+  <Curso Nome="Computadores e Telemática" Codigo="9361">
+    <UC Disciplina="Álgebra Linear e Geometria Analítica" ECTS="6" />
+    <UC Disciplina="Cálculo I" ECTS="6" />
+    <UC Disciplina="Programação I" ECTS="8" />
+    <UC Disciplina="Introdução aos Sistemas Digitais" ECTS="6" />
+  </Curso>
+  <Curso Nome="Electrónica e Telecomunicações" Codigo ="9365">
+    <UC Disciplina="Álgebra Linear e Geometria Analítica" ECTS="6" />
+    <UC Disciplina="Cálculo I" ECTS="6" />
+    <UC Disciplina="Programação I" ECTS="8" />
+    <UC Disciplina="Introdução aos Sistemas Digitais" ECTS="6" />
+  </Curso>
+  <Curso Nome="Engenharia Informática" Codigo="9119">
+    <UC Disciplina="Álgebra Linear e Geometria Analítica" ECTS="6" />
+    <UC Disciplina="Cálculo I" ECTS="6" />
+    <UC Disciplina="Elementos de Física" ECTS="8" />
+    <UC Disciplina="Introdução às Tecnologias Web" ECTS="6" />
+    <UC Disciplina="Fundamentos de programação" ECTS="6" />
+  </Curso>
+</Cursos>
