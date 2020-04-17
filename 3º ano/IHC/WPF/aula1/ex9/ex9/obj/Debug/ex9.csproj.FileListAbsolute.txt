@@ -1,0 +1,15 @@
+C:\Users\pedra\source\repos\ihc\aula1\ex9\ex9\bin\Debug\ex9.exe.config
+C:\Users\pedra\source\repos\ihc\aula1\ex9\ex9\bin\Debug\ex9.exe
+C:\Users\pedra\source\repos\ihc\aula1\ex9\ex9\bin\Debug\ex9.pdb
+C:\Users\pedra\source\repos\ihc\aula1\ex9\ex9\obj\Debug\ex9.csprojAssemblyReference.cache
+C:\Users\pedra\source\repos\ihc\aula1\ex9\ex9\obj\Debug\MainWindow.g.cs
+C:\Users\pedra\source\repos\ihc\aula1\ex9\ex9\obj\Debug\App.g.cs
+C:\Users\pedra\source\repos\ihc\aula1\ex9\ex9\obj\Debug\ex9_MarkupCompile.cache
+C:\Users\pedra\source\repos\ihc\aula1\ex9\ex9\obj\Debug\ex9_MarkupCompile.lref
+C:\Users\pedra\source\repos\ihc\aula1\ex9\ex9\obj\Debug\MainWindow.baml
+C:\Users\pedra\source\repos\ihc\aula1\ex9\ex9\obj\Debug\ex9.g.resources
+C:\Users\pedra\source\repos\ihc\aula1\ex9\ex9\obj\Debug\ex9.Properties.Resources.resources
+C:\Users\pedra\source\repos\ihc\aula1\ex9\ex9\obj\Debug\ex9.csproj.GenerateResource.cache
+C:\Users\pedra\source\repos\ihc\aula1\ex9\ex9\obj\Debug\ex9.csproj.CoreCompileInputs.cache
+C:\Users\pedra\source\repos\ihc\aula1\ex9\ex9\obj\Debug\ex9.exe
+C:\Users\pedra\source\repos\ihc\aula1\ex9\ex9\obj\Debug\ex9.pdb
