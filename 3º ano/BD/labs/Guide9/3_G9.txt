@@ -1,0 +1,13 @@
+create index emp_ssn on employee(Ssn);
+
+create index emp_fname on employee(fname); --o último nome é preciso como índice? É que já reduz mt a pesquisa
+
+create index emp_dno on employee(Dno);
+
+create index dep_dno on department(Dnumber);
+
+create index proj_pno on project(Pnumber);
+
+create index works_essn on works_on(Essn);
+
+create index dep_name on dependent(Dependent_name);

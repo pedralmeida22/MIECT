@@ -1,0 +1,29 @@
+﻿<Window x:Class="Deti_Windows.exemplo1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Deti_Windows"
+        mc:Ignorable="d"
+        Title="exemplo1" Height="450" Width="800">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="280" ></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Image Source="C:\Users\pedra\source\repos\ihc\aula2\Deti\Deti\Images\Logo_UA.jpg" />
+
+        <Grid Grid.Column="1">
+            <StackPanel>
+                <Label Grid.Column="1" Content="Ola mundo" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold"/>
+                <StackPanel >
+                    <Label Style="{StaticResource LabelStyle}">22222 Pedro Maria Marques</Label>
+                    <Label Style="{StaticResource LabelStyle}">33333 Maria Joaquina Sanches</Label>
+                </StackPanel>
+                <Button Width="40" Content="return" Margin="232,0,231.6,0" Click="Button_Click"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
