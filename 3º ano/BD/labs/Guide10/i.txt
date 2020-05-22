@@ -1,0 +1,28 @@
+Mais Valias:
+	-SP
+		- Boa performance
+		- Usabilidade prática
+		- Facilidade de teste e garantia de maior integridade de dados
+		- Maior segurança de tabelas conservando o acesso exclusivo através de SPs.
+	-UDF
+		- Possibildade de incorporar dentro de consultas complexas
+		- Possibildade de serem utilizadas como fonte de dados
+		
+	-Ambas
+		- Igualmente otimizadores pelo facto de serem compilados apenas 1 vez, na sua criação.
+		
+Diferenças:
+	-SP podem ler e modificar dados, enquanto que UDF apenas podem ler.
+	-SP só podem ser utilizados com EXECUTE, enquanto que UDF podem ser utilziados em SELECTs, JOINS, etc..
+	-UDF não permite o uso de tabelas temporárias
+	-Apenas os SP permitem o uso de SQL dinâmico
+	
+Casos de Uso:
+	UDF
+		-Obter tabelas como parâmetro para outras operações
+		-Agregar várias tabelas provenientes de diferentes UDFs
+	SP
+		-Criar rotinas possíveis de modificar a base de dados
+		-Impedir o bloqueamento de instruções no caso de Erros
+		-Pôr em prática funções não determinísticas
+		
