@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Altura: <input type="text" name="altura"></p>
+        <p>Peso: <input type="text" peso="peso"></p>
+        <button type="submit">Calcular</button>
+    </form>
+
+{% endblock %}
