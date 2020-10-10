@@ -4,5 +4,10 @@
 
     <p>O seu IMC é: </p>
     <h2>{{ imc }}</h2>
+    <p>Tem: </p>
+    <h2>{{ message }}</h2>
+
+    </br>
+    <button><a href="{% url 'info2' %}">Recalcular</a></button>
 
 {% endblock %}

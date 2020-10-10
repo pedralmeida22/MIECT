@@ -8,8 +8,7 @@
 
     <form action="" method="post">
         {% csrf_token %}
-        <p>Altura (cm): <input type="text" name="altura"></p>
-        <p>Peso (kg): <input type="text" name="peso"></p>
+        {{ form }}
         <button type="submit">Calcular</button>
     </form>
 

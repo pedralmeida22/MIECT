@@ -20,5 +20,6 @@ from imc import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
-    path('getinfo/', views.getinfo, name="info")
+    path('getinfo/', views.getinfo, name="info"),
+    path('getinfo2/', views.getinfo2, name="info2"),
 ]
