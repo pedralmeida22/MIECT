@@ -34,3 +34,15 @@ Work developed for the Computers and Telematics Engineering BSc + MSc at the Uni
 
 * Técnicas de Percepção de Redes
   * [tpr_ransomware](https://github.com/pedralmeida22/tpr_ransomware) 
+
+## 5º year: 
+
+### 1º semester
+* [Computação Móvel](https://github.com/pedralmeida22/CM21_89205)
+  * [Flutter](https://github.com/pedralmeida22/StalkTracker-CM)
+  * [Android](https://github.com/pedralmeida22/StalkTracker-Kotlin)
+
+* [Robótica Móvel e Inteligente](https://github.com/pedralmeida22/ciberRato)
+
+* [Sistemas Operativos e de Tempo-real](https://github.com/pedralmeida22/sotr)
+
